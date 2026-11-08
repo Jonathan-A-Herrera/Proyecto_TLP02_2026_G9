@@ -1,0 +1,25 @@
+# Formato: ETIQUETA | oración | fenómeno que se prueba
+# G = gramatical (debería aceptarse)   A = agramatical (debería rechazarse)
+G | El perro negro come | oración base, concordancia dentro del SN
+A | Los gato negra come | concordancia determinante-sustantivo-adjetivo
+A | El perro negro comen | concordancia sujeto-verbo
+G | Las niñas pequeñas leen un libro | concordancia femenino plural
+G | La niña feliz duerme | adjetivo de género común
+G | La estudiante pequeña lee un libro en el parque | sustantivo de género común y frase preposicional
+A | La estudiante pequeño lee | sustantivo de género común mal concordado
+G | Los perros negros ladraron ayer | pretérito y adverbio
+G | Ayer los niños comieron mucho | adverbio antepuesto
+G | El perro que ladra come rápidamente | relativa de sujeto
+A | El perro que ladran come | concordancia dentro de la relativa
+G | Las niñas que el profesor regañó están cansadas | concordancia a distancia con relativa de objeto
+A | Las niñas que el profesor regañó están cansados | concordancia a distancia
+A | Las niñas que el profesor regañó el libro están cansadas | hueco de la relativa ocupado
+G | Luis dice que los niños comen rápidamente | subordinada sustantiva
+G | Ana vio el perro con el telescopio | ambigüedad de adjunción de la frase preposicional
+G | Ana vio el perro en el parque con el telescopio | ambigüedad de adjunción con dos frases preposicionales
+G | El gato de la profesora duerme en la casa | frase preposicional dentro del SN
+G | Llegaron los niños | orden verbo-sujeto
+G | Lee un libro | sujeto tácito
+G | Ana , Luis y Pedro son alta , alto y alto respectivamente | dependencias cruzadas
+A | Ana , Luis y Pedro son alto , alto y alta respectivamente | dependencias cruzadas en orden espejo
+A | Ana y Luis son alto y alta respectivamente | dependencias cruzadas mal emparejadas

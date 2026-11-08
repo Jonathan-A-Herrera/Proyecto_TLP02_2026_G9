@@ -1,0 +1,1506 @@
+[
+  {
+    "esperado": "G",
+    "oracion": "El perro negro come",
+    "fenomeno": "oración base, concordancia dentro del SN",
+    "spacy_analiza": true,
+    "spacy_raiz": "come",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "El",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "perro",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "perro",
+        "pos": "PROPN",
+        "dep": "nsubj",
+        "nucleo": "come",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "negro",
+        "pos": "PROPN",
+        "dep": "flat",
+        "nucleo": "perro",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "come",
+        "pos": "PROPN",
+        "dep": "ROOT",
+        "nucleo": "come",
+        "genero": null,
+        "numero": null
+      }
+    ],
+    "nltk_fcfg_arboles": 1,
+    "nltk_fcfg": "acepta"
+  },
+  {
+    "esperado": "A",
+    "oracion": "Los gato negra come",
+    "fenomeno": "concordancia determinante-sustantivo-adjetivo",
+    "spacy_analiza": true,
+    "spacy_raiz": "come",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "Los",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "gato",
+        "genero": "Masc",
+        "numero": "Plur"
+      },
+      {
+        "texto": "gato",
+        "pos": "NOUN",
+        "dep": "nsubj",
+        "nucleo": "come",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "negra",
+        "pos": "ADJ",
+        "dep": "amod",
+        "nucleo": "gato",
+        "genero": "Fem",
+        "numero": "Sing"
+      },
+      {
+        "texto": "come",
+        "pos": "PROPN",
+        "dep": "ROOT",
+        "nucleo": "come",
+        "genero": null,
+        "numero": null
+      }
+    ],
+    "nltk_fcfg_arboles": 0,
+    "nltk_fcfg": "rechaza"
+  },
+  {
+    "esperado": "A",
+    "oracion": "El perro negro comen",
+    "fenomeno": "concordancia sujeto-verbo",
+    "spacy_analiza": true,
+    "spacy_raiz": "comen",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "El",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "perro",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "perro",
+        "pos": "PROPN",
+        "dep": "nsubj",
+        "nucleo": "comen",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "negro",
+        "pos": "ADJ",
+        "dep": "flat",
+        "nucleo": "perro",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "comen",
+        "pos": "NOUN",
+        "dep": "ROOT",
+        "nucleo": "comen",
+        "genero": "Masc",
+        "numero": "Sing"
+      }
+    ],
+    "nltk_fcfg_arboles": 0,
+    "nltk_fcfg": "rechaza"
+  },
+  {
+    "esperado": "G",
+    "oracion": "Las niñas pequeñas leen un libro",
+    "fenomeno": "concordancia femenino plural",
+    "spacy_analiza": true,
+    "spacy_raiz": "leen",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "Las",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "niñas",
+        "genero": "Fem",
+        "numero": "Plur"
+      },
+      {
+        "texto": "niñas",
+        "pos": "NOUN",
+        "dep": "nsubj",
+        "nucleo": "leen",
+        "genero": "Fem",
+        "numero": "Plur"
+      },
+      {
+        "texto": "pequeñas",
+        "pos": "ADJ",
+        "dep": "amod",
+        "nucleo": "niñas",
+        "genero": "Fem",
+        "numero": "Plur"
+      },
+      {
+        "texto": "leen",
+        "pos": "VERB",
+        "dep": "ROOT",
+        "nucleo": "leen",
+        "genero": null,
+        "numero": "Plur"
+      },
+      {
+        "texto": "un",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "libro",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "libro",
+        "pos": "NOUN",
+        "dep": "obj",
+        "nucleo": "leen",
+        "genero": "Masc",
+        "numero": "Sing"
+      }
+    ],
+    "nltk_fcfg_arboles": 1,
+    "nltk_fcfg": "acepta"
+  },
+  {
+    "esperado": "G",
+    "oracion": "La niña feliz duerme",
+    "fenomeno": "adjetivo de género común",
+    "spacy_analiza": true,
+    "spacy_raiz": "duerme",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "La",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "niña",
+        "genero": "Fem",
+        "numero": "Sing"
+      },
+      {
+        "texto": "niña",
+        "pos": "NOUN",
+        "dep": "nsubj",
+        "nucleo": "duerme",
+        "genero": "Fem",
+        "numero": "Sing"
+      },
+      {
+        "texto": "feliz",
+        "pos": "ADJ",
+        "dep": "amod",
+        "nucleo": "niña",
+        "genero": null,
+        "numero": "Sing"
+      },
+      {
+        "texto": "duerme",
+        "pos": "VERB",
+        "dep": "ROOT",
+        "nucleo": "duerme",
+        "genero": null,
+        "numero": "Sing"
+      }
+    ],
+    "nltk_fcfg_arboles": 1,
+    "nltk_fcfg": "acepta"
+  },
+  {
+    "esperado": "G",
+    "oracion": "La estudiante pequeña lee un libro en el parque",
+    "fenomeno": "sustantivo de género común y frase preposicional",
+    "spacy_analiza": true,
+    "spacy_raiz": "lee",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "La",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "estudiante",
+        "genero": "Fem",
+        "numero": "Sing"
+      },
+      {
+        "texto": "estudiante",
+        "pos": "NOUN",
+        "dep": "nsubj",
+        "nucleo": "lee",
+        "genero": null,
+        "numero": "Sing"
+      },
+      {
+        "texto": "pequeña",
+        "pos": "ADJ",
+        "dep": "amod",
+        "nucleo": "estudiante",
+        "genero": "Fem",
+        "numero": "Sing"
+      },
+      {
+        "texto": "lee",
+        "pos": "VERB",
+        "dep": "ROOT",
+        "nucleo": "lee",
+        "genero": null,
+        "numero": "Sing"
+      },
+      {
+        "texto": "un",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "libro",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "libro",
+        "pos": "NOUN",
+        "dep": "obj",
+        "nucleo": "lee",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "en",
+        "pos": "ADP",
+        "dep": "case",
+        "nucleo": "parque",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "el",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "parque",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "parque",
+        "pos": "NOUN",
+        "dep": "obl",
+        "nucleo": "lee",
+        "genero": "Masc",
+        "numero": "Sing"
+      }
+    ],
+    "nltk_fcfg_arboles": 2,
+    "nltk_fcfg": "acepta"
+  },
+  {
+    "esperado": "A",
+    "oracion": "La estudiante pequeño lee",
+    "fenomeno": "sustantivo de género común mal concordado",
+    "spacy_analiza": true,
+    "spacy_raiz": "estudiante",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "La",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "estudiante",
+        "genero": "Fem",
+        "numero": "Sing"
+      },
+      {
+        "texto": "estudiante",
+        "pos": "NOUN",
+        "dep": "ROOT",
+        "nucleo": "estudiante",
+        "genero": null,
+        "numero": "Sing"
+      },
+      {
+        "texto": "pequeño",
+        "pos": "ADJ",
+        "dep": "amod",
+        "nucleo": "estudiante",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "lee",
+        "pos": "PROPN",
+        "dep": "appos",
+        "nucleo": "estudiante",
+        "genero": null,
+        "numero": null
+      }
+    ],
+    "nltk_fcfg_arboles": 0,
+    "nltk_fcfg": "rechaza"
+  },
+  {
+    "esperado": "G",
+    "oracion": "Los perros negros ladraron ayer",
+    "fenomeno": "pretérito y adverbio",
+    "spacy_analiza": true,
+    "spacy_raiz": "ladraron",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "Los",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "perros",
+        "genero": "Masc",
+        "numero": "Plur"
+      },
+      {
+        "texto": "perros",
+        "pos": "NOUN",
+        "dep": "nsubj",
+        "nucleo": "ladraron",
+        "genero": "Masc",
+        "numero": "Plur"
+      },
+      {
+        "texto": "negros",
+        "pos": "ADJ",
+        "dep": "amod",
+        "nucleo": "perros",
+        "genero": "Masc",
+        "numero": "Plur"
+      },
+      {
+        "texto": "ladraron",
+        "pos": "VERB",
+        "dep": "ROOT",
+        "nucleo": "ladraron",
+        "genero": null,
+        "numero": "Plur"
+      },
+      {
+        "texto": "ayer",
+        "pos": "ADV",
+        "dep": "advmod",
+        "nucleo": "ladraron",
+        "genero": null,
+        "numero": null
+      }
+    ],
+    "nltk_fcfg_arboles": 1,
+    "nltk_fcfg": "acepta"
+  },
+  {
+    "esperado": "G",
+    "oracion": "Ayer los niños comieron mucho",
+    "fenomeno": "adverbio antepuesto",
+    "spacy_analiza": true,
+    "spacy_raiz": "comieron",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "Ayer",
+        "pos": "ADV",
+        "dep": "advmod",
+        "nucleo": "comieron",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "los",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "niños",
+        "genero": "Masc",
+        "numero": "Plur"
+      },
+      {
+        "texto": "niños",
+        "pos": "NOUN",
+        "dep": "nsubj",
+        "nucleo": "comieron",
+        "genero": "Masc",
+        "numero": "Plur"
+      },
+      {
+        "texto": "comieron",
+        "pos": "VERB",
+        "dep": "ROOT",
+        "nucleo": "comieron",
+        "genero": null,
+        "numero": "Plur"
+      },
+      {
+        "texto": "mucho",
+        "pos": "ADV",
+        "dep": "advmod",
+        "nucleo": "comieron",
+        "genero": null,
+        "numero": null
+      }
+    ],
+    "nltk_fcfg_arboles": 0,
+    "nltk_fcfg": "rechaza"
+  },
+  {
+    "esperado": "G",
+    "oracion": "El perro que ladra come rápidamente",
+    "fenomeno": "relativa de sujeto",
+    "spacy_analiza": true,
+    "spacy_raiz": "perro",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "El",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "perro",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "perro",
+        "pos": "NOUN",
+        "dep": "ROOT",
+        "nucleo": "perro",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "que",
+        "pos": "PRON",
+        "dep": "mark",
+        "nucleo": "come",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "ladra",
+        "pos": "PROPN",
+        "dep": "nsubj",
+        "nucleo": "come",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "come",
+        "pos": "VERB",
+        "dep": "acl",
+        "nucleo": "perro",
+        "genero": null,
+        "numero": "Sing"
+      },
+      {
+        "texto": "rápidamente",
+        "pos": "ADV",
+        "dep": "advmod",
+        "nucleo": "come",
+        "genero": null,
+        "numero": null
+      }
+    ],
+    "nltk_fcfg_arboles": 1,
+    "nltk_fcfg": "acepta"
+  },
+  {
+    "esperado": "A",
+    "oracion": "El perro que ladran come",
+    "fenomeno": "concordancia dentro de la relativa",
+    "spacy_analiza": true,
+    "spacy_raiz": "come",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "El",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "perro",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "perro",
+        "pos": "NOUN",
+        "dep": "nsubj",
+        "nucleo": "come",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "que",
+        "pos": "PRON",
+        "dep": "nsubj",
+        "nucleo": "ladran",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "ladran",
+        "pos": "VERB",
+        "dep": "acl",
+        "nucleo": "perro",
+        "genero": null,
+        "numero": "Plur"
+      },
+      {
+        "texto": "come",
+        "pos": "PROPN",
+        "dep": "ROOT",
+        "nucleo": "come",
+        "genero": null,
+        "numero": null
+      }
+    ],
+    "nltk_fcfg_arboles": 0,
+    "nltk_fcfg": "rechaza"
+  },
+  {
+    "esperado": "G",
+    "oracion": "Las niñas que el profesor regañó están cansadas",
+    "fenomeno": "concordancia a distancia con relativa de objeto",
+    "spacy_analiza": true,
+    "spacy_raiz": "cansadas",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "Las",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "niñas",
+        "genero": "Fem",
+        "numero": "Plur"
+      },
+      {
+        "texto": "niñas",
+        "pos": "NOUN",
+        "dep": "nsubj",
+        "nucleo": "cansadas",
+        "genero": "Fem",
+        "numero": "Plur"
+      },
+      {
+        "texto": "que",
+        "pos": "PRON",
+        "dep": "obj",
+        "nucleo": "regañó",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "el",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "profesor",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "profesor",
+        "pos": "NOUN",
+        "dep": "nsubj",
+        "nucleo": "regañó",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "regañó",
+        "pos": "VERB",
+        "dep": "acl",
+        "nucleo": "niñas",
+        "genero": null,
+        "numero": "Sing"
+      },
+      {
+        "texto": "están",
+        "pos": "AUX",
+        "dep": "cop",
+        "nucleo": "cansadas",
+        "genero": null,
+        "numero": "Plur"
+      },
+      {
+        "texto": "cansadas",
+        "pos": "ADJ",
+        "dep": "ROOT",
+        "nucleo": "cansadas",
+        "genero": "Fem",
+        "numero": "Plur"
+      }
+    ],
+    "nltk_fcfg_arboles": 1,
+    "nltk_fcfg": "acepta"
+  },
+  {
+    "esperado": "A",
+    "oracion": "Las niñas que el profesor regañó están cansados",
+    "fenomeno": "concordancia a distancia",
+    "spacy_analiza": true,
+    "spacy_raiz": "cansados",
+    "spacy_inconsistencias": [
+      "Gender: 'cansados'=Masc vs 'niñas'=Fem"
+    ],
+    "spacy_tokens": [
+      {
+        "texto": "Las",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "niñas",
+        "genero": "Fem",
+        "numero": "Plur"
+      },
+      {
+        "texto": "niñas",
+        "pos": "NOUN",
+        "dep": "nsubj",
+        "nucleo": "cansados",
+        "genero": "Fem",
+        "numero": "Plur"
+      },
+      {
+        "texto": "que",
+        "pos": "PRON",
+        "dep": "obj",
+        "nucleo": "regañó",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "el",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "profesor",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "profesor",
+        "pos": "NOUN",
+        "dep": "nsubj",
+        "nucleo": "regañó",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "regañó",
+        "pos": "VERB",
+        "dep": "acl",
+        "nucleo": "niñas",
+        "genero": null,
+        "numero": "Sing"
+      },
+      {
+        "texto": "están",
+        "pos": "AUX",
+        "dep": "cop",
+        "nucleo": "cansados",
+        "genero": null,
+        "numero": "Plur"
+      },
+      {
+        "texto": "cansados",
+        "pos": "ADJ",
+        "dep": "ROOT",
+        "nucleo": "cansados",
+        "genero": "Masc",
+        "numero": "Plur"
+      }
+    ],
+    "nltk_fcfg_arboles": 0,
+    "nltk_fcfg": "rechaza"
+  },
+  {
+    "esperado": "A",
+    "oracion": "Las niñas que el profesor regañó el libro están cansadas",
+    "fenomeno": "hueco de la relativa ocupado",
+    "spacy_analiza": true,
+    "spacy_raiz": "cansadas",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "Las",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "niñas",
+        "genero": "Fem",
+        "numero": "Plur"
+      },
+      {
+        "texto": "niñas",
+        "pos": "NOUN",
+        "dep": "nsubj",
+        "nucleo": "cansadas",
+        "genero": "Fem",
+        "numero": "Plur"
+      },
+      {
+        "texto": "que",
+        "pos": "PRON",
+        "dep": "obj",
+        "nucleo": "regañó",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "el",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "profesor",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "profesor",
+        "pos": "NOUN",
+        "dep": "nsubj",
+        "nucleo": "regañó",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "regañó",
+        "pos": "VERB",
+        "dep": "acl",
+        "nucleo": "niñas",
+        "genero": null,
+        "numero": "Sing"
+      },
+      {
+        "texto": "el",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "libro",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "libro",
+        "pos": "NOUN",
+        "dep": "obj",
+        "nucleo": "regañó",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "están",
+        "pos": "AUX",
+        "dep": "cop",
+        "nucleo": "cansadas",
+        "genero": null,
+        "numero": "Plur"
+      },
+      {
+        "texto": "cansadas",
+        "pos": "ADJ",
+        "dep": "ROOT",
+        "nucleo": "cansadas",
+        "genero": "Fem",
+        "numero": "Plur"
+      }
+    ],
+    "nltk_fcfg_arboles": 0,
+    "nltk_fcfg": "rechaza"
+  },
+  {
+    "esperado": "G",
+    "oracion": "Luis dice que los niños comen rápidamente",
+    "fenomeno": "subordinada sustantiva",
+    "spacy_analiza": true,
+    "spacy_raiz": "dice",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "Luis",
+        "pos": "PROPN",
+        "dep": "nsubj",
+        "nucleo": "dice",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "dice",
+        "pos": "VERB",
+        "dep": "ROOT",
+        "nucleo": "dice",
+        "genero": null,
+        "numero": "Sing"
+      },
+      {
+        "texto": "que",
+        "pos": "SCONJ",
+        "dep": "mark",
+        "nucleo": "comen",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "los",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "niños",
+        "genero": "Masc",
+        "numero": "Plur"
+      },
+      {
+        "texto": "niños",
+        "pos": "NOUN",
+        "dep": "nsubj",
+        "nucleo": "comen",
+        "genero": "Masc",
+        "numero": "Plur"
+      },
+      {
+        "texto": "comen",
+        "pos": "VERB",
+        "dep": "ccomp",
+        "nucleo": "dice",
+        "genero": null,
+        "numero": "Plur"
+      },
+      {
+        "texto": "rápidamente",
+        "pos": "ADV",
+        "dep": "advmod",
+        "nucleo": "comen",
+        "genero": null,
+        "numero": null
+      }
+    ],
+    "nltk_fcfg_arboles": 1,
+    "nltk_fcfg": "acepta"
+  },
+  {
+    "esperado": "G",
+    "oracion": "Ana vio el perro con el telescopio",
+    "fenomeno": "ambigüedad de adjunción de la frase preposicional",
+    "spacy_analiza": true,
+    "spacy_raiz": "vio",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "Ana",
+        "pos": "PROPN",
+        "dep": "nsubj",
+        "nucleo": "vio",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "vio",
+        "pos": "VERB",
+        "dep": "ROOT",
+        "nucleo": "vio",
+        "genero": null,
+        "numero": "Sing"
+      },
+      {
+        "texto": "el",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "perro",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "perro",
+        "pos": "NOUN",
+        "dep": "obj",
+        "nucleo": "vio",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "con",
+        "pos": "ADP",
+        "dep": "case",
+        "nucleo": "telescopio",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "el",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "telescopio",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "telescopio",
+        "pos": "NOUN",
+        "dep": "obl",
+        "nucleo": "vio",
+        "genero": "Masc",
+        "numero": "Sing"
+      }
+    ],
+    "nltk_fcfg_arboles": 2,
+    "nltk_fcfg": "acepta",
+    "spacy_adjuncion_telescopio": "vio"
+  },
+  {
+    "esperado": "G",
+    "oracion": "Ana vio el perro en el parque con el telescopio",
+    "fenomeno": "ambigüedad de adjunción con dos frases preposicionales",
+    "spacy_analiza": true,
+    "spacy_raiz": "vio",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "Ana",
+        "pos": "PROPN",
+        "dep": "nsubj",
+        "nucleo": "vio",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "vio",
+        "pos": "VERB",
+        "dep": "ROOT",
+        "nucleo": "vio",
+        "genero": null,
+        "numero": "Sing"
+      },
+      {
+        "texto": "el",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "perro",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "perro",
+        "pos": "NOUN",
+        "dep": "obj",
+        "nucleo": "vio",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "en",
+        "pos": "ADP",
+        "dep": "case",
+        "nucleo": "parque",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "el",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "parque",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "parque",
+        "pos": "NOUN",
+        "dep": "obl",
+        "nucleo": "vio",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "con",
+        "pos": "ADP",
+        "dep": "case",
+        "nucleo": "telescopio",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "el",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "telescopio",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "telescopio",
+        "pos": "NOUN",
+        "dep": "obl",
+        "nucleo": "vio",
+        "genero": "Masc",
+        "numero": "Sing"
+      }
+    ],
+    "nltk_fcfg_arboles": 5,
+    "nltk_fcfg": "acepta",
+    "spacy_adjuncion_telescopio": "vio"
+  },
+  {
+    "esperado": "G",
+    "oracion": "El gato de la profesora duerme en la casa",
+    "fenomeno": "frase preposicional dentro del SN",
+    "spacy_analiza": true,
+    "spacy_raiz": "duerme",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "El",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "gato",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "gato",
+        "pos": "NOUN",
+        "dep": "nsubj",
+        "nucleo": "duerme",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "de",
+        "pos": "ADP",
+        "dep": "case",
+        "nucleo": "profesora",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "la",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "profesora",
+        "genero": "Fem",
+        "numero": "Sing"
+      },
+      {
+        "texto": "profesora",
+        "pos": "NOUN",
+        "dep": "nmod",
+        "nucleo": "gato",
+        "genero": "Fem",
+        "numero": "Sing"
+      },
+      {
+        "texto": "duerme",
+        "pos": "VERB",
+        "dep": "ROOT",
+        "nucleo": "duerme",
+        "genero": null,
+        "numero": "Sing"
+      },
+      {
+        "texto": "en",
+        "pos": "ADP",
+        "dep": "case",
+        "nucleo": "casa",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "la",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "casa",
+        "genero": "Fem",
+        "numero": "Sing"
+      },
+      {
+        "texto": "casa",
+        "pos": "NOUN",
+        "dep": "obl",
+        "nucleo": "duerme",
+        "genero": "Fem",
+        "numero": "Sing"
+      }
+    ],
+    "nltk_fcfg_arboles": 1,
+    "nltk_fcfg": "acepta"
+  },
+  {
+    "esperado": "G",
+    "oracion": "Llegaron los niños",
+    "fenomeno": "orden verbo-sujeto",
+    "spacy_analiza": true,
+    "spacy_raiz": "Llegaron",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "Llegaron",
+        "pos": "VERB",
+        "dep": "ROOT",
+        "nucleo": "Llegaron",
+        "genero": null,
+        "numero": "Plur"
+      },
+      {
+        "texto": "los",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "niños",
+        "genero": "Masc",
+        "numero": "Plur"
+      },
+      {
+        "texto": "niños",
+        "pos": "NOUN",
+        "dep": "nsubj",
+        "nucleo": "Llegaron",
+        "genero": "Masc",
+        "numero": "Plur"
+      }
+    ],
+    "nltk_fcfg_arboles": 0,
+    "nltk_fcfg": "rechaza"
+  },
+  {
+    "esperado": "G",
+    "oracion": "Lee un libro",
+    "fenomeno": "sujeto tácito",
+    "spacy_analiza": true,
+    "spacy_raiz": "Lee",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "Lee",
+        "pos": "PROPN",
+        "dep": "ROOT",
+        "nucleo": "Lee",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "un",
+        "pos": "DET",
+        "dep": "det",
+        "nucleo": "libro",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "libro",
+        "pos": "NOUN",
+        "dep": "obj",
+        "nucleo": "Lee",
+        "genero": "Masc",
+        "numero": "Sing"
+      }
+    ],
+    "nltk_fcfg_arboles": 0,
+    "nltk_fcfg": "rechaza"
+  },
+  {
+    "esperado": "G",
+    "oracion": "Ana , Luis y Pedro son alta , alto y alto respectivamente",
+    "fenomeno": "dependencias cruzadas",
+    "spacy_analiza": true,
+    "spacy_raiz": "alta",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "Ana",
+        "pos": "PROPN",
+        "dep": "nsubj",
+        "nucleo": "alta",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": ",",
+        "pos": "PUNCT",
+        "dep": "punct",
+        "nucleo": "Luis",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "Luis",
+        "pos": "PROPN",
+        "dep": "conj",
+        "nucleo": "Ana",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "y",
+        "pos": "CCONJ",
+        "dep": "cc",
+        "nucleo": "Pedro",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "Pedro",
+        "pos": "PROPN",
+        "dep": "conj",
+        "nucleo": "Ana",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "son",
+        "pos": "AUX",
+        "dep": "cop",
+        "nucleo": "alta",
+        "genero": null,
+        "numero": "Plur"
+      },
+      {
+        "texto": "alta",
+        "pos": "ADJ",
+        "dep": "ROOT",
+        "nucleo": "alta",
+        "genero": "Fem",
+        "numero": "Sing"
+      },
+      {
+        "texto": ",",
+        "pos": "PUNCT",
+        "dep": "punct",
+        "nucleo": "alto",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "alto",
+        "pos": "ADJ",
+        "dep": "conj",
+        "nucleo": "alta",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "y",
+        "pos": "CCONJ",
+        "dep": "cc",
+        "nucleo": "alto",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "alto",
+        "pos": "ADJ",
+        "dep": "conj",
+        "nucleo": "alta",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "respectivamente",
+        "pos": "ADV",
+        "dep": "advmod",
+        "nucleo": "alta",
+        "genero": null,
+        "numero": null
+      }
+    ],
+    "nltk_fcfg_arboles": 0,
+    "nltk_fcfg": "rechaza"
+  },
+  {
+    "esperado": "A",
+    "oracion": "Ana , Luis y Pedro son alto , alto y alta respectivamente",
+    "fenomeno": "dependencias cruzadas en orden espejo",
+    "spacy_analiza": true,
+    "spacy_raiz": "alto",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "Ana",
+        "pos": "PROPN",
+        "dep": "nsubj",
+        "nucleo": "alto",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": ",",
+        "pos": "PUNCT",
+        "dep": "punct",
+        "nucleo": "Luis",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "Luis",
+        "pos": "PROPN",
+        "dep": "conj",
+        "nucleo": "Ana",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "y",
+        "pos": "CCONJ",
+        "dep": "cc",
+        "nucleo": "Pedro",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "Pedro",
+        "pos": "PROPN",
+        "dep": "conj",
+        "nucleo": "Ana",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "son",
+        "pos": "AUX",
+        "dep": "cop",
+        "nucleo": "alto",
+        "genero": null,
+        "numero": "Plur"
+      },
+      {
+        "texto": "alto",
+        "pos": "ADJ",
+        "dep": "ROOT",
+        "nucleo": "alto",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": ",",
+        "pos": "PUNCT",
+        "dep": "punct",
+        "nucleo": "alto",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "alto",
+        "pos": "ADJ",
+        "dep": "conj",
+        "nucleo": "alto",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "y",
+        "pos": "CCONJ",
+        "dep": "cc",
+        "nucleo": "alta",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "alta",
+        "pos": "ADJ",
+        "dep": "conj",
+        "nucleo": "alto",
+        "genero": "Fem",
+        "numero": "Sing"
+      },
+      {
+        "texto": "respectivamente",
+        "pos": "ADV",
+        "dep": "advmod",
+        "nucleo": "alto",
+        "genero": null,
+        "numero": null
+      }
+    ],
+    "nltk_fcfg_arboles": 0,
+    "nltk_fcfg": "rechaza"
+  },
+  {
+    "esperado": "A",
+    "oracion": "Ana y Luis son alto y alta respectivamente",
+    "fenomeno": "dependencias cruzadas mal emparejadas",
+    "spacy_analiza": true,
+    "spacy_raiz": "alto",
+    "spacy_inconsistencias": [],
+    "spacy_tokens": [
+      {
+        "texto": "Ana",
+        "pos": "PROPN",
+        "dep": "nsubj",
+        "nucleo": "alto",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "y",
+        "pos": "CCONJ",
+        "dep": "cc",
+        "nucleo": "Luis",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "Luis",
+        "pos": "PROPN",
+        "dep": "conj",
+        "nucleo": "Ana",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "son",
+        "pos": "AUX",
+        "dep": "cop",
+        "nucleo": "alto",
+        "genero": null,
+        "numero": "Plur"
+      },
+      {
+        "texto": "alto",
+        "pos": "ADJ",
+        "dep": "ROOT",
+        "nucleo": "alto",
+        "genero": "Masc",
+        "numero": "Sing"
+      },
+      {
+        "texto": "y",
+        "pos": "CCONJ",
+        "dep": "cc",
+        "nucleo": "alta",
+        "genero": null,
+        "numero": null
+      },
+      {
+        "texto": "alta",
+        "pos": "ADJ",
+        "dep": "conj",
+        "nucleo": "alto",
+        "genero": "Fem",
+        "numero": "Sing"
+      },
+      {
+        "texto": "respectivamente",
+        "pos": "ADV",
+        "dep": "advmod",
+        "nucleo": "alto",
+        "genero": null,
+        "numero": null
+      }
+    ],
+    "nltk_fcfg_arboles": 0,
+    "nltk_fcfg": "rechaza"
+  }
+]

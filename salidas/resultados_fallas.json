@@ -1,0 +1,470 @@
+{
+  "tablas": [
+    {
+      "gramatica": "MiniC",
+      "no_terminales": 19,
+      "producciones": 34,
+      "conflictos": 1,
+      "detalle": [
+        "M[sino, ELSE] = { sino -> ELSE sentencia | sino -> ε }"
+      ]
+    },
+    {
+      "gramatica": "Español v1",
+      "no_terminales": 12,
+      "producciones": 23,
+      "conflictos": 6,
+      "detalle": [
+        "M[MODS_N, ADJ] = { MODS_N -> ADJ MODS_N | MODS_N -> ε }",
+        "M[MODS_N, PREP] = { MODS_N -> SP MODS_N | MODS_N -> ε }",
+        "M[MODS_N, QUE] = { MODS_N -> REL MODS_N | MODS_N -> ε }",
+        "M[MODS_V, ADV] = { MODS_V -> ADV MODS_V | MODS_V -> ε }",
+        "M[MODS_V, PREP] = { MODS_V -> SP MODS_V | MODS_V -> ε }",
+        "M[MODS_V, QUE] = { MODS_V -> SUB | MODS_V -> ε }"
+      ]
+    },
+    {
+      "gramatica": "Español v2",
+      "no_terminales": 44,
+      "producciones": 95,
+      "conflictos": 19,
+      "detalle": [
+        "M[MODS_N_f_p, ADJ_c_p] = { MODS_N_f_p -> ADJ_c_p MODS_N_f_p | MODS_N_f_p -> ε }",
+        "M[MODS_N_f_p, ADJ_f_p] = { MODS_N_f_p -> ADJ_f_p MODS_N_f_p | MODS_N_f_p -> ε }",
+        "M[MODS_N_f_p, PREP] = { MODS_N_f_p -> SP MODS_N_f_p | MODS_N_f_p -> ε }",
+        "M[MODS_N_f_p, QUE] = { MODS_N_f_p -> REL_f_p MODS_N_f_p | MODS_N_f_p -> ε }",
+        "M[MODS_N_f_s, ADJ_c_s] = { MODS_N_f_s -> ADJ_c_s MODS_N_f_s | MODS_N_f_s -> ε }",
+        "M[MODS_N_f_s, ADJ_f_s] = { MODS_N_f_s -> ADJ_f_s MODS_N_f_s | MODS_N_f_s -> ε }",
+        "M[MODS_N_f_s, PREP] = { MODS_N_f_s -> SP MODS_N_f_s | MODS_N_f_s -> ε }",
+        "M[MODS_N_f_s, QUE] = { MODS_N_f_s -> REL_f_s MODS_N_f_s | MODS_N_f_s -> ε }",
+        "M[MODS_N_m_p, ADJ_c_p] = { MODS_N_m_p -> ADJ_c_p MODS_N_m_p | MODS_N_m_p -> ε }",
+        "M[MODS_N_m_p, ADJ_m_p] = { MODS_N_m_p -> ADJ_m_p MODS_N_m_p | MODS_N_m_p -> ε }",
+        "M[MODS_N_m_p, PREP] = { MODS_N_m_p -> SP MODS_N_m_p | MODS_N_m_p -> ε }",
+        "M[MODS_N_m_p, QUE] = { MODS_N_m_p -> REL_m_p MODS_N_m_p | MODS_N_m_p -> ε }",
+        "M[MODS_N_m_s, ADJ_c_s] = { MODS_N_m_s -> ADJ_c_s MODS_N_m_s | MODS_N_m_s -> ε }",
+        "M[MODS_N_m_s, ADJ_m_s] = { MODS_N_m_s -> ADJ_m_s MODS_N_m_s | MODS_N_m_s -> ε }",
+        "M[MODS_N_m_s, PREP] = { MODS_N_m_s -> SP MODS_N_m_s | MODS_N_m_s -> ε }",
+        "M[MODS_N_m_s, QUE] = { MODS_N_m_s -> REL_m_s MODS_N_m_s | MODS_N_m_s -> ε }",
+        "M[MODS_V, ADV] = { MODS_V -> ADV MODS_V | MODS_V -> ε }",
+        "M[MODS_V, PREP] = { MODS_V -> SP MODS_V | MODS_V -> ε }",
+        "M[MODS_V, QUE] = { MODS_V -> SUB | MODS_V -> ε }"
+      ]
+    }
+  ],
+  "oraciones": [
+    {
+      "esperado": "G",
+      "oracion": "El perro negro come",
+      "fenomeno": "oración base, concordancia dentro del SN",
+      "v1": "acepta",
+      "v1_motivo": "",
+      "v1_arboles": 1,
+      "v1_tipo": "VP",
+      "v2": "acepta",
+      "v2_motivo": "",
+      "v2_arboles": 1,
+      "v2_tipo": "VP"
+    },
+    {
+      "esperado": "A",
+      "oracion": "Los gato negra come",
+      "fenomeno": "concordancia determinante-sustantivo-adjetivo",
+      "v1": "acepta",
+      "v1_motivo": "",
+      "v1_arboles": 1,
+      "v1_tipo": "FP",
+      "v2": "rechaza",
+      "v2_motivo": "No hay regla para NUC_m_p con 'gato' (N_m_s) en la posición 2. Se esperaba uno de: N_c_p, N_m_p",
+      "v2_arboles": 0,
+      "v2_tipo": "VN"
+    },
+    {
+      "esperado": "A",
+      "oracion": "El perro negro comen",
+      "fenomeno": "concordancia sujeto-verbo",
+      "v1": "acepta",
+      "v1_motivo": "",
+      "v1_arboles": 1,
+      "v1_tipo": "FP",
+      "v2": "rechaza",
+      "v2_motivo": "No hay regla para SV_m_s con 'comen' (V_p) en la posición 4. Se esperaba uno de: ADV, COP_s, V_s",
+      "v2_arboles": 0,
+      "v2_tipo": "VN"
+    },
+    {
+      "esperado": "G",
+      "oracion": "Las niñas pequeñas leen un libro",
+      "fenomeno": "concordancia femenino plural",
+      "v1": "acepta",
+      "v1_motivo": "",
+      "v1_arboles": 1,
+      "v1_tipo": "VP",
+      "v2": "acepta",
+      "v2_motivo": "",
+      "v2_arboles": 1,
+      "v2_tipo": "VP"
+    },
+    {
+      "esperado": "G",
+      "oracion": "La niña feliz duerme",
+      "fenomeno": "adjetivo de género común",
+      "v1": "acepta",
+      "v1_motivo": "",
+      "v1_arboles": 1,
+      "v1_tipo": "VP",
+      "v2": "acepta",
+      "v2_motivo": "",
+      "v2_arboles": 1,
+      "v2_tipo": "VP"
+    },
+    {
+      "esperado": "G",
+      "oracion": "La estudiante pequeña lee un libro en el parque",
+      "fenomeno": "sustantivo de género común y frase preposicional",
+      "v1": "acepta",
+      "v1_motivo": "",
+      "v1_arboles": 2,
+      "v1_tipo": "VP",
+      "v2": "acepta",
+      "v2_motivo": "",
+      "v2_arboles": 2,
+      "v2_tipo": "VP"
+    },
+    {
+      "esperado": "A",
+      "oracion": "La estudiante pequeño lee",
+      "fenomeno": "sustantivo de género común mal concordado",
+      "v1": "acepta",
+      "v1_motivo": "",
+      "v1_arboles": 1,
+      "v1_tipo": "FP",
+      "v2": "rechaza",
+      "v2_motivo": "No hay regla para SV_f_s con 'pequeño' (ADJ_m_s) en la posición 3. Se esperaba uno de: ADV, COP_s, V_s",
+      "v2_arboles": 0,
+      "v2_tipo": "VN"
+    },
+    {
+      "esperado": "G",
+      "oracion": "Los perros negros ladraron ayer",
+      "fenomeno": "pretérito y adverbio",
+      "v1": "acepta",
+      "v1_motivo": "",
+      "v1_arboles": 1,
+      "v1_tipo": "VP",
+      "v2": "acepta",
+      "v2_motivo": "",
+      "v2_arboles": 1,
+      "v2_tipo": "VP"
+    },
+    {
+      "esperado": "G",
+      "oracion": "Ayer los niños comieron mucho",
+      "fenomeno": "adverbio antepuesto",
+      "v1": "rechaza",
+      "v1_motivo": "No hay regla para O con 'ayer' (ADV) en la posición 1. Se esperaba uno de: DET, NP",
+      "v1_arboles": 0,
+      "v1_tipo": "FN",
+      "v2": "rechaza",
+      "v2_motivo": "No hay regla para O con 'ayer' (ADV) en la posición 1. Se esperaba uno de: DET_f_p, DET_f_s, DET_m_p, DET_m_s, NP_f_s, NP_m_s",
+      "v2_arboles": 0,
+      "v2_tipo": "FN"
+    },
+    {
+      "esperado": "G",
+      "oracion": "El perro que ladra come rápidamente",
+      "fenomeno": "relativa de sujeto",
+      "v1": "acepta",
+      "v1_motivo": "",
+      "v1_arboles": 1,
+      "v1_tipo": "VP",
+      "v2": "acepta",
+      "v2_motivo": "",
+      "v2_arboles": 1,
+      "v2_tipo": "VP"
+    },
+    {
+      "esperado": "A",
+      "oracion": "El perro que ladran come",
+      "fenomeno": "concordancia dentro de la relativa",
+      "v1": "acepta",
+      "v1_motivo": "",
+      "v1_arboles": 1,
+      "v1_tipo": "FP",
+      "v2": "rechaza",
+      "v2_motivo": "No hay regla para REL_RESTO_m_s con 'ladran' (V_p) en la posición 4. Se esperaba uno de: ADV, COP_s, DET_f_p, DET_f_s, DET_m_p, DET_m_s, NP_f_s, NP_m_s, V_s",
+      "v2_arboles": 0,
+      "v2_tipo": "VN"
+    },
+    {
+      "esperado": "G",
+      "oracion": "Las niñas que el profesor regañó están cansadas",
+      "fenomeno": "concordancia a distancia con relativa de objeto",
+      "v1": "acepta",
+      "v1_motivo": "",
+      "v1_arboles": 1,
+      "v1_tipo": "VP",
+      "v2": "acepta",
+      "v2_motivo": "",
+      "v2_arboles": 1,
+      "v2_tipo": "VP"
+    },
+    {
+      "esperado": "A",
+      "oracion": "Las niñas que el profesor regañó están cansados",
+      "fenomeno": "concordancia a distancia",
+      "v1": "acepta",
+      "v1_motivo": "",
+      "v1_arboles": 1,
+      "v1_tipo": "FP",
+      "v2": "rechaza",
+      "v2_motivo": "No hay regla para ATRIB_f_p con 'cansados' (ADJ_m_p) en la posición 8. Se esperaba uno de: ADJ_c_p, ADJ_f_p",
+      "v2_arboles": 0,
+      "v2_tipo": "VN"
+    },
+    {
+      "esperado": "A",
+      "oracion": "Las niñas que el profesor regañó el libro están cansadas",
+      "fenomeno": "hueco de la relativa ocupado",
+      "v1": "acepta",
+      "v1_motivo": "",
+      "v1_arboles": 1,
+      "v1_tipo": "FP",
+      "v2": "rechaza",
+      "v2_motivo": "No hay regla para MODS_V con 'el' (DET_m_s) en la posición 7. Se esperaba uno de: $, ADJ_c_p, ADJ_c_s, ADJ_f_p, ADJ_f_s, ADJ_m_p, ADJ_m_s, ADV, COP_p, COP_s, PREP, QUE, V_p, V_s",
+      "v2_arboles": 0,
+      "v2_tipo": "VN"
+    },
+    {
+      "esperado": "G",
+      "oracion": "Luis dice que los niños comen rápidamente",
+      "fenomeno": "subordinada sustantiva",
+      "v1": "acepta",
+      "v1_motivo": "",
+      "v1_arboles": 1,
+      "v1_tipo": "VP",
+      "v2": "acepta",
+      "v2_motivo": "",
+      "v2_arboles": 1,
+      "v2_tipo": "VP"
+    },
+    {
+      "esperado": "G",
+      "oracion": "Ana vio el perro con el telescopio",
+      "fenomeno": "ambigüedad de adjunción de la frase preposicional",
+      "v1": "acepta",
+      "v1_motivo": "",
+      "v1_arboles": 2,
+      "v1_tipo": "VP",
+      "v2": "acepta",
+      "v2_motivo": "",
+      "v2_arboles": 2,
+      "v2_tipo": "VP"
+    },
+    {
+      "esperado": "G",
+      "oracion": "Ana vio el perro en el parque con el telescopio",
+      "fenomeno": "ambigüedad de adjunción con dos frases preposicionales",
+      "v1": "acepta",
+      "v1_motivo": "",
+      "v1_arboles": 5,
+      "v1_tipo": "VP",
+      "v2": "acepta",
+      "v2_motivo": "",
+      "v2_arboles": 5,
+      "v2_tipo": "VP"
+    },
+    {
+      "esperado": "G",
+      "oracion": "El gato de la profesora duerme en la casa",
+      "fenomeno": "frase preposicional dentro del SN",
+      "v1": "acepta",
+      "v1_motivo": "",
+      "v1_arboles": 1,
+      "v1_tipo": "VP",
+      "v2": "acepta",
+      "v2_motivo": "",
+      "v2_arboles": 1,
+      "v2_tipo": "VP"
+    },
+    {
+      "esperado": "G",
+      "oracion": "Llegaron los niños",
+      "fenomeno": "orden verbo-sujeto",
+      "v1": "rechaza",
+      "v1_motivo": "No hay regla para O con 'llegaron' (V) en la posición 1. Se esperaba uno de: DET, NP",
+      "v1_arboles": 0,
+      "v1_tipo": "FN",
+      "v2": "rechaza",
+      "v2_motivo": "No hay regla para O con 'llegaron' (V_p) en la posición 1. Se esperaba uno de: DET_f_p, DET_f_s, DET_m_p, DET_m_s, NP_f_s, NP_m_s",
+      "v2_arboles": 0,
+      "v2_tipo": "FN"
+    },
+    {
+      "esperado": "G",
+      "oracion": "Lee un libro",
+      "fenomeno": "sujeto tácito",
+      "v1": "rechaza",
+      "v1_motivo": "No hay regla para O con 'lee' (V) en la posición 1. Se esperaba uno de: DET, NP",
+      "v1_arboles": 0,
+      "v1_tipo": "FN",
+      "v2": "rechaza",
+      "v2_motivo": "No hay regla para O con 'lee' (V_s) en la posición 1. Se esperaba uno de: DET_f_p, DET_f_s, DET_m_p, DET_m_s, NP_f_s, NP_m_s",
+      "v2_arboles": 0,
+      "v2_tipo": "FN"
+    },
+    {
+      "esperado": "G",
+      "oracion": "Ana , Luis y Pedro son alta , alto y alto respectivamente",
+      "fenomeno": "dependencias cruzadas",
+      "v1": "rechaza",
+      "v1_motivo": "No hay regla para SV con ',' (SEP) en la posición 2. Se esperaba uno de: ADV, COP, V",
+      "v1_arboles": 0,
+      "v1_tipo": "FN",
+      "v2": "rechaza",
+      "v2_motivo": "No hay regla para SV_f_s con ',' (SEP) en la posición 2. Se esperaba uno de: ADV, COP_s, V_s",
+      "v2_arboles": 0,
+      "v2_tipo": "FN"
+    },
+    {
+      "esperado": "A",
+      "oracion": "Ana , Luis y Pedro son alto , alto y alta respectivamente",
+      "fenomeno": "dependencias cruzadas en orden espejo",
+      "v1": "rechaza",
+      "v1_motivo": "No hay regla para SV con ',' (SEP) en la posición 2. Se esperaba uno de: ADV, COP, V",
+      "v1_arboles": 0,
+      "v1_tipo": "VN",
+      "v2": "rechaza",
+      "v2_motivo": "No hay regla para SV_f_s con ',' (SEP) en la posición 2. Se esperaba uno de: ADV, COP_s, V_s",
+      "v2_arboles": 0,
+      "v2_tipo": "VN"
+    },
+    {
+      "esperado": "A",
+      "oracion": "Ana y Luis son alto y alta respectivamente",
+      "fenomeno": "dependencias cruzadas mal emparejadas",
+      "v1": "rechaza",
+      "v1_motivo": "No hay regla para SV con 'y' (SEP) en la posición 2. Se esperaba uno de: ADV, COP, V",
+      "v1_arboles": 0,
+      "v1_tipo": "VN",
+      "v2": "rechaza",
+      "v2_motivo": "No hay regla para SV_f_s con 'y' (SEP) en la posición 2. Se esperaba uno de: ADV, COP_s, V_s",
+      "v2_arboles": 0,
+      "v2_tipo": "VN"
+    }
+  ],
+  "metricas": {
+    "v1": {
+      "VP": 11,
+      "VN": 2,
+      "FP": 6,
+      "FN": 4,
+      "exactitud": 0.565
+    },
+    "v2": {
+      "VP": 11,
+      "VN": 8,
+      "FP": 0,
+      "FN": 4,
+      "exactitud": 0.826
+    }
+  },
+  "ambiguedad": [
+    {
+      "frases_prep": 0,
+      "oracion": "ana vio el perro",
+      "arboles": 1
+    },
+    {
+      "frases_prep": 1,
+      "oracion": "ana vio el perro en el parque",
+      "arboles": 2
+    },
+    {
+      "frases_prep": 2,
+      "oracion": "ana vio el perro en el parque con el telescopio",
+      "arboles": 5
+    },
+    {
+      "frases_prep": 3,
+      "oracion": "ana vio el perro en el parque con el telescopio sobre la mesa",
+      "arboles": 14
+    },
+    {
+      "frases_prep": 4,
+      "oracion": "ana vio el perro en el parque con el telescopio sobre la mesa de la niña",
+      "arboles": 42
+    },
+    {
+      "frases_prep": 5,
+      "oracion": "ana vio el perro en el parque con el telescopio sobre la mesa de la niña en la casa",
+      "arboles": 132
+    },
+    {
+      "frases_prep": 6,
+      "oracion": "ana vio el perro en el parque con el telescopio sobre la mesa de la niña en la casa con el libro",
+      "arboles": 429
+    }
+  ],
+  "explosion": [
+    {
+      "caso": "Sin rasgos (v1)",
+      "combinaciones": 1,
+      "no_terminales": 12,
+      "producciones": 23
+    },
+    {
+      "caso": "Número (s, p)",
+      "combinaciones": 2,
+      "no_terminales": 26,
+      "producciones": 52
+    },
+    {
+      "caso": "Género y número (v2)",
+      "combinaciones": 4,
+      "no_terminales": 44,
+      "producciones": 95
+    },
+    {
+      "caso": "Género, número y persona",
+      "combinaciones": 12,
+      "no_terminales": 116,
+      "producciones": 267
+    },
+    {
+      "caso": "Lo anterior + formalidad (tú/usted)",
+      "combinaciones": 16,
+      "no_terminales": 152,
+      "producciones": 351
+    }
+  ],
+  "respectivamente": [
+    {
+      "esperado": "G",
+      "oracion": "Ana , Luis y Pedro son alta , alto y alto respectivamente",
+      "descripcion": "orden cruzado correcto",
+      "v3a": "acepta",
+      "v3b": "rechaza"
+    },
+    {
+      "esperado": "A",
+      "oracion": "Ana , Luis y Pedro son alto , alto y alta respectivamente",
+      "descripcion": "orden espejo (incorrecto)",
+      "v3a": "acepta",
+      "v3b": "acepta"
+    },
+    {
+      "esperado": "A",
+      "oracion": "Ana y Luis son alto y alta respectivamente",
+      "descripcion": "mal emparejado",
+      "v3a": "acepta",
+      "v3b": "acepta"
+    },
+    {
+      "esperado": "G",
+      "oracion": "Ana y Luis son alta y alto respectivamente",
+      "descripcion": "orden cruzado correcto",
+      "v3a": "acepta",
+      "v3b": "rechaza"
+    }
+  ]
+}

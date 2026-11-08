@@ -1,0 +1,258 @@
+====================================================================================================
+COMPARACIÓN CON NLP: spaCy (estadístico) y NLTK (gramática de rasgos)
+Gramática de rasgos de NLTK: 21 reglas sintácticas (la v2 sin rasgos necesitó 95 producciones para lo mismo)
+====================================================================================================
+
+ 1. [G] El perro negro come
+    spaCy: siempre produce un análisis (raíz = 'come'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: acepta (1 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    El            DET    det       perro         Masc Sing 
+    perro         PROPN  nsubj     come          -    -    
+    negro         PROPN  flat      perro         -    -    
+    come          PROPN  ROOT      come          -    -    
+ 2. [A] Los gato negra come
+    spaCy: siempre produce un análisis (raíz = 'come'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: rechaza (0 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    Los           DET    det       gato          Masc Plur 
+    gato          NOUN   nsubj     come          -    -    
+    negra         ADJ    amod      gato          Fem  Sing 
+    come          PROPN  ROOT      come          -    -    
+ 3. [A] El perro negro comen
+    spaCy: siempre produce un análisis (raíz = 'comen'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: rechaza (0 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    El            DET    det       perro         Masc Sing 
+    perro         PROPN  nsubj     comen         -    -    
+    negro         ADJ    flat      perro         Masc Sing 
+    comen         NOUN   ROOT      comen         Masc Sing 
+ 4. [G] Las niñas pequeñas leen un libro
+    spaCy: siempre produce un análisis (raíz = 'leen'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: acepta (1 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    Las           DET    det       niñas         Fem  Plur 
+    niñas         NOUN   nsubj     leen          Fem  Plur 
+    pequeñas      ADJ    amod      niñas         Fem  Plur 
+    leen          VERB   ROOT      leen          -    Plur 
+    un            DET    det       libro         Masc Sing 
+    libro         NOUN   obj       leen          Masc Sing 
+ 5. [G] La niña feliz duerme
+    spaCy: siempre produce un análisis (raíz = 'duerme'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: acepta (1 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    La            DET    det       niña          Fem  Sing 
+    niña          NOUN   nsubj     duerme        Fem  Sing 
+    feliz         ADJ    amod      niña          -    Sing 
+    duerme        VERB   ROOT      duerme        -    Sing 
+ 6. [G] La estudiante pequeña lee un libro en el parque
+    spaCy: siempre produce un análisis (raíz = 'lee'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: acepta (2 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    La            DET    det       estudiante    Fem  Sing 
+    estudiante    NOUN   nsubj     lee           -    Sing 
+    pequeña       ADJ    amod      estudiante    Fem  Sing 
+    lee           VERB   ROOT      lee           -    Sing 
+    un            DET    det       libro         Masc Sing 
+    libro         NOUN   obj       lee           Masc Sing 
+    en            ADP    case      parque        -    -    
+    el            DET    det       parque        Masc Sing 
+    parque        NOUN   obl       lee           Masc Sing 
+ 7. [A] La estudiante pequeño lee
+    spaCy: siempre produce un análisis (raíz = 'estudiante'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: rechaza (0 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    La            DET    det       estudiante    Fem  Sing 
+    estudiante    NOUN   ROOT      estudiante    -    Sing 
+    pequeño       ADJ    amod      estudiante    Masc Sing 
+    lee           PROPN  appos     estudiante    -    -    
+ 8. [G] Los perros negros ladraron ayer
+    spaCy: siempre produce un análisis (raíz = 'ladraron'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: acepta (1 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    Los           DET    det       perros        Masc Plur 
+    perros        NOUN   nsubj     ladraron      Masc Plur 
+    negros        ADJ    amod      perros        Masc Plur 
+    ladraron      VERB   ROOT      ladraron      -    Plur 
+    ayer          ADV    advmod    ladraron      -    -    
+ 9. [G] Ayer los niños comieron mucho
+    spaCy: siempre produce un análisis (raíz = 'comieron'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: rechaza (0 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    Ayer          ADV    advmod    comieron      -    -    
+    los           DET    det       niños         Masc Plur 
+    niños         NOUN   nsubj     comieron      Masc Plur 
+    comieron      VERB   ROOT      comieron      -    Plur 
+    mucho         ADV    advmod    comieron      -    -    
+10. [G] El perro que ladra come rápidamente
+    spaCy: siempre produce un análisis (raíz = 'perro'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: acepta (1 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    El            DET    det       perro         Masc Sing 
+    perro         NOUN   ROOT      perro         Masc Sing 
+    que           PRON   mark      come          -    -    
+    ladra         PROPN  nsubj     come          -    -    
+    come          VERB   acl       perro         -    Sing 
+    rápidamente   ADV    advmod    come          -    -    
+11. [A] El perro que ladran come
+    spaCy: siempre produce un análisis (raíz = 'come'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: rechaza (0 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    El            DET    det       perro         Masc Sing 
+    perro         NOUN   nsubj     come          Masc Sing 
+    que           PRON   nsubj     ladran        -    -    
+    ladran        VERB   acl       perro         -    Plur 
+    come          PROPN  ROOT      come          -    -    
+12. [G] Las niñas que el profesor regañó están cansadas
+    spaCy: siempre produce un análisis (raíz = 'cansadas'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: acepta (1 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    Las           DET    det       niñas         Fem  Plur 
+    niñas         NOUN   nsubj     cansadas      Fem  Plur 
+    que           PRON   obj       regañó        -    -    
+    el            DET    det       profesor      Masc Sing 
+    profesor      NOUN   nsubj     regañó        Masc Sing 
+    regañó        VERB   acl       niñas         -    Sing 
+    están         AUX    cop       cansadas      -    Plur 
+    cansadas      ADJ    ROOT      cansadas      Fem  Plur 
+13. [A] Las niñas que el profesor regañó están cansados
+    spaCy: siempre produce un análisis (raíz = 'cansados'); inconsistencias de concordancia detectadas: ["Gender: 'cansados'=Masc vs 'niñas'=Fem"]
+    NLTK con rasgos: rechaza (0 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    Las           DET    det       niñas         Fem  Plur 
+    niñas         NOUN   nsubj     cansados      Fem  Plur 
+    que           PRON   obj       regañó        -    -    
+    el            DET    det       profesor      Masc Sing 
+    profesor      NOUN   nsubj     regañó        Masc Sing 
+    regañó        VERB   acl       niñas         -    Sing 
+    están         AUX    cop       cansados      -    Plur 
+    cansados      ADJ    ROOT      cansados      Masc Plur 
+14. [A] Las niñas que el profesor regañó el libro están cansadas
+    spaCy: siempre produce un análisis (raíz = 'cansadas'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: rechaza (0 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    Las           DET    det       niñas         Fem  Plur 
+    niñas         NOUN   nsubj     cansadas      Fem  Plur 
+    que           PRON   obj       regañó        -    -    
+    el            DET    det       profesor      Masc Sing 
+    profesor      NOUN   nsubj     regañó        Masc Sing 
+    regañó        VERB   acl       niñas         -    Sing 
+    el            DET    det       libro         Masc Sing 
+    libro         NOUN   obj       regañó        Masc Sing 
+    están         AUX    cop       cansadas      -    Plur 
+    cansadas      ADJ    ROOT      cansadas      Fem  Plur 
+15. [G] Luis dice que los niños comen rápidamente
+    spaCy: siempre produce un análisis (raíz = 'dice'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: acepta (1 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    Luis          PROPN  nsubj     dice          -    -    
+    dice          VERB   ROOT      dice          -    Sing 
+    que           SCONJ  mark      comen         -    -    
+    los           DET    det       niños         Masc Plur 
+    niños         NOUN   nsubj     comen         Masc Plur 
+    comen         VERB   ccomp     dice          -    Plur 
+    rápidamente   ADV    advmod    comen         -    -    
+16. [G] Ana vio el perro con el telescopio
+    spaCy: siempre produce un análisis (raíz = 'vio'); inconsistencias de concordancia detectadas: ninguna
+    spaCy eligió UNA sola lectura: 'telescopio' depende de 'vio'
+    NLTK con rasgos: acepta (2 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    Ana           PROPN  nsubj     vio           -    -    
+    vio           VERB   ROOT      vio           -    Sing 
+    el            DET    det       perro         Masc Sing 
+    perro         NOUN   obj       vio           Masc Sing 
+    con           ADP    case      telescopio    -    -    
+    el            DET    det       telescopio    Masc Sing 
+    telescopio    NOUN   obl       vio           Masc Sing 
+17. [G] Ana vio el perro en el parque con el telescopio
+    spaCy: siempre produce un análisis (raíz = 'vio'); inconsistencias de concordancia detectadas: ninguna
+    spaCy eligió UNA sola lectura: 'telescopio' depende de 'vio'
+    NLTK con rasgos: acepta (5 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    Ana           PROPN  nsubj     vio           -    -    
+    vio           VERB   ROOT      vio           -    Sing 
+    el            DET    det       perro         Masc Sing 
+    perro         NOUN   obj       vio           Masc Sing 
+    en            ADP    case      parque        -    -    
+    el            DET    det       parque        Masc Sing 
+    parque        NOUN   obl       vio           Masc Sing 
+    con           ADP    case      telescopio    -    -    
+    el            DET    det       telescopio    Masc Sing 
+    telescopio    NOUN   obl       vio           Masc Sing 
+18. [G] El gato de la profesora duerme en la casa
+    spaCy: siempre produce un análisis (raíz = 'duerme'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: acepta (1 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    El            DET    det       gato          Masc Sing 
+    gato          NOUN   nsubj     duerme        Masc Sing 
+    de            ADP    case      profesora     -    -    
+    la            DET    det       profesora     Fem  Sing 
+    profesora     NOUN   nmod      gato          Fem  Sing 
+    duerme        VERB   ROOT      duerme        -    Sing 
+    en            ADP    case      casa          -    -    
+    la            DET    det       casa          Fem  Sing 
+    casa          NOUN   obl       duerme        Fem  Sing 
+19. [G] Llegaron los niños
+    spaCy: siempre produce un análisis (raíz = 'Llegaron'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: rechaza (0 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    Llegaron      VERB   ROOT      Llegaron      -    Plur 
+    los           DET    det       niños         Masc Plur 
+    niños         NOUN   nsubj     Llegaron      Masc Plur 
+20. [G] Lee un libro
+    spaCy: siempre produce un análisis (raíz = 'Lee'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: rechaza (0 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    Lee           PROPN  ROOT      Lee           -    -    
+    un            DET    det       libro         Masc Sing 
+    libro         NOUN   obj       Lee           Masc Sing 
+21. [G] Ana , Luis y Pedro son alta , alto y alto respectivamente
+    spaCy: siempre produce un análisis (raíz = 'alta'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: rechaza (0 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    Ana           PROPN  nsubj     alta          -    -    
+    ,             PUNCT  punct     Luis          -    -    
+    Luis          PROPN  conj      Ana           -    -    
+    y             CCONJ  cc        Pedro         -    -    
+    Pedro         PROPN  conj      Ana           -    -    
+    son           AUX    cop       alta          -    Plur 
+    alta          ADJ    ROOT      alta          Fem  Sing 
+    ,             PUNCT  punct     alto          -    -    
+    alto          ADJ    conj      alta          Masc Sing 
+    y             CCONJ  cc        alto          -    -    
+    alto          ADJ    conj      alta          Masc Sing 
+    respectivamenteADV    advmod    alta          -    -    
+22. [A] Ana , Luis y Pedro son alto , alto y alta respectivamente
+    spaCy: siempre produce un análisis (raíz = 'alto'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: rechaza (0 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    Ana           PROPN  nsubj     alto          -    -    
+    ,             PUNCT  punct     Luis          -    -    
+    Luis          PROPN  conj      Ana           -    -    
+    y             CCONJ  cc        Pedro         -    -    
+    Pedro         PROPN  conj      Ana           -    -    
+    son           AUX    cop       alto          -    Plur 
+    alto          ADJ    ROOT      alto          Masc Sing 
+    ,             PUNCT  punct     alto          -    -    
+    alto          ADJ    conj      alto          Masc Sing 
+    y             CCONJ  cc        alta          -    -    
+    alta          ADJ    conj      alto          Fem  Sing 
+    respectivamenteADV    advmod    alto          -    -    
+23. [A] Ana y Luis son alto y alta respectivamente
+    spaCy: siempre produce un análisis (raíz = 'alto'); inconsistencias de concordancia detectadas: ninguna
+    NLTK con rasgos: rechaza (0 árbol(es))
+    palabra       POS    dep       núcleo        gén  núm  
+    Ana           PROPN  nsubj     alto          -    -    
+    y             CCONJ  cc        Luis          -    -    
+    Luis          PROPN  conj      Ana           -    -    
+    son           AUX    cop       alto          -    Plur 
+    alto          ADJ    ROOT      alto          Masc Sing 
+    y             CCONJ  cc        alta          -    -    
+    alta          ADJ    conj      alto          Fem  Sing 
+    respectivamenteADV    advmod    alto          -    -    
+====================================================================================================
+RESUMEN
+  Oraciones agramaticales: 8. spaCy las analizó todas (no rechaza nada); las reglas sobre sus rasgos marcaron inconsistencia en 1.
+  Verbos mal etiquetados por spaCy en oraciones gramaticales: 3 de 18
+  Verbos mal etiquetados por spaCy en oraciones agramaticales: 4 de 11
+  NLTK con rasgos: aciertos=19 de 23, FP=0, FN=4

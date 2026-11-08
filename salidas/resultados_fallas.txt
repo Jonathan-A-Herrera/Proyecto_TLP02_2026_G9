@@ -1,0 +1,138 @@
+====================================================================================================
+1. TAMAÑO Y CONFLICTOS LL(1) DE CADA GRAMÁTICA
+====================================================================================================
+MiniC: 19 no terminales, 34 producciones, 1 conflictos LL(1)
+    M[sino, ELSE] = { sino -> ELSE sentencia | sino -> ε }
+Español v1: 12 no terminales, 23 producciones, 6 conflictos LL(1)
+    M[MODS_N, ADJ] = { MODS_N -> ADJ MODS_N | MODS_N -> ε }
+    M[MODS_N, PREP] = { MODS_N -> SP MODS_N | MODS_N -> ε }
+    M[MODS_N, QUE] = { MODS_N -> REL MODS_N | MODS_N -> ε }
+    M[MODS_V, ADV] = { MODS_V -> ADV MODS_V | MODS_V -> ε }
+    M[MODS_V, PREP] = { MODS_V -> SP MODS_V | MODS_V -> ε }
+    M[MODS_V, QUE] = { MODS_V -> SUB | MODS_V -> ε }
+Español v2: 44 no terminales, 95 producciones, 19 conflictos LL(1)
+    M[MODS_N_f_p, ADJ_c_p] = { MODS_N_f_p -> ADJ_c_p MODS_N_f_p | MODS_N_f_p -> ε }
+    M[MODS_N_f_p, ADJ_f_p] = { MODS_N_f_p -> ADJ_f_p MODS_N_f_p | MODS_N_f_p -> ε }
+    M[MODS_N_f_p, PREP] = { MODS_N_f_p -> SP MODS_N_f_p | MODS_N_f_p -> ε }
+    M[MODS_N_f_p, QUE] = { MODS_N_f_p -> REL_f_p MODS_N_f_p | MODS_N_f_p -> ε }
+    M[MODS_N_f_s, ADJ_c_s] = { MODS_N_f_s -> ADJ_c_s MODS_N_f_s | MODS_N_f_s -> ε }
+    M[MODS_N_f_s, ADJ_f_s] = { MODS_N_f_s -> ADJ_f_s MODS_N_f_s | MODS_N_f_s -> ε }
+    M[MODS_N_f_s, PREP] = { MODS_N_f_s -> SP MODS_N_f_s | MODS_N_f_s -> ε }
+    M[MODS_N_f_s, QUE] = { MODS_N_f_s -> REL_f_s MODS_N_f_s | MODS_N_f_s -> ε }
+    ... y 11 conflictos más del mismo tipo
+
+====================================================================================================
+2. RESULTADOS DE v1 Y v2 SOBRE EL CONJUNTO DE ORACIONES
+   VP: aceptó una correcta | VN: rechazó una incorrecta | FP: aceptó una incorrecta | FN: rechazó una correcta
+====================================================================================================
+ 1. [G] El perro negro come
+      fenómeno: oración base, concordancia dentro del SN
+      v1: acepta  (VP, árboles=1)   v2: acepta  (VP, árboles=1)
+ 2. [A] Los gato negra come
+      fenómeno: concordancia determinante-sustantivo-adjetivo
+      v1: acepta  (FP, árboles=1)   v2: rechaza (VN, árboles=0)
+      motivo v2: No hay regla para NUC_m_p con 'gato' (N_m_s) en la posición 2. Se esperaba uno de: N_c_p, N_m_p
+ 3. [A] El perro negro comen
+      fenómeno: concordancia sujeto-verbo
+      v1: acepta  (FP, árboles=1)   v2: rechaza (VN, árboles=0)
+      motivo v2: No hay regla para SV_m_s con 'comen' (V_p) en la posición 4. Se esperaba uno de: ADV, COP_s, V_s
+ 4. [G] Las niñas pequeñas leen un libro
+      fenómeno: concordancia femenino plural
+      v1: acepta  (VP, árboles=1)   v2: acepta  (VP, árboles=1)
+ 5. [G] La niña feliz duerme
+      fenómeno: adjetivo de género común
+      v1: acepta  (VP, árboles=1)   v2: acepta  (VP, árboles=1)
+ 6. [G] La estudiante pequeña lee un libro en el parque
+      fenómeno: sustantivo de género común y frase preposicional
+      v1: acepta  (VP, árboles=2)   v2: acepta  (VP, árboles=2)
+ 7. [A] La estudiante pequeño lee
+      fenómeno: sustantivo de género común mal concordado
+      v1: acepta  (FP, árboles=1)   v2: rechaza (VN, árboles=0)
+      motivo v2: No hay regla para SV_f_s con 'pequeño' (ADJ_m_s) en la posición 3. Se esperaba uno de: ADV, COP_s, V_s
+ 8. [G] Los perros negros ladraron ayer
+      fenómeno: pretérito y adverbio
+      v1: acepta  (VP, árboles=1)   v2: acepta  (VP, árboles=1)
+ 9. [G] Ayer los niños comieron mucho
+      fenómeno: adverbio antepuesto
+      v1: rechaza (FN, árboles=0)   v2: rechaza (FN, árboles=0)
+      motivo v2: No hay regla para O con 'ayer' (ADV) en la posición 1. Se esperaba uno de: DET_f_p, DET_f_s, DET_m_p, DET_m_s, NP_f_s, NP_m_s
+10. [G] El perro que ladra come rápidamente
+      fenómeno: relativa de sujeto
+      v1: acepta  (VP, árboles=1)   v2: acepta  (VP, árboles=1)
+11. [A] El perro que ladran come
+      fenómeno: concordancia dentro de la relativa
+      v1: acepta  (FP, árboles=1)   v2: rechaza (VN, árboles=0)
+      motivo v2: No hay regla para REL_RESTO_m_s con 'ladran' (V_p) en la posición 4. Se esperaba uno de: ADV, COP_s, DET_f_p, DET_f_s, DET_m_p, DET_m_s, NP_
+12. [G] Las niñas que el profesor regañó están cansadas
+      fenómeno: concordancia a distancia con relativa de objeto
+      v1: acepta  (VP, árboles=1)   v2: acepta  (VP, árboles=1)
+13. [A] Las niñas que el profesor regañó están cansados
+      fenómeno: concordancia a distancia
+      v1: acepta  (FP, árboles=1)   v2: rechaza (VN, árboles=0)
+      motivo v2: No hay regla para ATRIB_f_p con 'cansados' (ADJ_m_p) en la posición 8. Se esperaba uno de: ADJ_c_p, ADJ_f_p
+14. [A] Las niñas que el profesor regañó el libro están cansadas
+      fenómeno: hueco de la relativa ocupado
+      v1: acepta  (FP, árboles=1)   v2: rechaza (VN, árboles=0)
+      motivo v2: No hay regla para MODS_V con 'el' (DET_m_s) en la posición 7. Se esperaba uno de: $, ADJ_c_p, ADJ_c_s, ADJ_f_p, ADJ_f_s, ADJ_m_p, ADJ_m_s, A
+15. [G] Luis dice que los niños comen rápidamente
+      fenómeno: subordinada sustantiva
+      v1: acepta  (VP, árboles=1)   v2: acepta  (VP, árboles=1)
+16. [G] Ana vio el perro con el telescopio
+      fenómeno: ambigüedad de adjunción de la frase preposicional
+      v1: acepta  (VP, árboles=2)   v2: acepta  (VP, árboles=2)
+17. [G] Ana vio el perro en el parque con el telescopio
+      fenómeno: ambigüedad de adjunción con dos frases preposicionales
+      v1: acepta  (VP, árboles=5)   v2: acepta  (VP, árboles=5)
+18. [G] El gato de la profesora duerme en la casa
+      fenómeno: frase preposicional dentro del SN
+      v1: acepta  (VP, árboles=1)   v2: acepta  (VP, árboles=1)
+19. [G] Llegaron los niños
+      fenómeno: orden verbo-sujeto
+      v1: rechaza (FN, árboles=0)   v2: rechaza (FN, árboles=0)
+      motivo v2: No hay regla para O con 'llegaron' (V_p) en la posición 1. Se esperaba uno de: DET_f_p, DET_f_s, DET_m_p, DET_m_s, NP_f_s, NP_m_s
+20. [G] Lee un libro
+      fenómeno: sujeto tácito
+      v1: rechaza (FN, árboles=0)   v2: rechaza (FN, árboles=0)
+      motivo v2: No hay regla para O con 'lee' (V_s) en la posición 1. Se esperaba uno de: DET_f_p, DET_f_s, DET_m_p, DET_m_s, NP_f_s, NP_m_s
+21. [G] Ana , Luis y Pedro son alta , alto y alto respectivamente
+      fenómeno: dependencias cruzadas
+      v1: rechaza (FN, árboles=0)   v2: rechaza (FN, árboles=0)
+      motivo v2: No hay regla para SV_f_s con ',' (SEP) en la posición 2. Se esperaba uno de: ADV, COP_s, V_s
+22. [A] Ana , Luis y Pedro son alto , alto y alta respectivamente
+      fenómeno: dependencias cruzadas en orden espejo
+      v1: rechaza (VN, árboles=0)   v2: rechaza (VN, árboles=0)
+      motivo v2: No hay regla para SV_f_s con ',' (SEP) en la posición 2. Se esperaba uno de: ADV, COP_s, V_s
+23. [A] Ana y Luis son alto y alta respectivamente
+      fenómeno: dependencias cruzadas mal emparejadas
+      v1: rechaza (VN, árboles=0)   v2: rechaza (VN, árboles=0)
+      motivo v2: No hay regla para SV_f_s con 'y' (SEP) en la posición 2. Se esperaba uno de: ADV, COP_s, V_s
+Resumen v1: {'VP': 11, 'VN': 2, 'FP': 6, 'FN': 4, 'exactitud': 0.565}
+Resumen v2: {'VP': 11, 'VN': 8, 'FP': 0, 'FN': 4, 'exactitud': 0.826}
+
+====================================================================================================
+3. AMBIGÜEDAD ESTRUCTURAL: ÁRBOLES SEGÚN EL NÚMERO DE FRASES PREPOSICIONALES (v1, ChartParser de NLTK)
+====================================================================================================
+  0 SP ->    1 árboles   (ana vio el perro)
+  1 SP ->    2 árboles   (ana vio el perro en el parque)
+  2 SP ->    5 árboles   (ana vio el perro en el parque con el telescopio)
+  3 SP ->   14 árboles   (ana vio el perro en el parque con el telescopio sobre la mesa)
+  4 SP ->   42 árboles   (ana vio el perro en el parque con el telescopio sobre la mesa de la niña)
+  5 SP ->  132 árboles   (ana vio el perro en el parque con el telescopio sobre la mesa de la niña en la casa)
+  6 SP ->  429 árboles   (ana vio el perro en el parque con el telescopio sobre la mesa de la niña en la casa con el libro)
+
+====================================================================================================
+4. EXPLOSIÓN DE LA GRAMÁTICA AL CODIFICAR LA CONCORDANCIA EN LOS NO TERMINALES
+====================================================================================================
+  Sin rasgos (v1)                          combinaciones=  1  no terminales=  12  producciones=   23
+  Número (s, p)                            combinaciones=  2  no terminales=  26  producciones=   52
+  Género y número (v2)                     combinaciones=  4  no terminales=  44  producciones=   95
+  Género, número y persona                 combinaciones= 12  no terminales= 116  producciones=  267
+  Lo anterior + formalidad (tú/usted)      combinaciones= 16  no terminales= 152  producciones=  351
+
+====================================================================================================
+5. DEPENDENCIAS CRUZADAS CON 'RESPECTIVAMENTE' (v3a: listas libres, v3b: emparejamiento anidado)
+====================================================================================================
+  [G] Ana , Luis y Pedro son alta , alto y alto respectivamente      v3a: acepta   v3b: rechaza  (orden cruzado correcto)
+  [A] Ana , Luis y Pedro son alto , alto y alta respectivamente      v3a: acepta   v3b: acepta   (orden espejo (incorrecto))
+  [A] Ana y Luis son alto y alta respectivamente                     v3a: acepta   v3b: acepta   (mal emparejado)
+  [G] Ana y Luis son alta y alto respectivamente                     v3a: acepta   v3b: rechaza  (orden cruzado correcto)
