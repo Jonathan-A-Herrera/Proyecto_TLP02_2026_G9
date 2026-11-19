@@ -1,0 +1,16 @@
+clave,enfoque,nivel,oraciones,VP,VN,FP,FN,exactitud
+parser_propio,Parser propio,1,16,12,4,0,0,1.0
+parser_propio,Parser propio,2,16,11,5,0,0,1.0
+parser_propio,Parser propio,3,16,5,6,0,5,0.688
+spacy,spaCy,1,16,9,4,0,3,0.812
+spacy,spaCy,2,16,11,4,1,0,0.938
+spacy,spaCy,3,16,8,3,3,2,0.688
+nltk,NLTK,1,16,12,4,0,0,1.0
+nltk,NLTK,2,16,11,5,0,0,1.0
+nltk,NLTK,3,16,5,6,0,5,0.688
+llm_zero_shot,LLM zero-shot,1,16,12,4,0,0,1.0
+llm_zero_shot,LLM zero-shot,2,16,11,5,0,0,1.0
+llm_zero_shot,LLM zero-shot,3,16,7,6,0,3,0.812
+llm_few_shot,LLM few-shot,1,16,12,4,0,0,1.0
+llm_few_shot,LLM few-shot,2,16,11,5,0,0,1.0
+llm_few_shot,LLM few-shot,3,16,7,6,0,3,0.812

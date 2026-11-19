@@ -1,0 +1,2828 @@
+{
+  "enfoque": "spacy",
+  "fecha": "2026-11-19T14:02:00-06:00",
+  "version_spacy": "3.8.18",
+  "modelo": "es_core_news_sm",
+  "version_modelo": "3.8.0",
+  "regla_de_aceptacion": "ACEPTA si la raíz es un verbo (o un atributo con cópula) y no hay inconsistencias de género/número entre det-sustantivo, adjetivo-sustantivo, sujeto-verbo y sujeto-atributo según los rasgos morfológicos de spaCy",
+  "resultados": [
+    {
+      "id": "1",
+      "oracion": "El perro come",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "NP",
+        "NP"
+      ],
+      "raiz": "come/PROPN",
+      "raiz_verbal": false,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "El",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "perro",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "perro",
+          "pos": "PROPN",
+          "dep": "nsubj",
+          "nucleo": "come",
+          "morfologia": ""
+        },
+        {
+          "texto": "come",
+          "pos": "PROPN",
+          "dep": "ROOT",
+          "nucleo": "come",
+          "morfologia": ""
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "oracion": "La niña duerme",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "raiz": "duerme/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "La",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niña",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "niña",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "duerme",
+          "morfologia": "Gender=Fem|Number=Sing"
+        },
+        {
+          "texto": "duerme",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "duerme",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "oracion": "Los niños leen un libro",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N"
+      ],
+      "raiz": "leen/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Los",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niños",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "niños",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "leen",
+          "morfologia": "Gender=Masc|Number=Plur"
+        },
+        {
+          "texto": "leen",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "leen",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "un",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "libro",
+          "morfologia": "Definite=Ind|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "libro",
+          "pos": "NOUN",
+          "dep": "obj",
+          "nucleo": "leen",
+          "morfologia": "Gender=Masc|Number=Sing"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "oracion": "Las gatas comen",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ"
+      ],
+      "raiz": "gatas/NOUN",
+      "raiz_verbal": false,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Las",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "gatas",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "gatas",
+          "pos": "NOUN",
+          "dep": "ROOT",
+          "nucleo": "gatas",
+          "morfologia": "Gender=Fem|Number=Plur"
+        },
+        {
+          "texto": "comen",
+          "pos": "ADJ",
+          "dep": "amod",
+          "nucleo": "gatas",
+          "morfologia": "Gender=Fem|Number=Plur"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "oracion": "Ana lee un libro",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N"
+      ],
+      "raiz": "lee/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Ana",
+          "pos": "PROPN",
+          "dep": "nsubj",
+          "nucleo": "lee",
+          "morfologia": ""
+        },
+        {
+          "texto": "lee",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "lee",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "un",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "libro",
+          "morfologia": "Definite=Ind|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "libro",
+          "pos": "NOUN",
+          "dep": "obj",
+          "nucleo": "lee",
+          "morfologia": "Gender=Masc|Number=Sing"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "oracion": "Luis vio el parque",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N"
+      ],
+      "raiz": "vio/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Luis",
+          "pos": "PROPN",
+          "dep": "nsubj",
+          "nucleo": "vio",
+          "morfologia": ""
+        },
+        {
+          "texto": "vio",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "vio",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin"
+        },
+        {
+          "texto": "el",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "parque",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "parque",
+          "pos": "NOUN",
+          "dep": "obj",
+          "nucleo": "vio",
+          "morfologia": "Gender=Masc|Number=Sing"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "oracion": "El profesor lee un libro",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N"
+      ],
+      "raiz": "lee/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "El",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "profesor",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "profesor",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "lee",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "lee",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "lee",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "un",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "libro",
+          "morfologia": "Definite=Ind|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "libro",
+          "pos": "NOUN",
+          "dep": "obj",
+          "nucleo": "lee",
+          "morfologia": "Gender=Masc|Number=Sing"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "oracion": "La profesora llegó",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "raiz": "llegó/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "La",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "profesora",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "profesora",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "llegó",
+          "morfologia": "Gender=Fem|Number=Sing"
+        },
+        {
+          "texto": "llegó",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "llegó",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "oracion": "Los perros ladran",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "raiz": "ladran/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Los",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "perros",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "perros",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "ladran",
+          "morfologia": "Gender=Masc|Number=Plur"
+        },
+        {
+          "texto": "ladran",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "ladran",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "oracion": "Pedro come",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "NP",
+        "NP"
+      ],
+      "raiz": "come/PROPN",
+      "raiz_verbal": false,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Pedro",
+          "pos": "PROPN",
+          "dep": "nsubj",
+          "nucleo": "come",
+          "morfologia": ""
+        },
+        {
+          "texto": "come",
+          "pos": "PROPN",
+          "dep": "ROOT",
+          "nucleo": "come",
+          "morfologia": ""
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "oracion": "El niño está cansado",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "raiz": "cansado/ADJ",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "El",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niño",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "niño",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "cansado",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "está",
+          "pos": "AUX",
+          "dep": "cop",
+          "nucleo": "cansado",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "cansado",
+          "pos": "ADJ",
+          "dep": "ROOT",
+          "nucleo": "cansado",
+          "morfologia": "Gender=Masc|Number=Sing|VerbForm=Part"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "oracion": "Las niñas son altas",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "raiz": "altas/ADJ",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Las",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niñas",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "niñas",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "altas",
+          "morfologia": "Gender=Fem|Number=Plur"
+        },
+        {
+          "texto": "son",
+          "pos": "AUX",
+          "dep": "cop",
+          "nucleo": "altas",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "altas",
+          "pos": "ADJ",
+          "dep": "ROOT",
+          "nucleo": "altas",
+          "morfologia": "Gender=Fem|Number=Plur"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "oracion": "La perro come",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "NP",
+        "NP"
+      ],
+      "raiz": "come/PROPN",
+      "raiz_verbal": false,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "La",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "perro",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "perro",
+          "pos": "PROPN",
+          "dep": "nsubj",
+          "nucleo": "come",
+          "morfologia": ""
+        },
+        {
+          "texto": "come",
+          "pos": "PROPN",
+          "dep": "ROOT",
+          "nucleo": "come",
+          "morfologia": ""
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "oracion": "Los niños come",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "NP"
+      ],
+      "raiz": "come/PROPN",
+      "raiz_verbal": false,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Los",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niños",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "niños",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "come",
+          "morfologia": "Gender=Masc|Number=Plur"
+        },
+        {
+          "texto": "come",
+          "pos": "PROPN",
+          "dep": "ROOT",
+          "nucleo": "come",
+          "morfologia": ""
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "oracion": "Las niñas es altas",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "raiz": "altas/ADJ",
+      "raiz_verbal": true,
+      "inconsistencias": [
+        "sujeto-copula: Number 'niñas'=Plur vs 'es'=Sing"
+      ],
+      "tokens": [
+        {
+          "texto": "Las",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niñas",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "niñas",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "altas",
+          "morfologia": "Gender=Fem|Number=Plur"
+        },
+        {
+          "texto": "es",
+          "pos": "AUX",
+          "dep": "cop",
+          "nucleo": "altas",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "altas",
+          "pos": "ADJ",
+          "dep": "ROOT",
+          "nucleo": "altas",
+          "morfologia": "Gender=Fem|Number=Plur"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "oracion": "El niño están cansado",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "raiz": "cansado/ADJ",
+      "raiz_verbal": true,
+      "inconsistencias": [
+        "sujeto-copula: Number 'niño'=Sing vs 'están'=Plur"
+      ],
+      "tokens": [
+        {
+          "texto": "El",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niño",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "niño",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "cansado",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "están",
+          "pos": "AUX",
+          "dep": "cop",
+          "nucleo": "cansado",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "cansado",
+          "pos": "ADJ",
+          "dep": "ROOT",
+          "nucleo": "cansado",
+          "morfologia": "Gender=Masc|Number=Sing|VerbForm=Part"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "oracion": "El perro negro come rápidamente",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "NP",
+        "ADJ",
+        "V",
+        "ADV"
+      ],
+      "raiz": "come/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "El",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "perro",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "perro",
+          "pos": "PROPN",
+          "dep": "nsubj",
+          "nucleo": "come",
+          "morfologia": ""
+        },
+        {
+          "texto": "negro",
+          "pos": "ADJ",
+          "dep": "flat",
+          "nucleo": "perro",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "come",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "come",
+          "morfologia": "Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "rápidamente",
+          "pos": "ADV",
+          "dep": "advmod",
+          "nucleo": "come",
+          "morfologia": ""
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "oracion": "Las niñas pequeñas leen un libro en la casa",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "raiz": "leen/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Las",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niñas",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "niñas",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "leen",
+          "morfologia": "Gender=Fem|Number=Plur"
+        },
+        {
+          "texto": "pequeñas",
+          "pos": "ADJ",
+          "dep": "amod",
+          "nucleo": "niñas",
+          "morfologia": "Gender=Fem|Number=Plur"
+        },
+        {
+          "texto": "leen",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "leen",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "un",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "libro",
+          "morfologia": "Definite=Ind|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "libro",
+          "pos": "NOUN",
+          "dep": "obj",
+          "nucleo": "leen",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "en",
+          "pos": "ADP",
+          "dep": "case",
+          "nucleo": "casa",
+          "morfologia": ""
+        },
+        {
+          "texto": "la",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "casa",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "casa",
+          "pos": "NOUN",
+          "dep": "obl",
+          "nucleo": "leen",
+          "morfologia": "Gender=Fem|Number=Sing"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "oracion": "La estudiante alta lee un libro",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "DET",
+        "N"
+      ],
+      "raiz": "lee/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "La",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "estudiante",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "estudiante",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "lee",
+          "morfologia": "Number=Sing"
+        },
+        {
+          "texto": "alta",
+          "pos": "ADJ",
+          "dep": "amod",
+          "nucleo": "estudiante",
+          "morfologia": "Gender=Fem|Number=Sing"
+        },
+        {
+          "texto": "lee",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "lee",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "un",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "libro",
+          "morfologia": "Definite=Ind|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "libro",
+          "pos": "NOUN",
+          "dep": "obj",
+          "nucleo": "lee",
+          "morfologia": "Gender=Masc|Number=Sing"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "oracion": "Los perros grandes ladraron ayer",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "ADV"
+      ],
+      "raiz": "ladraron/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Los",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "perros",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "perros",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "ladraron",
+          "morfologia": "Gender=Masc|Number=Plur"
+        },
+        {
+          "texto": "grandes",
+          "pos": "ADJ",
+          "dep": "amod",
+          "nucleo": "perros",
+          "morfologia": "Number=Plur"
+        },
+        {
+          "texto": "ladraron",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "ladraron",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin"
+        },
+        {
+          "texto": "ayer",
+          "pos": "ADV",
+          "dep": "advmod",
+          "nucleo": "ladraron",
+          "morfologia": ""
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "oracion": "El gato de la profesora duerme en la mesa",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N",
+        "V",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "raiz": "duerme/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "El",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "gato",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "gato",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "duerme",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "de",
+          "pos": "ADP",
+          "dep": "case",
+          "nucleo": "profesora",
+          "morfologia": ""
+        },
+        {
+          "texto": "la",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "profesora",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "profesora",
+          "pos": "NOUN",
+          "dep": "nmod",
+          "nucleo": "gato",
+          "morfologia": "Gender=Fem|Number=Sing"
+        },
+        {
+          "texto": "duerme",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "duerme",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "en",
+          "pos": "ADP",
+          "dep": "case",
+          "nucleo": "mesa",
+          "morfologia": ""
+        },
+        {
+          "texto": "la",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "mesa",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "mesa",
+          "pos": "NOUN",
+          "dep": "obl",
+          "nucleo": "duerme",
+          "morfologia": "Gender=Fem|Number=Sing"
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "oracion": "Ana vio el perro negro en el parque",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N",
+        "ADJ",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "raiz": "vio/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Ana",
+          "pos": "PROPN",
+          "dep": "nsubj",
+          "nucleo": "vio",
+          "morfologia": ""
+        },
+        {
+          "texto": "vio",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "vio",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin"
+        },
+        {
+          "texto": "el",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "perro",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "perro",
+          "pos": "NOUN",
+          "dep": "obj",
+          "nucleo": "vio",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "negro",
+          "pos": "ADJ",
+          "dep": "amod",
+          "nucleo": "perro",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "en",
+          "pos": "ADP",
+          "dep": "case",
+          "nucleo": "parque",
+          "morfologia": ""
+        },
+        {
+          "texto": "el",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "parque",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "parque",
+          "pos": "NOUN",
+          "dep": "obl",
+          "nucleo": "vio",
+          "morfologia": "Gender=Masc|Number=Sing"
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "oracion": "La niña feliz come mucho",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "ADV"
+      ],
+      "raiz": "come/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "La",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niña",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "niña",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "come",
+          "morfologia": "Gender=Fem|Number=Sing"
+        },
+        {
+          "texto": "feliz",
+          "pos": "ADJ",
+          "dep": "amod",
+          "nucleo": "niña",
+          "morfologia": "Number=Sing"
+        },
+        {
+          "texto": "come",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "come",
+          "morfologia": "Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "mucho",
+          "pos": "ADV",
+          "dep": "advmod",
+          "nucleo": "come",
+          "morfologia": ""
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "oracion": "Los estudiantes leyeron un libro sobre la mesa",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "raiz": "leyeron/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Los",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "estudiantes",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "estudiantes",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "leyeron",
+          "morfologia": "Number=Plur"
+        },
+        {
+          "texto": "leyeron",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "leyeron",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin"
+        },
+        {
+          "texto": "un",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "libro",
+          "morfologia": "Definite=Ind|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "libro",
+          "pos": "NOUN",
+          "dep": "obj",
+          "nucleo": "leyeron",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "sobre",
+          "pos": "ADP",
+          "dep": "case",
+          "nucleo": "mesa",
+          "morfologia": ""
+        },
+        {
+          "texto": "la",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "mesa",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "mesa",
+          "pos": "NOUN",
+          "dep": "nmod",
+          "nucleo": "libro",
+          "morfologia": "Gender=Fem|Number=Sing"
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "oracion": "El perro que ladra come",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "NP",
+        "V"
+      ],
+      "raiz": "come/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "El",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "perro",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "perro",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "come",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "que",
+          "pos": "PRON",
+          "dep": "mark",
+          "nucleo": "ladra",
+          "morfologia": "PronType=Int,Rel"
+        },
+        {
+          "texto": "ladra",
+          "pos": "PROPN",
+          "dep": "nmod",
+          "nucleo": "perro",
+          "morfologia": ""
+        },
+        {
+          "texto": "come",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "come",
+          "morfologia": "Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin"
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "oracion": "Luis dice que la niña duerme",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "QUE",
+        "DET",
+        "N",
+        "V"
+      ],
+      "raiz": "dice/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Luis",
+          "pos": "PROPN",
+          "dep": "nsubj",
+          "nucleo": "dice",
+          "morfologia": ""
+        },
+        {
+          "texto": "dice",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "dice",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "que",
+          "pos": "SCONJ",
+          "dep": "mark",
+          "nucleo": "duerme",
+          "morfologia": ""
+        },
+        {
+          "texto": "la",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niña",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "niña",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "duerme",
+          "morfologia": "Gender=Fem|Number=Sing"
+        },
+        {
+          "texto": "duerme",
+          "pos": "VERB",
+          "dep": "ccomp",
+          "nucleo": "dice",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin"
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "oracion": "Las gatas negras están cansadas",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "COP",
+        "ADJ"
+      ],
+      "raiz": "cansadas/ADJ",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Las",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "gatas",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "gatas",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "cansadas",
+          "morfologia": "Gender=Fem|Number=Plur"
+        },
+        {
+          "texto": "negras",
+          "pos": "ADJ",
+          "dep": "amod",
+          "nucleo": "gatas",
+          "morfologia": "Gender=Fem|Number=Plur"
+        },
+        {
+          "texto": "están",
+          "pos": "AUX",
+          "dep": "cop",
+          "nucleo": "cansadas",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "cansadas",
+          "pos": "ADJ",
+          "dep": "ROOT",
+          "nucleo": "cansadas",
+          "morfologia": "Gender=Fem|Number=Plur|VerbForm=Part"
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "oracion": "Los gato negra come",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "NP"
+      ],
+      "raiz": "come/PROPN",
+      "raiz_verbal": false,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Los",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "gato",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "gato",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "come",
+          "morfologia": ""
+        },
+        {
+          "texto": "negra",
+          "pos": "ADJ",
+          "dep": "amod",
+          "nucleo": "gato",
+          "morfologia": "Gender=Fem|Number=Sing"
+        },
+        {
+          "texto": "come",
+          "pos": "PROPN",
+          "dep": "ROOT",
+          "nucleo": "come",
+          "morfologia": ""
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "oracion": "La estudiante pequeño lee",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "NP"
+      ],
+      "raiz": "estudiante/NOUN",
+      "raiz_verbal": false,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "La",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "estudiante",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "estudiante",
+          "pos": "NOUN",
+          "dep": "ROOT",
+          "nucleo": "estudiante",
+          "morfologia": "Number=Sing"
+        },
+        {
+          "texto": "pequeño",
+          "pos": "ADJ",
+          "dep": "amod",
+          "nucleo": "estudiante",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "lee",
+          "pos": "PROPN",
+          "dep": "appos",
+          "nucleo": "estudiante",
+          "morfologia": ""
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "oracion": "El perro que ladran come",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "V",
+        "NP"
+      ],
+      "raiz": "come/PROPN",
+      "raiz_verbal": false,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "El",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "perro",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "perro",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "come",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "que",
+          "pos": "PRON",
+          "dep": "nsubj",
+          "nucleo": "ladran",
+          "morfologia": "PronType=Int,Rel"
+        },
+        {
+          "texto": "ladran",
+          "pos": "VERB",
+          "dep": "acl",
+          "nucleo": "perro",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "come",
+          "pos": "PROPN",
+          "dep": "ROOT",
+          "nucleo": "come",
+          "morfologia": ""
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "oracion": "Las niñas pequeños leen un libro",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "DET",
+        "N"
+      ],
+      "raiz": "leen/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [
+        "amod: Gender 'pequeños'=Masc vs 'niñas'=Fem"
+      ],
+      "tokens": [
+        {
+          "texto": "Las",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niñas",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "niñas",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "leen",
+          "morfologia": "Gender=Fem|Number=Plur"
+        },
+        {
+          "texto": "pequeños",
+          "pos": "ADJ",
+          "dep": "amod",
+          "nucleo": "niñas",
+          "morfologia": "Gender=Masc|Number=Plur"
+        },
+        {
+          "texto": "leen",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "leen",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "un",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "libro",
+          "morfologia": "Definite=Ind|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "libro",
+          "pos": "NOUN",
+          "dep": "obj",
+          "nucleo": "leen",
+          "morfologia": "Gender=Masc|Number=Sing"
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "oracion": "El gato de la profesora duermen",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N",
+        "V"
+      ],
+      "raiz": "duermen/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "El",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "gato",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "gato",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "duermen",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "de",
+          "pos": "ADP",
+          "dep": "case",
+          "nucleo": "profesora",
+          "morfologia": ""
+        },
+        {
+          "texto": "la",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "profesora",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "profesora",
+          "pos": "NOUN",
+          "dep": "nmod",
+          "nucleo": "gato",
+          "morfologia": "Gender=Fem|Number=Sing"
+        },
+        {
+          "texto": "duermen",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "duermen",
+          "morfologia": "VerbForm=Inf"
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "oracion": "Las niñas que el profesor regañó están cansadas",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "COP",
+        "ADJ"
+      ],
+      "raiz": "cansadas/ADJ",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Las",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niñas",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "niñas",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "cansadas",
+          "morfologia": "Gender=Fem|Number=Plur"
+        },
+        {
+          "texto": "que",
+          "pos": "PRON",
+          "dep": "obj",
+          "nucleo": "regañó",
+          "morfologia": "PronType=Int,Rel"
+        },
+        {
+          "texto": "el",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "profesor",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "profesor",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "regañó",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "regañó",
+          "pos": "VERB",
+          "dep": "acl",
+          "nucleo": "niñas",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin"
+        },
+        {
+          "texto": "están",
+          "pos": "AUX",
+          "dep": "cop",
+          "nucleo": "cansadas",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "cansadas",
+          "pos": "ADJ",
+          "dep": "ROOT",
+          "nucleo": "cansadas",
+          "morfologia": "Gender=Fem|Number=Plur|VerbForm=Part"
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "oracion": "Ana vio el perro con el telescopio",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "raiz": "vio/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Ana",
+          "pos": "PROPN",
+          "dep": "nsubj",
+          "nucleo": "vio",
+          "morfologia": ""
+        },
+        {
+          "texto": "vio",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "vio",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin"
+        },
+        {
+          "texto": "el",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "perro",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "perro",
+          "pos": "NOUN",
+          "dep": "obj",
+          "nucleo": "vio",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "con",
+          "pos": "ADP",
+          "dep": "case",
+          "nucleo": "telescopio",
+          "morfologia": ""
+        },
+        {
+          "texto": "el",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "telescopio",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "telescopio",
+          "pos": "NOUN",
+          "dep": "obl",
+          "nucleo": "vio",
+          "morfologia": "Gender=Masc|Number=Sing"
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "oracion": "Ana vio el perro en el parque con el telescopio",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "raiz": "vio/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Ana",
+          "pos": "PROPN",
+          "dep": "nsubj",
+          "nucleo": "vio",
+          "morfologia": ""
+        },
+        {
+          "texto": "vio",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "vio",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin"
+        },
+        {
+          "texto": "el",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "perro",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "perro",
+          "pos": "NOUN",
+          "dep": "obj",
+          "nucleo": "vio",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "en",
+          "pos": "ADP",
+          "dep": "case",
+          "nucleo": "parque",
+          "morfologia": ""
+        },
+        {
+          "texto": "el",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "parque",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "parque",
+          "pos": "NOUN",
+          "dep": "obl",
+          "nucleo": "vio",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "con",
+          "pos": "ADP",
+          "dep": "case",
+          "nucleo": "telescopio",
+          "morfologia": ""
+        },
+        {
+          "texto": "el",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "telescopio",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "telescopio",
+          "pos": "NOUN",
+          "dep": "obl",
+          "nucleo": "vio",
+          "morfologia": "Gender=Masc|Number=Sing"
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "oracion": "Luis dice que Ana dice que los niños comen",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "QUE",
+        "NP",
+        "V",
+        "QUE",
+        "DET",
+        "N",
+        "NP"
+      ],
+      "raiz": "dice/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Luis",
+          "pos": "PROPN",
+          "dep": "nsubj",
+          "nucleo": "dice",
+          "morfologia": ""
+        },
+        {
+          "texto": "dice",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "dice",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "que",
+          "pos": "SCONJ",
+          "dep": "mark",
+          "nucleo": "dice",
+          "morfologia": ""
+        },
+        {
+          "texto": "Ana",
+          "pos": "PROPN",
+          "dep": "nsubj",
+          "nucleo": "dice",
+          "morfologia": ""
+        },
+        {
+          "texto": "dice",
+          "pos": "VERB",
+          "dep": "ccomp",
+          "nucleo": "dice",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "que",
+          "pos": "SCONJ",
+          "dep": "mark",
+          "nucleo": "comen",
+          "morfologia": ""
+        },
+        {
+          "texto": "los",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niños",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "niños",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "comen",
+          "morfologia": "Gender=Masc|Number=Plur"
+        },
+        {
+          "texto": "comen",
+          "pos": "PROPN",
+          "dep": "ccomp",
+          "nucleo": "dice",
+          "morfologia": ""
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "oracion": "Llegaron los niños",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "V",
+        "DET",
+        "N"
+      ],
+      "raiz": "Llegaron/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Llegaron",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "Llegaron",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin"
+        },
+        {
+          "texto": "los",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niños",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "niños",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "Llegaron",
+          "morfologia": "Gender=Masc|Number=Plur"
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "oracion": "Lee un libro",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "NP",
+        "DET",
+        "N"
+      ],
+      "raiz": "Lee/PROPN",
+      "raiz_verbal": false,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Lee",
+          "pos": "PROPN",
+          "dep": "ROOT",
+          "nucleo": "Lee",
+          "morfologia": ""
+        },
+        {
+          "texto": "un",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "libro",
+          "morfologia": "Definite=Ind|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "libro",
+          "pos": "NOUN",
+          "dep": "obj",
+          "nucleo": "Lee",
+          "morfologia": "Gender=Masc|Number=Sing"
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "oracion": "Ayer los niños comieron mucho",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "ADV",
+        "DET",
+        "N",
+        "V",
+        "ADV"
+      ],
+      "raiz": "comieron/VERB",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Ayer",
+          "pos": "ADV",
+          "dep": "advmod",
+          "nucleo": "comieron",
+          "morfologia": ""
+        },
+        {
+          "texto": "los",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niños",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "niños",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "comieron",
+          "morfologia": "Gender=Masc|Number=Plur"
+        },
+        {
+          "texto": "comieron",
+          "pos": "VERB",
+          "dep": "ROOT",
+          "nucleo": "comieron",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin"
+        },
+        {
+          "texto": "mucho",
+          "pos": "ADV",
+          "dep": "advmod",
+          "nucleo": "comieron",
+          "morfologia": ""
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "oracion": "Ana , Luis y Pedro son alta , alto y alto respectivamente",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "SEP",
+        "NP",
+        "SEP",
+        "NP",
+        "COP",
+        "ADJ",
+        "SEP",
+        "ADJ",
+        "SEP",
+        "ADJ",
+        "ADV"
+      ],
+      "raiz": "alta/ADJ",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Ana",
+          "pos": "PROPN",
+          "dep": "nsubj",
+          "nucleo": "alta",
+          "morfologia": ""
+        },
+        {
+          "texto": ",",
+          "pos": "PUNCT",
+          "dep": "punct",
+          "nucleo": "Luis",
+          "morfologia": "PunctType=Comm"
+        },
+        {
+          "texto": "Luis",
+          "pos": "PROPN",
+          "dep": "conj",
+          "nucleo": "Ana",
+          "morfologia": ""
+        },
+        {
+          "texto": "y",
+          "pos": "CCONJ",
+          "dep": "cc",
+          "nucleo": "Pedro",
+          "morfologia": ""
+        },
+        {
+          "texto": "Pedro",
+          "pos": "PROPN",
+          "dep": "conj",
+          "nucleo": "Ana",
+          "morfologia": ""
+        },
+        {
+          "texto": "son",
+          "pos": "AUX",
+          "dep": "cop",
+          "nucleo": "alta",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "alta",
+          "pos": "ADJ",
+          "dep": "ROOT",
+          "nucleo": "alta",
+          "morfologia": "Gender=Fem|Number=Sing"
+        },
+        {
+          "texto": ",",
+          "pos": "PUNCT",
+          "dep": "punct",
+          "nucleo": "alto",
+          "morfologia": "PunctType=Comm"
+        },
+        {
+          "texto": "alto",
+          "pos": "ADJ",
+          "dep": "conj",
+          "nucleo": "alta",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "y",
+          "pos": "CCONJ",
+          "dep": "cc",
+          "nucleo": "alto",
+          "morfologia": ""
+        },
+        {
+          "texto": "alto",
+          "pos": "ADJ",
+          "dep": "conj",
+          "nucleo": "alta",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "respectivamente",
+          "pos": "ADV",
+          "dep": "advmod",
+          "nucleo": "alta",
+          "morfologia": ""
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "oracion": "El perro que el niño vio ladra",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "N"
+      ],
+      "raiz": "perro/NOUN",
+      "raiz_verbal": false,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "El",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "perro",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "perro",
+          "pos": "NOUN",
+          "dep": "ROOT",
+          "nucleo": "perro",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "que",
+          "pos": "SCONJ",
+          "dep": "mark",
+          "nucleo": "vio",
+          "morfologia": ""
+        },
+        {
+          "texto": "el",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niño",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "niño",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "vio",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "vio",
+          "pos": "VERB",
+          "dep": "acl",
+          "nucleo": "perro",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin"
+        },
+        {
+          "texto": "ladra",
+          "pos": "NOUN",
+          "dep": "obj",
+          "nucleo": "vio",
+          "morfologia": "Gender=Fem|Number=Sing"
+        }
+      ]
+    },
+    {
+      "id": "42",
+      "oracion": "Los niños que leen libros están felices",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "V",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "raiz": "felices/ADJ",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Los",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niños",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "niños",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "felices",
+          "morfologia": "Gender=Masc|Number=Plur"
+        },
+        {
+          "texto": "que",
+          "pos": "PRON",
+          "dep": "nsubj",
+          "nucleo": "leen",
+          "morfologia": "PronType=Int,Rel"
+        },
+        {
+          "texto": "leen",
+          "pos": "VERB",
+          "dep": "acl",
+          "nucleo": "niños",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "libros",
+          "pos": "NOUN",
+          "dep": "obj",
+          "nucleo": "leen",
+          "morfologia": "Gender=Masc|Number=Plur"
+        },
+        {
+          "texto": "están",
+          "pos": "AUX",
+          "dep": "cop",
+          "nucleo": "felices",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "felices",
+          "pos": "ADJ",
+          "dep": "ROOT",
+          "nucleo": "felices",
+          "morfologia": "Number=Plur"
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "oracion": "Las niñas que el profesor regañó están cansados",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "COP",
+        "ADJ"
+      ],
+      "raiz": "cansados/ADJ",
+      "raiz_verbal": true,
+      "inconsistencias": [
+        "sujeto-atributo: Gender 'niñas'=Fem vs 'cansados'=Masc"
+      ],
+      "tokens": [
+        {
+          "texto": "Las",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niñas",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "niñas",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "cansados",
+          "morfologia": "Gender=Fem|Number=Plur"
+        },
+        {
+          "texto": "que",
+          "pos": "PRON",
+          "dep": "obj",
+          "nucleo": "regañó",
+          "morfologia": "PronType=Int,Rel"
+        },
+        {
+          "texto": "el",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "profesor",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "profesor",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "regañó",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "regañó",
+          "pos": "VERB",
+          "dep": "acl",
+          "nucleo": "niñas",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin"
+        },
+        {
+          "texto": "están",
+          "pos": "AUX",
+          "dep": "cop",
+          "nucleo": "cansados",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "cansados",
+          "pos": "ADJ",
+          "dep": "ROOT",
+          "nucleo": "cansados",
+          "morfologia": "Gender=Masc|Number=Plur|VerbForm=Part"
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "oracion": "Las niñas que el profesor regañó el libro están cansadas",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "raiz": "cansadas/ADJ",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Las",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niñas",
+          "morfologia": "Definite=Def|Gender=Fem|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "niñas",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "cansadas",
+          "morfologia": "Gender=Fem|Number=Plur"
+        },
+        {
+          "texto": "que",
+          "pos": "PRON",
+          "dep": "obj",
+          "nucleo": "regañó",
+          "morfologia": "PronType=Int,Rel"
+        },
+        {
+          "texto": "el",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "profesor",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "profesor",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "regañó",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "regañó",
+          "pos": "VERB",
+          "dep": "acl",
+          "nucleo": "niñas",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin"
+        },
+        {
+          "texto": "el",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "libro",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "libro",
+          "pos": "NOUN",
+          "dep": "obj",
+          "nucleo": "regañó",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "están",
+          "pos": "AUX",
+          "dep": "cop",
+          "nucleo": "cansadas",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "cansadas",
+          "pos": "ADJ",
+          "dep": "ROOT",
+          "nucleo": "cansadas",
+          "morfologia": "Gender=Fem|Number=Plur|VerbForm=Part"
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "oracion": "Ana , Luis y Pedro son alto , alto y alta respectivamente",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "SEP",
+        "NP",
+        "SEP",
+        "NP",
+        "COP",
+        "ADJ",
+        "SEP",
+        "ADJ",
+        "SEP",
+        "ADJ",
+        "ADV"
+      ],
+      "raiz": "alto/ADJ",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Ana",
+          "pos": "PROPN",
+          "dep": "nsubj",
+          "nucleo": "alto",
+          "morfologia": ""
+        },
+        {
+          "texto": ",",
+          "pos": "PUNCT",
+          "dep": "punct",
+          "nucleo": "Luis",
+          "morfologia": "PunctType=Comm"
+        },
+        {
+          "texto": "Luis",
+          "pos": "PROPN",
+          "dep": "conj",
+          "nucleo": "Ana",
+          "morfologia": ""
+        },
+        {
+          "texto": "y",
+          "pos": "CCONJ",
+          "dep": "cc",
+          "nucleo": "Pedro",
+          "morfologia": ""
+        },
+        {
+          "texto": "Pedro",
+          "pos": "PROPN",
+          "dep": "conj",
+          "nucleo": "Ana",
+          "morfologia": ""
+        },
+        {
+          "texto": "son",
+          "pos": "AUX",
+          "dep": "cop",
+          "nucleo": "alto",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "alto",
+          "pos": "ADJ",
+          "dep": "ROOT",
+          "nucleo": "alto",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": ",",
+          "pos": "PUNCT",
+          "dep": "punct",
+          "nucleo": "alto",
+          "morfologia": "PunctType=Comm"
+        },
+        {
+          "texto": "alto",
+          "pos": "ADJ",
+          "dep": "conj",
+          "nucleo": "alto",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "y",
+          "pos": "CCONJ",
+          "dep": "cc",
+          "nucleo": "alta",
+          "morfologia": ""
+        },
+        {
+          "texto": "alta",
+          "pos": "ADJ",
+          "dep": "conj",
+          "nucleo": "alto",
+          "morfologia": "Gender=Fem|Number=Sing"
+        },
+        {
+          "texto": "respectivamente",
+          "pos": "ADV",
+          "dep": "advmod",
+          "nucleo": "alto",
+          "morfologia": ""
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "oracion": "Ana y Luis son alto y alta respectivamente",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "SEP",
+        "NP",
+        "COP",
+        "ADJ",
+        "SEP",
+        "ADJ",
+        "ADV"
+      ],
+      "raiz": "alto/ADJ",
+      "raiz_verbal": true,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "Ana",
+          "pos": "PROPN",
+          "dep": "nsubj",
+          "nucleo": "alto",
+          "morfologia": ""
+        },
+        {
+          "texto": "y",
+          "pos": "CCONJ",
+          "dep": "cc",
+          "nucleo": "Luis",
+          "morfologia": ""
+        },
+        {
+          "texto": "Luis",
+          "pos": "PROPN",
+          "dep": "conj",
+          "nucleo": "Ana",
+          "morfologia": ""
+        },
+        {
+          "texto": "son",
+          "pos": "AUX",
+          "dep": "cop",
+          "nucleo": "alto",
+          "morfologia": "Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "alto",
+          "pos": "ADJ",
+          "dep": "ROOT",
+          "nucleo": "alto",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "y",
+          "pos": "CCONJ",
+          "dep": "cc",
+          "nucleo": "alta",
+          "morfologia": ""
+        },
+        {
+          "texto": "alta",
+          "pos": "ADJ",
+          "dep": "conj",
+          "nucleo": "alto",
+          "morfologia": "Gender=Fem|Number=Sing"
+        },
+        {
+          "texto": "respectivamente",
+          "pos": "ADV",
+          "dep": "advmod",
+          "nucleo": "alto",
+          "morfologia": ""
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "oracion": "Los niños que el profesor regañó está cansados",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "COP",
+        "ADJ"
+      ],
+      "raiz": "niños/NOUN",
+      "raiz_verbal": false,
+      "inconsistencias": [
+        "sujeto-atributo: Number 'profesor'=Sing vs 'cansados'=Plur"
+      ],
+      "tokens": [
+        {
+          "texto": "Los",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niños",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Plur|PronType=Art"
+        },
+        {
+          "texto": "niños",
+          "pos": "NOUN",
+          "dep": "ROOT",
+          "nucleo": "niños",
+          "morfologia": "Gender=Masc|Number=Plur"
+        },
+        {
+          "texto": "que",
+          "pos": "PRON",
+          "dep": "obj",
+          "nucleo": "cansados",
+          "morfologia": "PronType=Int,Rel"
+        },
+        {
+          "texto": "el",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "profesor",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "profesor",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "cansados",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "regañó",
+          "pos": "VERB",
+          "dep": "amod",
+          "nucleo": "profesor",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin"
+        },
+        {
+          "texto": "está",
+          "pos": "AUX",
+          "dep": "cop",
+          "nucleo": "cansados",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin"
+        },
+        {
+          "texto": "cansados",
+          "pos": "ADJ",
+          "dep": "acl",
+          "nucleo": "niños",
+          "morfologia": "Gender=Masc|Number=Plur|VerbForm=Part"
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "oracion": "El perro que el niño vio el gato ladra",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N",
+        "NP"
+      ],
+      "raiz": "perro/NOUN",
+      "raiz_verbal": false,
+      "inconsistencias": [],
+      "tokens": [
+        {
+          "texto": "El",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "perro",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "perro",
+          "pos": "NOUN",
+          "dep": "ROOT",
+          "nucleo": "perro",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "que",
+          "pos": "SCONJ",
+          "dep": "mark",
+          "nucleo": "vio",
+          "morfologia": ""
+        },
+        {
+          "texto": "el",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "niño",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "niño",
+          "pos": "NOUN",
+          "dep": "nsubj",
+          "nucleo": "vio",
+          "morfologia": "Gender=Masc|Number=Sing"
+        },
+        {
+          "texto": "vio",
+          "pos": "VERB",
+          "dep": "acl",
+          "nucleo": "perro",
+          "morfologia": "Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin"
+        },
+        {
+          "texto": "el",
+          "pos": "DET",
+          "dep": "det",
+          "nucleo": "gato",
+          "morfologia": "Definite=Def|Gender=Masc|Number=Sing|PronType=Art"
+        },
+        {
+          "texto": "gato",
+          "pos": "NOUN",
+          "dep": "obj",
+          "nucleo": "vio",
+          "morfologia": ""
+        },
+        {
+          "texto": "ladra",
+          "pos": "PROPN",
+          "dep": "amod",
+          "nucleo": "gato",
+          "morfologia": ""
+        }
+      ]
+    }
+  ]
+}

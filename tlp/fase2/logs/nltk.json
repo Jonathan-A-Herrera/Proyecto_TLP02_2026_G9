@@ -1,0 +1,559 @@
+{
+  "enfoque": "nltk",
+  "fecha": "2026-11-19T14:02:00-06:00",
+  "version_nltk": "3.10.4",
+  "descripcion": "FeatureChartParser con gramática de rasgos (GEN, NUM) unificados",
+  "reglas_sintacticas": 21,
+  "resultados": [
+    {
+      "id": "1",
+      "oracion": "El perro come",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='m', NUM='s']\n    (DET[GEN='m', NUM='s'] el)\n    (N[GEN='m', NUM='s'] perro)\n    (MODS[GEN=?g, NUM=?n] ))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] come)\n    (COMP[] (MODSV[] ))))"
+    },
+    {
+      "id": "2",
+      "oracion": "La niña duerme",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='f', NUM='s']\n    (DET[GEN='f', NUM='s'] la)\n    (N[GEN='f', NUM='s'] niña)\n    (MODS[GEN=?g, NUM=?n] ))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] duerme)\n    (COMP[] (MODSV[] ))))"
+    },
+    {
+      "id": "3",
+      "oracion": "Los niños leen un libro",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='m', NUM='p']\n    (DET[GEN='m', NUM='p'] los)\n    (N[GEN='m', NUM='p'] niños)\n    (MODS[GEN=?g, NUM=?n] ))\n  (SV[GEN=?g, NUM='p']\n    (ADVS[] )\n    (V[NUM='p'] leen)\n    (COMP[]\n      (SN[GEN='m', NUM='s']\n        (DET[GEN='m', NUM='s'] un)\n        (N[GEN='m', NUM='s'] libro)\n        (MODS[GEN=?g, NUM=?n] ))\n      (MODSV[] ))))"
+    },
+    {
+      "id": "4",
+      "oracion": "Las gatas comen",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='f', NUM='p']\n    (DET[GEN='f', NUM='p'] las)\n    (N[GEN='f', NUM='p'] gatas)\n    (MODS[GEN=?g, NUM=?n] ))\n  (SV[GEN=?g, NUM='p']\n    (ADVS[] )\n    (V[NUM='p'] comen)\n    (COMP[] (MODSV[] ))))"
+    },
+    {
+      "id": "5",
+      "oracion": "Ana lee un libro",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='f', NUM='s'] (NP[GEN='f', NUM='s'] ana))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] lee)\n    (COMP[]\n      (SN[GEN='m', NUM='s']\n        (DET[GEN='m', NUM='s'] un)\n        (N[GEN='m', NUM='s'] libro)\n        (MODS[GEN=?g, NUM=?n] ))\n      (MODSV[] ))))"
+    },
+    {
+      "id": "6",
+      "oracion": "Luis vio el parque",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='m', NUM='s'] (NP[GEN='m', NUM='s'] luis))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] vio)\n    (COMP[]\n      (SN[GEN='m', NUM='s']\n        (DET[GEN='m', NUM='s'] el)\n        (N[GEN='m', NUM='s'] parque)\n        (MODS[GEN=?g, NUM=?n] ))\n      (MODSV[] ))))"
+    },
+    {
+      "id": "7",
+      "oracion": "El profesor lee un libro",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='m', NUM='s']\n    (DET[GEN='m', NUM='s'] el)\n    (N[GEN='m', NUM='s'] profesor)\n    (MODS[GEN=?g, NUM=?n] ))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] lee)\n    (COMP[]\n      (SN[GEN='m', NUM='s']\n        (DET[GEN='m', NUM='s'] un)\n        (N[GEN='m', NUM='s'] libro)\n        (MODS[GEN=?g, NUM=?n] ))\n      (MODSV[] ))))"
+    },
+    {
+      "id": "8",
+      "oracion": "La profesora llegó",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='f', NUM='s']\n    (DET[GEN='f', NUM='s'] la)\n    (N[GEN='f', NUM='s'] profesora)\n    (MODS[GEN=?g, NUM=?n] ))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] llegó)\n    (COMP[] (MODSV[] ))))"
+    },
+    {
+      "id": "9",
+      "oracion": "Los perros ladran",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='m', NUM='p']\n    (DET[GEN='m', NUM='p'] los)\n    (N[GEN='m', NUM='p'] perros)\n    (MODS[GEN=?g, NUM=?n] ))\n  (SV[GEN=?g, NUM='p']\n    (ADVS[] )\n    (V[NUM='p'] ladran)\n    (COMP[] (MODSV[] ))))"
+    },
+    {
+      "id": "10",
+      "oracion": "Pedro come",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "NP",
+        "V"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='m', NUM='s'] (NP[GEN='m', NUM='s'] pedro))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] come)\n    (COMP[] (MODSV[] ))))"
+    },
+    {
+      "id": "11",
+      "oracion": "El niño está cansado",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='m', NUM='s']\n    (DET[GEN='m', NUM='s'] el)\n    (N[GEN='m', NUM='s'] niño)\n    (MODS[GEN=?g, NUM=?n] ))\n  (SV[GEN='m', NUM='s']\n    (ADVS[] )\n    (COP[NUM='s'] está)\n    (ADJ[GEN='m', NUM='s'] cansado)\n    (MODSV[] )))"
+    },
+    {
+      "id": "12",
+      "oracion": "Las niñas son altas",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='f', NUM='p']\n    (DET[GEN='f', NUM='p'] las)\n    (N[GEN='f', NUM='p'] niñas)\n    (MODS[GEN=?g, NUM=?n] ))\n  (SV[GEN='f', NUM='p']\n    (ADVS[] )\n    (COP[NUM='p'] son)\n    (ADJ[GEN='f', NUM='p'] altas)\n    (MODSV[] )))"
+    },
+    {
+      "id": "13",
+      "oracion": "La perro come",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "14",
+      "oracion": "Los niños come",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "15",
+      "oracion": "Las niñas es altas",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "16",
+      "oracion": "El niño están cansado",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "17",
+      "oracion": "El perro negro come rápidamente",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "ADV"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='m', NUM='s']\n    (DET[GEN='m', NUM='s'] el)\n    (N[GEN='m', NUM='s'] perro)\n    (MODS[GEN='m', NUM='s']\n      (ADJ[GEN='m', NUM='s'] negro)\n      (MODS[GEN=?g, NUM=?n] )))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] come)\n    (COMP[] (MODSV[] (ADV[] rápidamente) (MODSV[] )))))"
+    },
+    {
+      "id": "18",
+      "oracion": "Las niñas pequeñas leen un libro en la casa",
+      "veredicto": "ACEPTA",
+      "arboles": 2,
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='f', NUM='p']\n    (DET[GEN='f', NUM='p'] las)\n    (N[GEN='f', NUM='p'] niñas)\n    (MODS[GEN='f', NUM='p']\n      (ADJ[GEN='f', NUM='p'] pequeñas)\n      (MODS[GEN=?g, NUM=?n] )))\n  (SV[GEN=?g, NUM='p']\n    (ADVS[] )\n    (V[NUM='p'] leen)\n    (COMP[]\n      (SN[GEN='m', NUM='s']\n        (DET[GEN='m', NUM='s'] un)\n        (N[GEN='m', NUM='s'] libro)\n        (MODS[GEN=?g, NUM=?n] ))\n      (MODSV[]\n        (SP[]\n          (PREP[] en)\n          (SN[GEN='f', NUM='s']\n            (DET[GEN='f', NUM='s'] la)\n            (N[GEN='f', NUM='s'] casa)\n            (MODS[GEN=?g, NUM=?n] )))\n        (MODSV[] )))))"
+    },
+    {
+      "id": "19",
+      "oracion": "La estudiante alta lee un libro",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "DET",
+        "N"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='f', NUM='s']\n    (DET[GEN='f', NUM='s'] la)\n    (N[NUM='s'] estudiante)\n    (MODS[GEN='f', NUM='s']\n      (ADJ[GEN='f', NUM='s'] alta)\n      (MODS[GEN=?g, NUM=?n] )))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] lee)\n    (COMP[]\n      (SN[GEN='m', NUM='s']\n        (DET[GEN='m', NUM='s'] un)\n        (N[GEN='m', NUM='s'] libro)\n        (MODS[GEN=?g, NUM=?n] ))\n      (MODSV[] ))))"
+    },
+    {
+      "id": "20",
+      "oracion": "Los perros grandes ladraron ayer",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "ADV"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='m', NUM='p']\n    (DET[GEN='m', NUM='p'] los)\n    (N[GEN='m', NUM='p'] perros)\n    (MODS[GEN=?g, NUM='p']\n      (ADJ[NUM='p'] grandes)\n      (MODS[GEN=?g, NUM=?n] )))\n  (SV[GEN=?g, NUM='p']\n    (ADVS[] )\n    (V[NUM='p'] ladraron)\n    (COMP[] (MODSV[] (ADV[] ayer) (MODSV[] )))))"
+    },
+    {
+      "id": "21",
+      "oracion": "El gato de la profesora duerme en la mesa",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N",
+        "V",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='m', NUM='s']\n    (DET[GEN='m', NUM='s'] el)\n    (N[GEN='m', NUM='s'] gato)\n    (MODS[GEN=?g, NUM=?n]\n      (SP[]\n        (PREP[] de)\n        (SN[GEN='f', NUM='s']\n          (DET[GEN='f', NUM='s'] la)\n          (N[GEN='f', NUM='s'] profesora)\n          (MODS[GEN=?g, NUM=?n] )))\n      (MODS[GEN=?g, NUM=?n] )))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] duerme)\n    (COMP[]\n      (MODSV[]\n        (SP[]\n          (PREP[] en)\n          (SN[GEN='f', NUM='s']\n            (DET[GEN='f', NUM='s'] la)\n            (N[GEN='f', NUM='s'] mesa)\n            (MODS[GEN=?g, NUM=?n] )))\n        (MODSV[] )))))"
+    },
+    {
+      "id": "22",
+      "oracion": "Ana vio el perro negro en el parque",
+      "veredicto": "ACEPTA",
+      "arboles": 2,
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N",
+        "ADJ",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='f', NUM='s'] (NP[GEN='f', NUM='s'] ana))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] vio)\n    (COMP[]\n      (SN[GEN='m', NUM='s']\n        (DET[GEN='m', NUM='s'] el)\n        (N[GEN='m', NUM='s'] perro)\n        (MODS[GEN='m', NUM='s']\n          (ADJ[GEN='m', NUM='s'] negro)\n          (MODS[GEN=?g, NUM=?n] )))\n      (MODSV[]\n        (SP[]\n          (PREP[] en)\n          (SN[GEN='m', NUM='s']\n            (DET[GEN='m', NUM='s'] el)\n            (N[GEN='m', NUM='s'] parque)\n            (MODS[GEN=?g, NUM=?n] )))\n        (MODSV[] )))))"
+    },
+    {
+      "id": "23",
+      "oracion": "La niña feliz come mucho",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "ADV"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='f', NUM='s']\n    (DET[GEN='f', NUM='s'] la)\n    (N[GEN='f', NUM='s'] niña)\n    (MODS[GEN=?g, NUM='s']\n      (ADJ[NUM='s'] feliz)\n      (MODS[GEN=?g, NUM=?n] )))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] come)\n    (COMP[] (MODSV[] (ADV[] mucho) (MODSV[] )))))"
+    },
+    {
+      "id": "24",
+      "oracion": "Los estudiantes leyeron un libro sobre la mesa",
+      "veredicto": "ACEPTA",
+      "arboles": 2,
+      "categorias": [
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='m', NUM='p']\n    (DET[GEN='m', NUM='p'] los)\n    (N[NUM='p'] estudiantes)\n    (MODS[GEN=?g, NUM=?n] ))\n  (SV[GEN=?g, NUM='p']\n    (ADVS[] )\n    (V[NUM='p'] leyeron)\n    (COMP[]\n      (SN[GEN='m', NUM='s']\n        (DET[GEN='m', NUM='s'] un)\n        (N[GEN='m', NUM='s'] libro)\n        (MODS[GEN=?g, NUM=?n] ))\n      (MODSV[]\n        (SP[]\n          (PREP[] sobre)\n          (SN[GEN='f', NUM='s']\n            (DET[GEN='f', NUM='s'] la)\n            (N[GEN='f', NUM='s'] mesa)\n            (MODS[GEN=?g, NUM=?n] )))\n        (MODSV[] )))))"
+    },
+    {
+      "id": "25",
+      "oracion": "El perro que ladra come",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "V",
+        "V"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='m', NUM='s']\n    (DET[GEN='m', NUM='s'] el)\n    (N[GEN='m', NUM='s'] perro)\n    (MODS[GEN=?g, NUM='s']\n      (REL[GEN=?g, NUM='s']\n        (QUE[] que)\n        (SV[GEN=?g, NUM='s']\n          (ADVS[] )\n          (V[NUM='s'] ladra)\n          (COMP[] (MODSV[] ))))\n      (MODS[GEN=?g, NUM=?n] )))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] come)\n    (COMP[] (MODSV[] ))))"
+    },
+    {
+      "id": "26",
+      "oracion": "Luis dice que la niña duerme",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "NP",
+        "V",
+        "QUE",
+        "DET",
+        "N",
+        "V"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='m', NUM='s'] (NP[GEN='m', NUM='s'] luis))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] dice)\n    (COMP[]\n      (MODSV[]\n        (QUE[] que)\n        (O[]\n          (SN[GEN='f', NUM='s']\n            (DET[GEN='f', NUM='s'] la)\n            (N[GEN='f', NUM='s'] niña)\n            (MODS[GEN=?g, NUM=?n] ))\n          (SV[GEN=?g, NUM='s']\n            (ADVS[] )\n            (V[NUM='s'] duerme)\n            (COMP[] (MODSV[] ))))))))"
+    },
+    {
+      "id": "27",
+      "oracion": "Las gatas negras están cansadas",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "COP",
+        "ADJ"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='f', NUM='p']\n    (DET[GEN='f', NUM='p'] las)\n    (N[GEN='f', NUM='p'] gatas)\n    (MODS[GEN='f', NUM='p']\n      (ADJ[GEN='f', NUM='p'] negras)\n      (MODS[GEN=?g, NUM=?n] )))\n  (SV[GEN='f', NUM='p']\n    (ADVS[] )\n    (COP[NUM='p'] están)\n    (ADJ[GEN='f', NUM='p'] cansadas)\n    (MODSV[] )))"
+    },
+    {
+      "id": "28",
+      "oracion": "Los gato negra come",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "29",
+      "oracion": "La estudiante pequeño lee",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "30",
+      "oracion": "El perro que ladran come",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "31",
+      "oracion": "Las niñas pequeños leen un libro",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "32",
+      "oracion": "El gato de la profesora duermen",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "33",
+      "oracion": "Las niñas que el profesor regañó están cansadas",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "COP",
+        "ADJ"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='f', NUM='p']\n    (DET[GEN='f', NUM='p'] las)\n    (N[GEN='f', NUM='p'] niñas)\n    (MODS[GEN=?g, NUM=?n]\n      (REL[GEN=?g, NUM=?n]\n        (QUE[] que)\n        (SN[GEN='m', NUM='s']\n          (DET[GEN='m', NUM='s'] el)\n          (N[GEN='m', NUM='s'] profesor)\n          (MODS[GEN=?g, NUM=?n] ))\n        (SVH[NUM='s'] (ADVS[] ) (V[NUM='s'] regañó) (MODSV[] )))\n      (MODS[GEN=?g, NUM=?n] )))\n  (SV[GEN='f', NUM='p']\n    (ADVS[] )\n    (COP[NUM='p'] están)\n    (ADJ[GEN='f', NUM='p'] cansadas)\n    (MODSV[] )))"
+    },
+    {
+      "id": "34",
+      "oracion": "Ana vio el perro con el telescopio",
+      "veredicto": "ACEPTA",
+      "arboles": 2,
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='f', NUM='s'] (NP[GEN='f', NUM='s'] ana))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] vio)\n    (COMP[]\n      (SN[GEN='m', NUM='s']\n        (DET[GEN='m', NUM='s'] el)\n        (N[GEN='m', NUM='s'] perro)\n        (MODS[GEN=?g, NUM=?n] ))\n      (MODSV[]\n        (SP[]\n          (PREP[] con)\n          (SN[GEN='m', NUM='s']\n            (DET[GEN='m', NUM='s'] el)\n            (N[GEN='m', NUM='s'] telescopio)\n            (MODS[GEN=?g, NUM=?n] )))\n        (MODSV[] )))))"
+    },
+    {
+      "id": "35",
+      "oracion": "Ana vio el perro en el parque con el telescopio",
+      "veredicto": "ACEPTA",
+      "arboles": 5,
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='f', NUM='s'] (NP[GEN='f', NUM='s'] ana))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] vio)\n    (COMP[]\n      (SN[GEN='m', NUM='s']\n        (DET[GEN='m', NUM='s'] el)\n        (N[GEN='m', NUM='s'] perro)\n        (MODS[GEN=?g, NUM=?n]\n          (SP[]\n            (PREP[] en)\n            (SN[GEN='m', NUM='s']\n              (DET[GEN='m', NUM='s'] el)\n              (N[GEN='m', NUM='s'] parque)\n              (MODS[GEN=?g, NUM=?n] )))\n          (MODS[GEN=?g, NUM=?n] )))\n      (MODSV[]\n        (SP[]\n          (PREP[] con)\n          (SN[GEN='m', NUM='s']\n            (DET[GEN='m', NUM='s'] el)\n            (N[GEN='m', NUM='s'] telescopio)\n            (MODS[GEN=?g, NUM=?n] )))\n        (MODSV[] )))))"
+    },
+    {
+      "id": "36",
+      "oracion": "Luis dice que Ana dice que los niños comen",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "NP",
+        "V",
+        "QUE",
+        "NP",
+        "V",
+        "QUE",
+        "DET",
+        "N",
+        "V"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='m', NUM='s'] (NP[GEN='m', NUM='s'] luis))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] dice)\n    (COMP[]\n      (MODSV[]\n        (QUE[] que)\n        (O[]\n          (SN[GEN='f', NUM='s'] (NP[GEN='f', NUM='s'] ana))\n          (SV[GEN=?g, NUM='s']\n            (ADVS[] )\n            (V[NUM='s'] dice)\n            (COMP[]\n              (MODSV[]\n                (QUE[] que)\n                (O[]\n                  (SN[GEN='m', NUM='p']\n                    (DET[GEN='m', NUM='p'] los)\n                    (N[GEN='m', NUM='p'] niños)\n                    (MODS[GEN=?g, NUM=?n] ))\n                  (SV[GEN=?g, NUM='p']\n                    (ADVS[] )\n                    (V[NUM='p'] comen)\n                    (COMP[] (MODSV[] ))))))))))))"
+    },
+    {
+      "id": "37",
+      "oracion": "Llegaron los niños",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "38",
+      "oracion": "Lee un libro",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "39",
+      "oracion": "Ayer los niños comieron mucho",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "40",
+      "oracion": "Ana , Luis y Pedro son alta , alto y alto respectivamente",
+      "motivo": "Grammar does not cover some of the input words: \"',', 'y', ',', 'y', 'respectivamente'\".",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "41",
+      "oracion": "El perro que el niño vio ladra",
+      "veredicto": "ACEPTA",
+      "arboles": 1,
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "V"
+      ],
+      "arbol": "(O[]\n  (SN[GEN='m', NUM='s']\n    (DET[GEN='m', NUM='s'] el)\n    (N[GEN='m', NUM='s'] perro)\n    (MODS[GEN=?g, NUM=?n]\n      (REL[GEN=?g, NUM=?n]\n        (QUE[] que)\n        (SN[GEN='m', NUM='s']\n          (DET[GEN='m', NUM='s'] el)\n          (N[GEN='m', NUM='s'] niño)\n          (MODS[GEN=?g, NUM=?n] ))\n        (SVH[NUM='s'] (ADVS[] ) (V[NUM='s'] vio) (MODSV[] )))\n      (MODS[GEN=?g, NUM=?n] )))\n  (SV[GEN=?g, NUM='s']\n    (ADVS[] )\n    (V[NUM='s'] ladra)\n    (COMP[] (MODSV[] ))))"
+    },
+    {
+      "id": "42",
+      "oracion": "Los niños que leen libros están felices",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "43",
+      "oracion": "Las niñas que el profesor regañó están cansados",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "44",
+      "oracion": "Las niñas que el profesor regañó el libro están cansadas",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "45",
+      "oracion": "Ana , Luis y Pedro son alto , alto y alta respectivamente",
+      "motivo": "Grammar does not cover some of the input words: \"',', 'y', ',', 'y', 'respectivamente'\".",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "46",
+      "oracion": "Ana y Luis son alto y alta respectivamente",
+      "motivo": "Grammar does not cover some of the input words: \"'y', 'y', 'respectivamente'\".",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "47",
+      "oracion": "Los niños que el profesor regañó está cansados",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    },
+    {
+      "id": "48",
+      "oracion": "El perro que el niño vio el gato ladra",
+      "veredicto": "RECHAZA",
+      "arboles": 0,
+      "categorias": []
+    }
+  ]
+}

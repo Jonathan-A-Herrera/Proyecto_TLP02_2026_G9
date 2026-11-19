@@ -1,0 +1,49 @@
+id,nivel,oracion,esperado,en_gramatica,arboles_en_G,categorias_esperadas,fenomeno
+1,1,El perro come,ACEPTA,SI,1,DET N V,"SVO mínimo, presente"
+2,1,La niña duerme,ACEPTA,SI,1,DET N V,sujeto femenino singular
+3,1,Los niños leen un libro,ACEPTA,SI,1,DET N V DET N,sujeto plural con objeto directo
+4,1,Las gatas comen,ACEPTA,SI,1,DET N V,sujeto femenino plural
+5,1,Ana lee un libro,ACEPTA,SI,1,NP V DET N,nombre propio como sujeto
+6,1,Luis vio el parque,ACEPTA,SI,1,NP V DET N,pretérito con objeto
+7,1,El profesor lee un libro,ACEPTA,SI,1,DET N V DET N,sujeto masculino con objeto
+8,1,La profesora llegó,ACEPTA,SI,1,DET N V,pretérito intransitivo
+9,1,Los perros ladran,ACEPTA,SI,1,DET N V,plural intransitivo
+10,1,Pedro come,ACEPTA,SI,1,NP V,nombre propio intransitivo
+11,1,El niño está cansado,ACEPTA,SI,1,DET N COP ADJ,cópula con atributo
+12,1,Las niñas son altas,ACEPTA,SI,1,DET N COP ADJ,cópula con atributo plural
+13,1,La perro come,RECHAZA,NO,0,DET N V,concordancia determinante-sustantivo
+14,1,Los niños come,RECHAZA,NO,0,DET N V,concordancia sujeto-verbo
+15,1,Las niñas es altas,RECHAZA,NO,0,DET N COP ADJ,concordancia sujeto-cópula
+16,1,El niño están cansado,RECHAZA,NO,0,DET N COP ADJ,concordancia sujeto-cópula
+17,2,El perro negro come rápidamente,ACEPTA,SI,1,DET N ADJ V ADV,adjetivo y adverbio
+18,2,Las niñas pequeñas leen un libro en la casa,ACEPTA,SI,2,DET N ADJ V DET N PREP DET N,adjetivo y frase preposicional
+19,2,La estudiante alta lee un libro,ACEPTA,SI,1,DET N ADJ V DET N,sustantivo de género común
+20,2,Los perros grandes ladraron ayer,ACEPTA,SI,1,DET N ADJ V ADV,"adjetivo común, pretérito y adverbio"
+21,2,El gato de la profesora duerme en la mesa,ACEPTA,SI,1,DET N PREP DET N V PREP DET N,frase preposicional dentro del SN
+22,2,Ana vio el perro negro en el parque,ACEPTA,SI,2,NP V DET N ADJ PREP DET N,objeto con adjetivo y frase preposicional
+23,2,La niña feliz come mucho,ACEPTA,SI,1,DET N ADJ V ADV,adjetivo común y adverbio
+24,2,Los estudiantes leyeron un libro sobre la mesa,ACEPTA,SI,2,DET N V DET N PREP DET N,pretérito y frase preposicional
+25,2,El perro que ladra come,ACEPTA,SI,1,DET N QUE V V,relativa de sujeto
+26,2,Luis dice que la niña duerme,ACEPTA,SI,1,NP V QUE DET N V,subordinada sustantiva
+27,2,Las gatas negras están cansadas,ACEPTA,SI,1,DET N ADJ COP ADJ,adjetivo y atributo femenino plural
+28,2,Los gato negra come,RECHAZA,NO,0,DET N ADJ V,concordancia dentro del SN
+29,2,La estudiante pequeño lee,RECHAZA,NO,0,DET N ADJ V,género común mal concordado
+30,2,El perro que ladran come,RECHAZA,NO,0,DET N QUE V V,concordancia dentro de la relativa
+31,2,Las niñas pequeños leen un libro,RECHAZA,NO,0,DET N ADJ V DET N,concordancia sustantivo-adjetivo
+32,2,El gato de la profesora duermen,RECHAZA,NO,0,DET N PREP DET N V,concordancia sujeto-verbo con frase preposicional
+33,3,Las niñas que el profesor regañó están cansadas,ACEPTA,SI,1,DET N QUE DET N V COP ADJ,concordancia a distancia con relativa de objeto
+34,3,Ana vio el perro con el telescopio,ACEPTA,SI,2,NP V DET N PREP DET N,ambigüedad de adjunción
+35,3,Ana vio el perro en el parque con el telescopio,ACEPTA,SI,5,NP V DET N PREP DET N PREP DET N,ambigüedad con dos frases preposicionales
+36,3,Luis dice que Ana dice que los niños comen,ACEPTA,SI,1,NP V QUE NP V QUE DET N V,subordinadas anidadas
+37,3,Llegaron los niños,ACEPTA,NO,0,V DET N,orden verbo-sujeto
+38,3,Lee un libro,ACEPTA,NO,0,V DET N,sujeto tácito
+39,3,Ayer los niños comieron mucho,ACEPTA,NO,0,ADV DET N V ADV,adverbio antepuesto
+40,3,"Ana , Luis y Pedro son alta , alto y alto respectivamente",ACEPTA,NO,0,NP SEP NP SEP NP COP ADJ SEP ADJ SEP ADJ ADV,dependencias cruzadas
+41,3,El perro que el niño vio ladra,ACEPTA,SI,1,DET N QUE DET N V V,relativa de objeto
+42,3,Los niños que leen libros están felices,ACEPTA,NO,0,DET N QUE V N COP ADJ,plural sin determinante dentro de la relativa
+43,3,Las niñas que el profesor regañó están cansados,RECHAZA,NO,0,DET N QUE DET N V COP ADJ,concordancia a distancia
+44,3,Las niñas que el profesor regañó el libro están cansadas,RECHAZA,NO,0,DET N QUE DET N V DET N COP ADJ,hueco de la relativa ocupado
+45,3,"Ana , Luis y Pedro son alto , alto y alta respectivamente",RECHAZA,NO,0,NP SEP NP SEP NP COP ADJ SEP ADJ SEP ADJ ADV,dependencias cruzadas en orden espejo
+46,3,Ana y Luis son alto y alta respectivamente,RECHAZA,NO,0,NP SEP NP COP ADJ SEP ADJ ADV,dependencias cruzadas mal emparejadas
+47,3,Los niños que el profesor regañó está cansados,RECHAZA,NO,0,DET N QUE DET N V COP ADJ,concordancia a distancia sujeto-cópula
+48,3,El perro que el niño vio el gato ladra,RECHAZA,NO,0,DET N QUE DET N V DET N V,hueco de la relativa ocupado

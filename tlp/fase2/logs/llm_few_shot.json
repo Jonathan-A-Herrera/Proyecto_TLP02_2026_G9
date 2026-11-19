@@ -1,0 +1,724 @@
+{
+  "enfoque": "llm_few_shot",
+  "fecha": "2026-11-19T15:26:18-06:00",
+  "proveedor": "gemini",
+  "modelo": "gemini-3.5-flash-lite",
+  "temperatura": 0,
+  "max_tokens": 2048,
+  "huella_prompt_sistema": "235e7f7d7232c91f",
+  "prompt_en": "prompts/few_shot.txt",
+  "llamadas_en": "logs/llm_few_shot_llamadas.jsonl",
+  "resultados": [
+    {
+      "id": "1",
+      "oracion": "El perro come",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "O -> SN_m_s SV_m_s; SN_m_s -> DET_m_s NUC_m_s; NUC_m_s -> N_m_s MODS_N_m_s; MODS_N_m_s -> ε; SV_m_s -> ADVS NUCLEO_V_m_s; ADVS -> ε; NUCLEO_V_m_s -> V_s COMP; COMP -> MODS_V; MODS_V -> ε",
+      "timestamp_respuesta": "2026-11-19T15:21:05-06:00"
+    },
+    {
+      "id": "2",
+      "oracion": "La niña duerme",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "O -> SN_f_s SV_f_s; SN_f_s -> DET_f_s NUC_f_s; NUC_f_s -> N_f_s MODS_N_f_s; SV_f_s -> ADVS NUCLEO_V_f_s; NUCLEO_V_f_s -> V_s COMP; COMP -> MODS_V",
+      "timestamp_respuesta": "2026-11-19T15:21:12-06:00"
+    },
+    {
+      "id": "3",
+      "oracion": "Los niños leen un libro",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N"
+      ],
+      "justificacion": "O -> SN_m_p SV_m_p; SN_m_p -> DET_m_p NUC_m_p; NUC_m_p -> N_m_p MODS_N_m_p; MODS_N_m_p -> ε; SV_m_p -> ADVS NUCLEO_V_m_p; ADVS -> ε; NUCLEO_V_m_p -> V_p COMP; COMP -> SN_m_s MODS_V; SN_m_s -> DET_m_s NUC_m_s; NUC_m_s -> N_m_s MODS_N_m_s; MODS_N_m_s -> ε; MODS_V -> ε",
+      "timestamp_respuesta": "2026-11-19T15:21:18-06:00"
+    },
+    {
+      "id": "4",
+      "oracion": "Las gatas comen",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "O -> SN_f_p SV_f_p; SN_f_p -> DET_f_p NUC_f_p; NUC_f_p -> N_f_p MODS_N_f_p; MODS_N_f_p -> ε; SV_f_p -> ADVS NUCLEO_V_f_p; ADVS -> ε; NUCLEO_V_f_p -> V_p COMP; COMP -> MODS_V; MODS_V -> ε",
+      "timestamp_respuesta": "2026-11-19T15:21:24-06:00"
+    },
+    {
+      "id": "5",
+      "oracion": "Ana lee un libro",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N"
+      ],
+      "justificacion": "O -> SN_f_s SV_f_s; SN_f_s -> NP_f_s; SV_f_s -> ADVS NUCLEO_V_f_s; NUCLEO_V_f_s -> V_s COMP; COMP -> SN_m_s MODS_V; SN_m_s -> DET_m_s NUC_m_s; NUC_m_s -> N_m_s MODS_N_m_s; MODS_N_m_s -> ε; MODS_V -> ε",
+      "timestamp_respuesta": "2026-11-19T15:21:30-06:00"
+    },
+    {
+      "id": "6",
+      "oracion": "Luis vio el parque",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N"
+      ],
+      "justificacion": "O -> SN_m_s SV_m_s; SN_m_s -> NP_m_s; SV_m_s -> ADVS NUCLEO_V_m_s; NUCLEO_V_m_s -> V_s COMP; COMP -> SN_m_s MODS_V; SN_m_s -> DET_m_s NUC_m_s; NUC_m_s -> N_m_s MODS_N_m_s; MODS_N_m_s -> ε; MODS_V -> ε",
+      "timestamp_respuesta": "2026-11-19T15:21:36-06:00"
+    },
+    {
+      "id": "7",
+      "oracion": "El profesor lee un libro",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N"
+      ],
+      "justificacion": "O -> SN_m_s SV_m_s; SN_m_s -> DET_m_s NUC_m_s; NUC_m_s -> N_m_s MODS_N_m_s; SV_m_s -> ADVS NUCLEO_V_m_s; NUCLEO_V_m_s -> V_s COMP; COMP -> SN_m_s MODS_V; SN_m_s -> DET_m_s NUC_m_s; NUC_m_s -> N_m_s MODS_N_m_s",
+      "timestamp_respuesta": "2026-11-19T15:21:42-06:00"
+    },
+    {
+      "id": "8",
+      "oracion": "La profesora llegó",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "O -> SN_f_s SV_f_s; SN_f_s -> DET_f_s NUC_f_s; NUC_f_s -> N_f_s MODS_N_f_s; MODS_N_f_s -> ε; SV_f_s -> ADVS NUCLEO_V_f_s; ADVS -> ε; NUCLEO_V_f_s -> V_s COMP; COMP -> MODS_V; MODS_V -> ε",
+      "timestamp_respuesta": "2026-11-19T15:21:49-06:00"
+    },
+    {
+      "id": "9",
+      "oracion": "Los perros ladran",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "O -> SN_m_p SV_m_p; SN_m_p -> DET_m_p NUC_m_p; NUC_m_p -> N_m_p MODS_N_m_p; MODS_N_m_p -> ε; SV_m_p -> ADVS NUCLEO_V_m_p; NUCLEO_V_m_p -> V_p COMP; COMP -> MODS_V; MODS_V -> ε",
+      "timestamp_respuesta": "2026-11-19T15:21:55-06:00"
+    },
+    {
+      "id": "10",
+      "oracion": "Pedro come",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V"
+      ],
+      "justificacion": "O -> SN_m_s SV_m_s; SN_m_s -> NP_m_s; SV_m_s -> ADVS NUCLEO_V_m_s; NUCLEO_V_m_s -> V_s COMP; COMP -> MODS_V",
+      "timestamp_respuesta": "2026-11-19T15:22:02-06:00"
+    },
+    {
+      "id": "11",
+      "oracion": "El niño está cansado",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "O -> SN_m_s SV_m_s; SN_m_s -> DET_m_s NUC_m_s; NUC_m_s -> N_m_s MODS_N_m_s; SV_m_s -> ADVS NUCLEO_V_m_s; NUCLEO_V_m_s -> COP_s ATRIB_m_s MODS_V; ATRIB_m_s -> ADJ_m_s",
+      "timestamp_respuesta": "2026-11-19T15:22:08-06:00"
+    },
+    {
+      "id": "12",
+      "oracion": "Las niñas son altas",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "O -> SN_f_p SV_f_p; SN_f_p -> DET_f_p NUC_f_p; NUC_f_p -> N_f_p MODS_N_f_p; MODS_N_f_p -> ε; SV_f_p -> ADVS NUCLEO_V_f_p; ADVS -> ε; NUCLEO_V_f_p -> COP_p ATRIB_f_p MODS_V; ATRIB_f_p -> ADJ_f_p; MODS_V -> ε",
+      "timestamp_respuesta": "2026-11-19T15:22:14-06:00"
+    },
+    {
+      "id": "13",
+      "oracion": "La perro come",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "Después de DET_f_s la regla NUC_f_s exige N_f_s o N_c_s y 'perro' es N_m_s",
+      "timestamp_respuesta": "2026-11-19T15:22:20-06:00"
+    },
+    {
+      "id": "14",
+      "oracion": "Los niños come",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "Discordancia de número: SN_m_p requiere SV_m_p con V_p, pero 'come' es V_s",
+      "timestamp_respuesta": "2026-11-19T15:22:25-06:00"
+    },
+    {
+      "id": "15",
+      "oracion": "Las niñas es altas",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "Discordancia de número: SN_f_p requiere COP_p y 'es' es COP_s",
+      "timestamp_respuesta": "2026-11-19T15:22:33-06:00"
+    },
+    {
+      "id": "16",
+      "oracion": "El niño están cansado",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "El sujeto 'el niño' es singular (SN_m_s) y requiere un verbo en singular (COP_s), pero 'están' es plural (COP_p)",
+      "timestamp_respuesta": "2026-11-19T15:22:40-06:00"
+    },
+    {
+      "id": "17",
+      "oracion": "El perro negro come rápidamente",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "ADV"
+      ],
+      "justificacion": "O -> SN_m_s SV_m_s; SN_m_s -> DET_m_s NUC_m_s; NUC_m_s -> N_m_s MODS_N_m_s; MODS_N_m_s -> ADJ_m_s MODS_N_m_s; SV_m_s -> ADVS NUCLEO_V_m_s; NUCLEO_V_m_s -> V_s COMP; COMP -> MODS_V; MODS_V -> ADV MODS_V",
+      "timestamp_respuesta": "2026-11-19T15:22:47-06:00"
+    },
+    {
+      "id": "18",
+      "oracion": "Las niñas pequeñas leen un libro en la casa",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "justificacion": "O -> SN_f_p SV_f_p; SN_f_p -> DET_f_p NUC_f_p; NUC_f_p -> N_f_p MODS_N_f_p; MODS_N_f_p -> ADJ_f_p MODS_N_f_p; SV_f_p -> ADVS NUCLEO_V_f_p; NUCLEO_V_f_p -> V_p COMP; COMP -> SN_m_s MODS_V; SN_m_s -> DET_m_s NUC_m_s; NUC_m_s -> N_m_s MODS_N_m_s; MODS_V -> SP MODS_V; SP -> PREP SN_X; SN_X -> SN_f_s; SN_f_s -> DET_f_s NUC_f_s; NUC_f_s -> N_f_s",
+      "timestamp_respuesta": "2026-11-19T15:23:05-06:00"
+    },
+    {
+      "id": "19",
+      "oracion": "La estudiante alta lee un libro",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "DET",
+        "N"
+      ],
+      "justificacion": "O -> SN_f_s SV_f_s; SN_f_s -> DET_f_s NUC_f_s; NUC_f_s -> N_c_s MODS_N_f_s; MODS_N_f_s -> ADJ_f_s MODS_N_f_s; SV_f_s -> ADVS NUCLEO_V_f_s; NUCLEO_V_f_s -> V_s COMP; COMP -> SN_m_s MODS_V; SN_m_s -> DET_m_s NUC_m_s; NUC_m_s -> N_m_s MODS_N_m_s",
+      "timestamp_respuesta": "2026-11-19T15:23:11-06:00"
+    },
+    {
+      "id": "20",
+      "oracion": "Los perros grandes ladraron ayer",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "ADV"
+      ],
+      "justificacion": "O -> SN_m_p SV_m_p; SN_m_p -> DET_m_p NUC_m_p; NUC_m_p -> N_m_p MODS_N_m_p; MODS_N_m_p -> ADJ_c_p MODS_N_m_p; SV_m_p -> ADVS NUCLEO_V_m_p; NUCLEO_V_m_p -> V_p COMP; COMP -> MODS_V; MODS_V -> ADV MODS_V",
+      "timestamp_respuesta": "2026-11-19T15:23:17-06:00"
+    },
+    {
+      "id": "21",
+      "oracion": "El gato de la profesora duerme en la mesa",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N",
+        "V",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "justificacion": "O -> SN_m_s SV_m_s; SN_m_s -> DET_m_s NUC_m_s; NUC_m_s -> N_m_s MODS_N_m_s; MODS_N_m_s -> SP MODS_N_m_s; SP -> PREP SN_X; SN_X -> SN_f_s; SV_m_s -> ADVS NUCLEO_V_m_s; NUCLEO_V_m_s -> V_s COMP; COMP -> MODS_V; MODS_V -> SP MODS_V; SP -> PREP SN_X; SN_X -> SN_f_s",
+      "timestamp_respuesta": "2026-11-19T15:23:24-06:00"
+    },
+    {
+      "id": "22",
+      "oracion": "Ana vio el perro negro en el parque",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N",
+        "ADJ",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "justificacion": "O -> SN_f_s SV_f_s; SN_f_s -> NP_f_s; SV_f_s -> ADVS NUCLEO_V_f_s; NUCLEO_V_f_s -> V_s COMP; COMP -> SN_m_s MODS_V; SN_m_s -> DET_m_s NUC_m_s; NUC_m_s -> N_m_s MODS_N_m_s; MODS_N_m_s -> ADJ_m_s MODS_N_m_s | SP MODS_N_m_s; SP -> PREP SN_X; SN_X -> SN_m_s; SN_m_s -> DET_m_s NUC_m_s; NUC_m_s -> N_m_s",
+      "timestamp_respuesta": "2026-11-19T15:23:30-06:00"
+    },
+    {
+      "id": "23",
+      "oracion": "La niña feliz come mucho",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "ADV"
+      ],
+      "justificacion": "O -> SN_f_s SV_f_s; SN_f_s -> DET_f_s NUC_f_s; NUC_f_s -> N_f_s MODS_N_f_s; MODS_N_f_s -> ADJ_c_s MODS_N_f_s; SV_f_s -> ADVS NUCLEO_V_f_s; NUCLEO_V_f_s -> V_s COMP; COMP -> MODS_V; MODS_V -> ADV MODS_V",
+      "timestamp_respuesta": "2026-11-19T15:23:36-06:00"
+    },
+    {
+      "id": "24",
+      "oracion": "Los estudiantes leyeron un libro sobre la mesa",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "justificacion": "O -> SN_m_p SV_m_p; SN_m_p -> DET_m_p NUC_m_p; NUC_m_p -> N_c_p MODS_N_m_p; SV_m_p -> ADVS NUCLEO_V_m_p; NUCLEO_V_m_p -> V_p COMP; COMP -> SN_m_s MODS_V; SN_m_s -> DET_m_s NUC_m_s; NUC_m_s -> N_m_s MODS_N_m_s; MODS_N_m_s -> SP MODS_N_m_s; SP -> PREP SN_X; SN_X -> SN_f_s; SN_f_s -> DET_f_s NUC_f_s; NUC_f_s -> N_f_s",
+      "timestamp_respuesta": "2026-11-19T15:23:43-06:00"
+    },
+    {
+      "id": "25",
+      "oracion": "El perro que ladra come",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "V",
+        "V"
+      ],
+      "justificacion": "O -> SN_m_s SV_m_s; SN_m_s -> DET_m_s NUC_m_s; NUC_m_s -> N_m_s MODS_N_m_s; MODS_N_m_s -> REL_m_s MODS_N_m_s; REL_m_s -> QUE REL_RESTO_m_s; REL_RESTO_m_s -> SV_m_s; SV_m_s -> ADVS NUCLEO_V_m_s; NUCLEO_V_m_s -> V_s COMP; SV_m_s (principal) -> ADVS NUCLEO_V_m_s",
+      "timestamp_respuesta": "2026-11-19T15:23:49-06:00"
+    },
+    {
+      "id": "26",
+      "oracion": "Luis dice que la niña duerme",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "QUE",
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "O -> SN_m_s SV_m_s; SN_m_s -> NP_m_s; SV_m_s -> ADVS NUCLEO_V_m_s; NUCLEO_V_m_s -> V_s COMP; COMP -> SN_f_s MODS_V; SN_f_s -> DET_f_s NUC_f_s; NUC_f_s -> N_f_s MODS_N_f_s; MODS_N_f_s -> ε; MODS_V -> SUB; SUB -> QUE O; O -> SN_f_s SV_f_s; SN_f_s -> DET_f_s NUC_f_s; NUC_f_s -> N_f_s MODS_N_f_s; SV_f_s -> ADVS NUCLEO_V_f_s; NUCLEO_V_f_s -> V_s COMP; COMP -> MODS_V",
+      "timestamp_respuesta": "2026-11-19T15:23:55-06:00"
+    },
+    {
+      "id": "27",
+      "oracion": "Las gatas negras están cansadas",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "O -> SN_f_p SV_f_p; SN_f_p -> DET_f_p NUC_f_p; NUC_f_p -> N_f_p MODS_N_f_p; MODS_N_f_p -> ADJ_f_p MODS_N_f_p; SV_f_p -> ADVS NUCLEO_V_f_p; NUCLEO_V_f_p -> COP_p ATRIB_f_p MODS_V; ATRIB_f_p -> ADJ_f_p",
+      "timestamp_respuesta": "2026-11-19T15:24:01-06:00"
+    },
+    {
+      "id": "28",
+      "oracion": "Los gato negra come",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V"
+      ],
+      "justificacion": "Discordancia de género y número: 'los' (DET_m_p) y 'gato' (N_m_s), y 'gato' (m_s) con 'negra' (ADJ_f_s)",
+      "timestamp_respuesta": "2026-11-19T15:24:07-06:00"
+    },
+    {
+      "id": "29",
+      "oracion": "La estudiante pequeño lee",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V"
+      ],
+      "justificacion": "Después de DET_f_s la regla NUC_f_s produce N_c_s con MODS_N_f_s, exigiendo ADJ_f_s o ADJ_c_s y 'pequeño' es ADJ_m_s",
+      "timestamp_respuesta": "2026-11-19T15:24:14-06:00"
+    },
+    {
+      "id": "30",
+      "oracion": "El perro que ladran come",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "V",
+        "V"
+      ],
+      "justificacion": "Incoherencia de número en la subordinada: REL_m_s requiere SV_m_s (con V_s 'ladra'), pero 'ladran' es V_p",
+      "timestamp_respuesta": "2026-11-19T15:24:20-06:00"
+    },
+    {
+      "id": "31",
+      "oracion": "Las niñas pequeños leen un libro",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "DET",
+        "N"
+      ],
+      "justificacion": "Las niñas (femenino plural) no concuerda con pequeños (masculino plural) en el modificador de NUC_f_p",
+      "timestamp_respuesta": "2026-11-19T15:24:26-06:00"
+    },
+    {
+      "id": "32",
+      "oracion": "El gato de la profesora duermen",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "El sujeto 'el gato de la profesora' es singular (m_s) y requiere un verbo singular, pero 'duermen' es plural",
+      "timestamp_respuesta": "2026-11-19T15:24:33-06:00"
+    },
+    {
+      "id": "33",
+      "oracion": "Las niñas que el profesor regañó están cansadas",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "O -> SN_f_p SV_f_p; SN_f_p -> DET_f_p NUC_f_p; NUC_f_p -> N_f_p MODS_N_f_p; MODS_N_f_p -> REL_f_p MODS_N_f_p; REL_f_p -> QUE REL_RESTO_f_p; REL_RESTO_f_p -> O_HUECO; O_HUECO -> SN_m_s SV_HUECO_m_s; SV_f_p -> ADVS NUCLEO_V_f_p; NUCLEO_V_f_p -> COP_p ATRIB_f_p MODS_V",
+      "timestamp_respuesta": "2026-11-19T15:24:40-06:00"
+    },
+    {
+      "id": "34",
+      "oracion": "Ana vio el perro con el telescopio",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "justificacion": "O -> SN_f_s SV_f_s; SN_f_s -> NP_f_s; SV_f_s -> ADVS NUCLEO_V_f_s; NUCLEO_V_f_s -> V_s COMP; COMP -> SN_m_s MODS_V; MODS_N_m_s -> SP; SP -> PREP SN_X",
+      "timestamp_respuesta": "2026-11-19T15:24:46-06:00"
+    },
+    {
+      "id": "35",
+      "oracion": "Ana vio el perro en el parque con el telescopio",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "justificacion": "O -> SN_f_s SV_f_s; SN_f_s -> NP_f_s; SV_f_s -> ADVS NUCLEO_V_f_s; NUCLEO_V_f_s -> V_s COMP; COMP -> SN_m_s MODS_V; MODS_V -> SP MODS_V; SP -> PREP SN_X; SN_X -> SN_m_s; MODS_V -> SP MODS_V; SP -> PREP SN_X; SN_X -> SN_m_s",
+      "timestamp_respuesta": "2026-11-19T15:24:52-06:00"
+    },
+    {
+      "id": "36",
+      "oracion": "Luis dice que Ana dice que los niños comen",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "QUE",
+        "NP",
+        "V",
+        "QUE",
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "O -> SN_m_s SV_m_s; SN_m_s -> NP_m_s; SV_m_s -> ADVS NUCLEO_V_m_s; NUCLEO_V_m_s -> V_s COMP; COMP -> SN_m_s MODS_V; SN_m_s -> NP_f_s; SV_m_s -> ADVS NUCLEO_V_m_s; NUCLEO_V_m_s -> V_s COMP; COMP -> SN_m_p MODS_V; SN_m_p -> DET_m_p NUC_m_p; NUC_m_p -> N_m_p MODS_N_m_p; SV_m_p -> ADVS NUCLEO_V_m_p; NUCLEO_V_m_p -> V_p COMP",
+      "timestamp_respuesta": "2026-11-19T15:24:58-06:00"
+    },
+    {
+      "id": "37",
+      "oracion": "Llegaron los niños",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "V",
+        "DET",
+        "N"
+      ],
+      "justificacion": "Toda derivación de O empieza obligatoriamente con SN (DET o NP); ninguna regla permite iniciar con SV o V",
+      "timestamp_respuesta": "2026-11-19T15:25:05-06:00"
+    },
+    {
+      "id": "38",
+      "oracion": "Lee un libro",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "V",
+        "DET",
+        "N"
+      ],
+      "justificacion": "Toda derivación de O exige un SN al inicio, por lo que una estructura que empieza por verbo no puede derivarse",
+      "timestamp_respuesta": "2026-11-19T15:25:11-06:00"
+    },
+    {
+      "id": "39",
+      "oracion": "Ayer los niños comieron mucho",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "ADV",
+        "DET",
+        "N",
+        "V",
+        "ADV"
+      ],
+      "justificacion": "O -> SN_m_p SV_m_p; SV_m_p -> ADVS NUCLEO_V_m_p; ADVS -> ADV ADVS; NUCLEO_V_m_p -> V_p COMP; COMP -> MODS_V; MODS_V -> ADV MODS_V",
+      "timestamp_respuesta": "2026-11-19T15:25:18-06:00"
+    },
+    {
+      "id": "40",
+      "oracion": "Ana , Luis y Pedro son alta , alto y alto respectivamente",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "NP",
+        "SEP",
+        "NP",
+        "SEP",
+        "NP",
+        "COP",
+        "ADJ",
+        "SEP",
+        "ADJ",
+        "SEP",
+        "ADJ",
+        "ADV"
+      ],
+      "justificacion": "La gramática no contempla construcciones con conjunciones múltiples, comas y la palabra 'respectivamente' al nivel de sujeto u objeto",
+      "timestamp_respuesta": "2026-11-19T15:25:24-06:00"
+    },
+    {
+      "id": "41",
+      "oracion": "El perro que el niño vio ladra",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "V"
+      ],
+      "justificacion": "O -> SN_m_s SV_m_s; SN_m_s -> DET_m_s NUC_m_s; NUC_m_s -> N_m_s MODS_N_m_s; MODS_N_m_s -> REL_m_s MODS_N_m_s; REL_m_s -> QUE REL_RESTO_m_s; REL_RESTO_m_s -> O_HUECO; O_HUECO -> SN_m_s SV_HUECO_m_s; SV_HUECO_m_s -> ADVS V_s MODS_V; SV_m_s -> ADVS NUCLEO_V_m_s; NUCLEO_V_m_s -> V_s COMP",
+      "timestamp_respuesta": "2026-11-19T15:25:30-06:00"
+    },
+    {
+      "id": "42",
+      "oracion": "Los niños que leen libros están felices",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "V",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "O -> SN_m_p SV_m_p; SN_m_p -> DET_m_p NUC_m_p; NUC_m_p -> N_m_p MODS_N_m_p; MODS_N_m_p -> REL_m_p; REL_m_p -> QUE REL_RESTO_m_p; REL_RESTO_m_p -> SV_m_p; SV_m_p -> NUCLEO_V_m_p; NUCLEO_V_m_p -> V_p COMP; COMP -> SN_m_p; SV_m_p -> COP_p ATRIB_m_p",
+      "timestamp_respuesta": "2026-11-19T15:25:36-06:00"
+    },
+    {
+      "id": "43",
+      "oracion": "Las niñas que el profesor regañó están cansados",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "El sujeto 'Las niñas' es femenino plural (SN_f_p), pero el atributo 'cansados' es masculino plural (ATRIB_m_p), causando un fallo en la concordancia exigida por la gramática libre de contexto.",
+      "timestamp_respuesta": "2026-11-19T15:25:43-06:00"
+    },
+    {
+      "id": "44",
+      "oracion": "Las niñas que el profesor regañó el libro están cansadas",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "La oración de relativo requiere O_HUECO con un elemento hueco sintáctico compatible, pero 'el libro' no deja un hueco válido para el verbo transitivo 'regañó'.",
+      "timestamp_respuesta": "2026-11-19T15:25:49-06:00"
+    },
+    {
+      "id": "45",
+      "oracion": "Ana , Luis y Pedro son alto , alto y alta respectivamente",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "NP",
+        "SEP",
+        "NP",
+        "SEP",
+        "NP",
+        "COP",
+        "ADJ",
+        "SEP",
+        "ADJ",
+        "SEP",
+        "ADJ",
+        "ADV"
+      ],
+      "justificacion": "La gramática no contempla construcciones con conjunciones múltiples 'y' ni elementos como 'respectivamente' o comas SEP",
+      "timestamp_respuesta": "2026-11-19T15:25:55-06:00"
+    },
+    {
+      "id": "46",
+      "oracion": "Ana y Luis son alto y alta respectivamente",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "NP",
+        "SEP",
+        "NP",
+        "COP",
+        "ADJ",
+        "SEP",
+        "ADJ",
+        "ADV"
+      ],
+      "justificacion": "Las palabras 'y' (SEP) y 'respectivamente' (RESP) no forman parte del léxico ni de las reglas de la gramática libre de contexto para coordinar sujetos u objetos.",
+      "timestamp_respuesta": "2026-11-19T15:26:00-06:00"
+    },
+    {
+      "id": "47",
+      "oracion": "Los niños que el profesor regañó está cansados",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "No coincide el número del sujeto plural (SN_m_p) con el núcleo verbal singular (COP_s) en la oración principal ('está' en vez de 'están')",
+      "timestamp_respuesta": "2026-11-19T15:26:07-06:00"
+    },
+    {
+      "id": "48",
+      "oracion": "El perro que el niño vio el gato ladra",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "La estructura de relativo con O_HUECO requiere un argumento vacante, pero la secuencia contiene dos SN completos ('el niño vio' y 'el gato') sin coincidir con la reducción de valencia de la gramática.",
+      "timestamp_respuesta": "2026-11-19T15:26:13-06:00"
+    }
+  ]
+}

@@ -1,0 +1,724 @@
+{
+  "enfoque": "llm_zero_shot",
+  "fecha": "2026-11-19T15:20:59-06:00",
+  "proveedor": "gemini",
+  "modelo": "gemini-3.5-flash-lite",
+  "temperatura": 0,
+  "max_tokens": 2048,
+  "huella_prompt_sistema": "6fed457da186deb4",
+  "prompt_en": "prompts/zero_shot.txt",
+  "llamadas_en": "logs/llm_zero_shot_llamadas.jsonl",
+  "resultados": [
+    {
+      "id": "1",
+      "oracion": "El perro come",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "Derivado exitosamente mediante O -> SN_m_s SV_m_s, con SN_m_s -> DET_m_s NUC_m_s (DET_m_s: el, NUC_m_s: N_m_s: perro) y SV_m_s -> ADVS NUCLEO_V_m_s (ADVS: ε, NUCLEO_V_m_s: V_s COMP: come)",
+      "timestamp_respuesta": "2026-11-19T15:15:38-06:00"
+    },
+    {
+      "id": "2",
+      "oracion": "La niña duerme",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "Derivado mediante O -> SN_f_s SV_f_s, con SN_f_s -> DET_f_s NUC_f_s (la niña) y SV_f_s -> ADVS NUCLEO_V_f_s -> duerme.",
+      "timestamp_respuesta": "2026-11-19T15:15:44-06:00"
+    },
+    {
+      "id": "3",
+      "oracion": "Los niños leen un libro",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N"
+      ],
+      "justificacion": "La oración se deriva mediante O -> SN_m_p SV_m_p, donde SN_m_p -> DET_m_p NUC_m_p (los niños) y SV_m_p -> ADVS NUCLEO_V_m_p -> V_p COMP (leen un libro).",
+      "timestamp_respuesta": "2026-11-19T15:15:50-06:00"
+    },
+    {
+      "id": "4",
+      "oracion": "Las gatas comen",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "Derivado mediante O -> SN_f_p SV_f_p, donde SN_f_p -> DET_f_p NUC_f_p (las gatas) y SV_f_p -> ADVS NUCLEO_V_f_p (comen)",
+      "timestamp_respuesta": "2026-11-19T15:15:56-06:00"
+    },
+    {
+      "id": "5",
+      "oracion": "Ana lee un libro",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N"
+      ],
+      "justificacion": "Derivado exitosamente usando O -> SN_f_s SV_f_s, NP_f_s, SV_f_s -> ADVS NUCLEO_V_f_s, NUCLEO_V_f_s -> V_s COMP, COMP -> SN_m_s MODS_V, SN_m_s -> DET_m_s NUC_m_s, NUC_m_s -> N_m_s.",
+      "timestamp_respuesta": "2026-11-19T15:16:02-06:00"
+    },
+    {
+      "id": "6",
+      "oracion": "Luis vio el parque",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N"
+      ],
+      "justificacion": "Derivado exitosamente usando O -> SN_m_s SV_m_s, NP_m_s, SV_m_s -> ADVS NUCLEO_V_m_s, NUCLEO_V_m_s -> V_s COMP, COMP -> SN_m_s MODS_V, SN_m_s -> DET_m_s NUC_m_s, NUC_m_s -> N_m_s",
+      "timestamp_respuesta": "2026-11-19T15:16:08-06:00"
+    },
+    {
+      "id": "7",
+      "oracion": "El profesor lee un libro",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N"
+      ],
+      "justificacion": "Derivado mediante O -> SN_m_s SV_m_s, con SN_m_s -> DET_m_s NUC_m_s y SV_m_s -> ADVS NUCLEO_V_m_s.",
+      "timestamp_respuesta": "2026-11-19T15:16:14-06:00"
+    },
+    {
+      "id": "8",
+      "oracion": "La profesora llegó",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "La oracion se deriva mediante O -> SN_f_s SV_f_s, con DET_f_s NUC_f_s y N_f_s para 'la profesora', y SV_f_s -> ADVS NUCLEO_V_f_s con V_s para 'llegó'.",
+      "timestamp_respuesta": "2026-11-19T15:16:21-06:00"
+    },
+    {
+      "id": "9",
+      "oracion": "Los perros ladran",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "Derivado exitosamente mediante O -> SN_m_p SV_m_p usando DET_m_p NUC_m_p y NUCLEO_V_m_p.",
+      "timestamp_respuesta": "2026-11-19T15:16:27-06:00"
+    },
+    {
+      "id": "10",
+      "oracion": "Pedro come",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V"
+      ],
+      "justificacion": "Derivado mediante O -> SN_m_s SV_m_s, NP_m_s -> pedro, y SV_m_s -> ADVS NUCLEO_V_m_s -> V_s COMP -> come",
+      "timestamp_respuesta": "2026-11-19T15:16:33-06:00"
+    },
+    {
+      "id": "11",
+      "oracion": "El niño está cansado",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "Derivado mediante O -> SN_m_s SV_m_s, con DET_m_s (el), NUC_m_s -> N_m_s (niño), SV_m_s -> COP_s (está) ATRIB_m_s (cansado).",
+      "timestamp_respuesta": "2026-11-19T15:16:38-06:00"
+    },
+    {
+      "id": "12",
+      "oracion": "Las niñas son altas",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "Derivado mediante O -> SN_f_p SV_f_p, donde SN_f_p -> DET_f_p NUC_f_p (las niñas) y SV_f_p -> COP_p ATRIB_f_p (son altas).",
+      "timestamp_respuesta": "2026-11-19T15:16:44-06:00"
+    },
+    {
+      "id": "13",
+      "oracion": "La perro come",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "Discordancia de género: 'la' es DET_f_s pero 'perro' es N_m_s, impidiendo la formación de un SN válido",
+      "timestamp_respuesta": "2026-11-19T15:16:50-06:00"
+    },
+    {
+      "id": "14",
+      "oracion": "Los niños come",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "No se puede derivar porque el sujeto SN_m_p (los niños) requiere un verbo en plural SV_m_p, pero 'come' es V_s (singular).",
+      "timestamp_respuesta": "2026-11-19T15:16:57-06:00"
+    },
+    {
+      "id": "15",
+      "oracion": "Las niñas es altas",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "No concuerda en número: SN_f_p (las niñas, plural) requiere COP_p (son, están, estaban), pero la entrada usa COP_s (es).",
+      "timestamp_respuesta": "2026-11-19T15:17:02-06:00"
+    },
+    {
+      "id": "16",
+      "oracion": "El niño están cansado",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "No coincide la concordancia de número entre el sujeto plural (están cansado) y el núcleo singular o viceversa, ya que COP_p requiere ATRIB_m_p pero 'cansado' es ADJ_m_s.",
+      "timestamp_respuesta": "2026-11-19T15:17:20-06:00"
+    },
+    {
+      "id": "17",
+      "oracion": "El perro negro come rápidamente",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "ADV"
+      ],
+      "justificacion": "Derivado mediante O -> SN_m_s SV_m_s, SN_m_s -> DET_m_s NUC_m_s, NUC_m_s -> N_m_s MODS_N_m_s, MODS_N_m_s -> ADJ_m_s, SV_m_s -> ADVS NUCLEO_V_m_s, NUCLEO_V_m_s -> V_s COMP, COMP -> MODS_V, MODS_V -> ADV",
+      "timestamp_respuesta": "2026-11-19T15:17:26-06:00"
+    },
+    {
+      "id": "18",
+      "oracion": "Las niñas pequeñas leen un libro en la casa",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "justificacion": "La oración se deriva correctamente a partir del símbolo inicial O -> SN_f_p SV_f_p utilizando las reglas gramaticales para el sintagma nominal femenino plural con modificador adjetivo y el sintagma verbal con complemento y SP.",
+      "timestamp_respuesta": "2026-11-19T15:17:43-06:00"
+    },
+    {
+      "id": "19",
+      "oracion": "La estudiante alta lee un libro",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "DET",
+        "N"
+      ],
+      "justificacion": "Derivado mediante O -> SN_f_s SV_f_s donde SN_f_s genera DET_f_s N_c_s ADJ_c_s y SV_f_s genera V_s con COMP (SN_m_s con DET_m_s N_m_s)",
+      "timestamp_respuesta": "2026-11-19T15:17:49-06:00"
+    },
+    {
+      "id": "20",
+      "oracion": "Los perros grandes ladraron ayer",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "ADV"
+      ],
+      "justificacion": "Derivado mediante O -> SN_m_p SV_m_p, con SN_m_p -> DET_m_p NUC_m_p, NUC_m_p -> N_m_p MODS_N_m_p, MODS_N_m_p -> ADJ_c_p, y SV_m_p -> ADVS NUCLEO_V_m_p, NUCLEO_V_m_p -> V_p COMP.",
+      "timestamp_respuesta": "2026-11-19T15:17:55-06:00"
+    },
+    {
+      "id": "21",
+      "oracion": "El gato de la profesora duerme en la mesa",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N",
+        "V",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "justificacion": "Derivado exitosamente desde O aplicando SN_m_s (con SP) y SV_m_s con V_s.",
+      "timestamp_respuesta": "2026-11-19T15:18:02-06:00"
+    },
+    {
+      "id": "22",
+      "oracion": "Ana vio el perro negro en el parque",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N",
+        "ADJ",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "justificacion": "Derivado mediante SN_f_s (NP_f_s) y SV_f_s (V_s COMP con SN_m_s)",
+      "timestamp_respuesta": "2026-11-19T15:18:08-06:00"
+    },
+    {
+      "id": "23",
+      "oracion": "La niña feliz come mucho",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "ADV"
+      ],
+      "justificacion": "Derivado mediante O -> SN_f_s SV_f_s, con SN_f_s -> DET_f_s NUC_f_s, NUC_f_s -> N_f_s MODS_N_f_s, MODS_N_f_s -> ADJ_c_s, y SV_f_s -> ADVS NUCLEO_V_f_s.",
+      "timestamp_respuesta": "2026-11-19T15:18:14-06:00"
+    },
+    {
+      "id": "24",
+      "oracion": "Los estudiantes leyeron un libro sobre la mesa",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "justificacion": "La oración se deriva correctamente a partir del símbolo inicial O -> SN_m_p SV_m_p, donde el sujeto es un sintagma nominal plural y el sintagme verbal contiene un verbo transitivo con un complemento y un modificador preposicional.",
+      "timestamp_respuesta": "2026-11-19T15:18:20-06:00"
+    },
+    {
+      "id": "25",
+      "oracion": "El perro que ladra come",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "V",
+        "V"
+      ],
+      "justificacion": "Derivado mediante O -> SN_m_s SV_m_s, con SN_m_s -> DET_m_s NUC_m_s, NUC_m_s -> N_m_s MODS_N_m_s, MODS_N_m_s -> REL_m_s, REL_m_s -> QUE REL_RESTO_m_s, REL_RESTO_m_s -> SV_m_s, SV_m_s -> ADVS NUCLEO_V_m_s, NUCLEO_V_m_s -> V_s COMP.",
+      "timestamp_respuesta": "2026-11-19T15:18:26-06:00"
+    },
+    {
+      "id": "26",
+      "oracion": "Luis dice que la niña duerme",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "QUE",
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "Derivado mediante O -> SN_m_s SV_m_s, donde el sujeto es NP_m_s y el SV contiene un COMP con una oración subordinada introducida por QUE.",
+      "timestamp_respuesta": "2026-11-19T15:18:33-06:00"
+    },
+    {
+      "id": "27",
+      "oracion": "Las gatas negras están cansadas",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "Derivado mediante O -> SN_f_p SV_f_p, con DET_f_p NUC_f_p y COP_p ATRIB_f_p.",
+      "timestamp_respuesta": "2026-11-19T15:18:39-06:00"
+    },
+    {
+      "id": "28",
+      "oracion": "Los gato negra come",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V"
+      ],
+      "justificacion": "No concuerda el género del sintagma nominal: el sustantivo 'gato' es masculino singular pero el adjetivo 'negra' y el determinante 'los' no concuerdan en género y número.",
+      "timestamp_respuesta": "2026-11-19T15:18:45-06:00"
+    },
+    {
+      "id": "29",
+      "oracion": "La estudiante pequeño lee",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V"
+      ],
+      "justificacion": "Error de concordancia de género entre el determinante/sustantivo femenino (la estudiante) y el adjetivo masculino (pequeño)",
+      "timestamp_respuesta": "2026-11-19T15:18:51-06:00"
+    },
+    {
+      "id": "30",
+      "oracion": "El perro que ladran come",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "V",
+        "V"
+      ],
+      "justificacion": "El sujeto 'el perro' es singular (m_s) y el verbo de la subordinada relativa es plural ('ladran', m_p), fallando la concordancia exigida por la gramática en REL_RESTO.",
+      "timestamp_respuesta": "2026-11-19T15:18:57-06:00"
+    },
+    {
+      "id": "31",
+      "oracion": "Las niñas pequeños leen un libro",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "DET",
+        "N"
+      ],
+      "justificacion": "Las reglas gramaticales requieren concordancia de género entre DET_f_p N_f_p y ADJ_m_p, lo cual no es posible en la derivación.",
+      "timestamp_respuesta": "2026-11-19T15:19:02-06:00"
+    },
+    {
+      "id": "32",
+      "oracion": "El gato de la profesora duermen",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "No se puede derivar porque el sujeto 'El gato de la profesora' es singular (m_s) y el verbo 'duermen' es plural (p), lo que viola la concordancia con el SV_m_p.",
+      "timestamp_respuesta": "2026-11-19T15:19:09-06:00"
+    },
+    {
+      "id": "33",
+      "oracion": "Las niñas que el profesor regañó están cansadas",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "Derivable desde O -> SN_f_p SV_f_p usando relativo con O_HUECO para el objeto directo del verbo transitivo regañó",
+      "timestamp_respuesta": "2026-11-19T15:19:15-06:00"
+    },
+    {
+      "id": "34",
+      "oracion": "Ana vio el perro con el telescopio",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "justificacion": "Derivado mediante O -> SN_f_s SV_f_s, donde el SN_f_s es NP_f_s (ana), y el SV_f_s contiene NUCLEO_V_f_s -> V_s COMP con COMP -> SN_m_s MODS_V (el perro) y MODS_V -> SP MODS_V (con el telescopio).",
+      "timestamp_respuesta": "2026-11-19T15:19:21-06:00"
+    },
+    {
+      "id": "35",
+      "oracion": "Ana vio el perro en el parque con el telescopio",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "justificacion": "Derivado mediante O -> SN_f_s SV_f_s, donde el SN_f_s es NP_f_s ('ana') y SV_f_s tiene V_s COMP con adjunción múltiple de SP en MODS_N y MODS_V.",
+      "timestamp_respuesta": "2026-11-19T15:19:27-06:00"
+    },
+    {
+      "id": "36",
+      "oracion": "Luis dice que Ana dice que los niños comen",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "QUE",
+        "NP",
+        "V",
+        "QUE",
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "La oración se deriva correctamente a partir del símbolo inicial O -> SN_m_s SV_m_s, donde el SV contiene una subordinada sustantiva introducida por QUE.",
+      "timestamp_respuesta": "2026-11-19T15:19:33-06:00"
+    },
+    {
+      "id": "37",
+      "oracion": "Llegaron los niños",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "V",
+        "DET",
+        "N"
+      ],
+      "justificacion": "La gramática requiere que una oración comience con un SN (Sintagma Nominal) seguido de un SV (Sintagma Verbal), pero la secuencia empieza con un verbo (Llegaron).",
+      "timestamp_respuesta": "2026-11-19T15:19:40-06:00"
+    },
+    {
+      "id": "38",
+      "oracion": "Lee un libro",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "V",
+        "DET",
+        "N"
+      ],
+      "justificacion": "La gramática exige un sujeto nominal (SN) al inicio de la regla O, pero la oración comienza directamente con un verbo sin sujeto.",
+      "timestamp_respuesta": "2026-11-19T15:19:46-06:00"
+    },
+    {
+      "id": "39",
+      "oracion": "Ayer los niños comieron mucho",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "ADV",
+        "DET",
+        "N",
+        "V",
+        "ADV"
+      ],
+      "justificacion": "Derivado mediante O -> SN_m_p SV_m_p, donde SN_m_p es DET_m_p NUC_m_p (los niños) y SV_m_p es ADVS NUCLEO_V_m_p con ayer (ADV) y comieron mucho (V y COMP con ADV).",
+      "timestamp_respuesta": "2026-11-19T15:19:53-06:00"
+    },
+    {
+      "id": "40",
+      "oracion": "Ana , Luis y Pedro son alta , alto y alto respectivamente",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "NP",
+        "SEP",
+        "NP",
+        "SEP",
+        "NP",
+        "COP",
+        "ADJ",
+        "SEP",
+        "ADJ",
+        "SEP",
+        "ADJ",
+        "ADV"
+      ],
+      "justificacion": "La gramática no contempla el uso de 'respectivamente' ni combinaciones de múltiples sujetos con atributivos coordinados de este tipo.",
+      "timestamp_respuesta": "2026-11-19T15:19:58-06:00"
+    },
+    {
+      "id": "41",
+      "oracion": "El perro que el niño vio ladra",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "V"
+      ],
+      "justificacion": "Derivado desde O usando SN_m_s con una cláusula de relativo O_HUECO y SV_m_s con núcleo verbal intransitivo",
+      "timestamp_respuesta": "2026-11-19T15:20:05-06:00"
+    },
+    {
+      "id": "42",
+      "oracion": "Los niños que leen libros están felices",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "V",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "Derivado mediante O -> SN_m_p SV_m_p usando relativas y sujeto con modificadores",
+      "timestamp_respuesta": "2026-11-19T15:20:11-06:00"
+    },
+    {
+      "id": "43",
+      "oracion": "Las niñas que el profesor regañó están cansados",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "Discordancia de género entre el sujeto 'niñas' (femenino plural) y el atributo 'cansados' (masculino plural)",
+      "timestamp_respuesta": "2026-11-19T15:20:17-06:00"
+    },
+    {
+      "id": "44",
+      "oracion": "Las niñas que el profesor regañó el libro están cansadas",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "La estructura de la subordinada de relativo contiene una oración con objeto directo (el libro) pero el verbo regañó no deja hueco directo en la regla O_HUECO usada.",
+      "timestamp_respuesta": "2026-11-19T15:20:29-06:00"
+    },
+    {
+      "id": "45",
+      "oracion": "Ana , Luis y Pedro son alto , alto y alta respectivamente",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "NP",
+        "SEP",
+        "NP",
+        "SEP",
+        "NP",
+        "COP",
+        "ADJ",
+        "SEP",
+        "ADJ",
+        "SEP",
+        "ADJ",
+        "ADV"
+      ],
+      "justificacion": "La gramática no contempla estructuras coordinadas complejas con 'respectivamente' ni combinaciones de sujeto múltiple heterogéneo con los no terminales provistos.",
+      "timestamp_respuesta": "2026-11-19T15:20:36-06:00"
+    },
+    {
+      "id": "46",
+      "oracion": "Ana y Luis son alto y alta respectivamente",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "NP",
+        "SEP",
+        "NP",
+        "COP",
+        "ADJ",
+        "SEP",
+        "ADJ",
+        "ADV"
+      ],
+      "justificacion": "No existen reglas en la gramática para coordinar sujetos heterogéneos con 'y' ni construcciones con 'respectivamente'.",
+      "timestamp_respuesta": "2026-11-19T15:20:42-06:00"
+    },
+    {
+      "id": "47",
+      "oracion": "Los niños que el profesor regañó está cansados",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "COP",
+        "ADJ"
+      ],
+      "justificacion": "La concordancia de número entre el sujeto (los niños, plural) y el verbo copulativo (está, singular) es incorrecta según la gramática.",
+      "timestamp_respuesta": "2026-11-19T15:20:48-06:00"
+    },
+    {
+      "id": "48",
+      "oracion": "El perro que el niño vio el gato ladra",
+      "veredicto": "RECHAZA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N",
+        "V"
+      ],
+      "justificacion": "La oración no puede derivarse porque la estructura relativa 'que el niño vio el gato' presenta un conflicto sintáctico con los argumentos del verbo transitivo sin la preposición adecuada o el hueco correcto.",
+      "timestamp_respuesta": "2026-11-19T15:20:54-06:00"
+    }
+  ]
+}

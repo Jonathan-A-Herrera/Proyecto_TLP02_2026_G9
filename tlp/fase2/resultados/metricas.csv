@@ -1,0 +1,6 @@
+clave,enfoque,VP,VN,FP,FN,precision,cobertura,rechazo_correcto,exactitud,errores_etiquetado,acierto_categorias_tokens,fidelidad_LG,respuestas_invalidas
+parser_propio,Parser propio,28,15,0,5,1.0,0.848,1.0,0.896,0,1.0,1.0,0
+spacy,spaCy,28,11,4,5,0.875,0.848,0.733,0.812,3,0.982,0.75,0
+nltk,NLTK,28,15,0,5,1.0,0.848,1.0,0.896,0,1.0,1.0,0
+llm_zero_shot,LLM zero-shot,30,15,0,3,1.0,0.909,1.0,0.938,0,1.0,0.958,0
+llm_few_shot,LLM few-shot,30,15,0,3,1.0,0.909,1.0,0.938,0,1.0,0.958,0

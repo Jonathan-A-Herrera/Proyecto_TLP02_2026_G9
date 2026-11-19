@@ -1,0 +1,596 @@
+{
+  "enfoque": "parser_propio",
+  "fecha": "2026-11-19T14:01:59-06:00",
+  "descripcion": "Parser predictivo LL(1) con pila sobre la CFG v2 (44 no terminales, 95 producciones)",
+  "no_terminales": 44,
+  "producciones": 95,
+  "resultados": [
+    {
+      "id": "1",
+      "oracion": "El perro come",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "conflictos_resueltos": [],
+      "arbol": "(O\n  (SN_m_s el (NUC_m_s perro (MODS_N_m_s )))\n  (SV_m_s (ADVS ) (NUCLEO_V_m_s come (COMP (MODS_V )))))"
+    },
+    {
+      "id": "2",
+      "oracion": "La niña duerme",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "conflictos_resueltos": [],
+      "arbol": "(O\n  (SN_f_s la (NUC_f_s niña (MODS_N_f_s )))\n  (SV_f_s (ADVS ) (NUCLEO_V_f_s duerme (COMP (MODS_V )))))"
+    },
+    {
+      "id": "3",
+      "oracion": "Los niños leen un libro",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N"
+      ],
+      "conflictos_resueltos": [],
+      "arbol": "(O\n  (SN_m_p los (NUC_m_p niños (MODS_N_m_p )))\n  (SV_m_p\n    (ADVS )\n    (NUCLEO_V_m_p\n      leen\n      (COMP (SN_m_s un (NUC_m_s libro (MODS_N_m_s ))) (MODS_V )))))"
+    },
+    {
+      "id": "4",
+      "oracion": "Las gatas comen",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "conflictos_resueltos": [],
+      "arbol": "(O\n  (SN_f_p las (NUC_f_p gatas (MODS_N_f_p )))\n  (SV_f_p (ADVS ) (NUCLEO_V_f_p comen (COMP (MODS_V )))))"
+    },
+    {
+      "id": "5",
+      "oracion": "Ana lee un libro",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N"
+      ],
+      "conflictos_resueltos": [],
+      "arbol": "(O\n  (SN_f_s ana)\n  (SV_f_s\n    (ADVS )\n    (NUCLEO_V_f_s\n      lee\n      (COMP (SN_m_s un (NUC_m_s libro (MODS_N_m_s ))) (MODS_V )))))"
+    },
+    {
+      "id": "6",
+      "oracion": "Luis vio el parque",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N"
+      ],
+      "conflictos_resueltos": [],
+      "arbol": "(O\n  (SN_m_s luis)\n  (SV_m_s\n    (ADVS )\n    (NUCLEO_V_m_s\n      vio\n      (COMP (SN_m_s el (NUC_m_s parque (MODS_N_m_s ))) (MODS_V )))))"
+    },
+    {
+      "id": "7",
+      "oracion": "El profesor lee un libro",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N"
+      ],
+      "conflictos_resueltos": [],
+      "arbol": "(O\n  (SN_m_s el (NUC_m_s profesor (MODS_N_m_s )))\n  (SV_m_s\n    (ADVS )\n    (NUCLEO_V_m_s\n      lee\n      (COMP (SN_m_s un (NUC_m_s libro (MODS_N_m_s ))) (MODS_V )))))"
+    },
+    {
+      "id": "8",
+      "oracion": "La profesora llegó",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "conflictos_resueltos": [],
+      "arbol": "(O\n  (SN_f_s la (NUC_f_s profesora (MODS_N_f_s )))\n  (SV_f_s (ADVS ) (NUCLEO_V_f_s llegó (COMP (MODS_V )))))"
+    },
+    {
+      "id": "9",
+      "oracion": "Los perros ladran",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V"
+      ],
+      "conflictos_resueltos": [],
+      "arbol": "(O\n  (SN_m_p los (NUC_m_p perros (MODS_N_m_p )))\n  (SV_m_p (ADVS ) (NUCLEO_V_m_p ladran (COMP (MODS_V )))))"
+    },
+    {
+      "id": "10",
+      "oracion": "Pedro come",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V"
+      ],
+      "conflictos_resueltos": [],
+      "arbol": "(O\n  (SN_m_s pedro)\n  (SV_m_s (ADVS ) (NUCLEO_V_m_s come (COMP (MODS_V )))))"
+    },
+    {
+      "id": "11",
+      "oracion": "El niño está cansado",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "conflictos_resueltos": [],
+      "arbol": "(O\n  (SN_m_s el (NUC_m_s niño (MODS_N_m_s )))\n  (SV_m_s (ADVS ) (NUCLEO_V_m_s está (ATRIB_m_s cansado) (MODS_V ))))"
+    },
+    {
+      "id": "12",
+      "oracion": "Las niñas son altas",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "COP",
+        "ADJ"
+      ],
+      "conflictos_resueltos": [],
+      "arbol": "(O\n  (SN_f_p las (NUC_f_p niñas (MODS_N_f_p )))\n  (SV_f_p (ADVS ) (NUCLEO_V_f_p son (ATRIB_f_p altas) (MODS_V ))))"
+    },
+    {
+      "id": "13",
+      "oracion": "La perro come",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para NUC_f_s con 'perro' (N_m_s) en la posición 2. Se esperaba uno de: N_c_s, N_f_s"
+    },
+    {
+      "id": "14",
+      "oracion": "Los niños come",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para SV_m_p con 'come' (V_s) en la posición 3. Se esperaba uno de: ADV, COP_p, V_p"
+    },
+    {
+      "id": "15",
+      "oracion": "Las niñas es altas",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para SV_f_p con 'es' (COP_s) en la posición 3. Se esperaba uno de: ADV, COP_p, V_p"
+    },
+    {
+      "id": "16",
+      "oracion": "El niño están cansado",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para SV_m_s con 'están' (COP_p) en la posición 3. Se esperaba uno de: ADV, COP_s, V_s"
+    },
+    {
+      "id": "17",
+      "oracion": "El perro negro come rápidamente",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "ADV"
+      ],
+      "conflictos_resueltos": [
+        "M[MODS_N_m_s, ADJ_m_s]",
+        "M[MODS_V, ADV]"
+      ],
+      "arbol": "(O\n  (SN_m_s el (NUC_m_s perro (MODS_N_m_s negro (MODS_N_m_s ))))\n  (SV_m_s\n    (ADVS )\n    (NUCLEO_V_m_s come (COMP (MODS_V rápidamente (MODS_V ))))))"
+    },
+    {
+      "id": "18",
+      "oracion": "Las niñas pequeñas leen un libro en la casa",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "conflictos_resueltos": [
+        "M[MODS_N_f_p, ADJ_f_p]",
+        "M[MODS_N_m_s, PREP]"
+      ],
+      "arbol": "(O\n  (SN_f_p las (NUC_f_p niñas (MODS_N_f_p pequeñas (MODS_N_f_p ))))\n  (SV_f_p\n    (ADVS )\n    (NUCLEO_V_f_p\n      leen\n      (COMP\n        (SN_m_s\n          un\n          (NUC_m_s\n            libro\n            (MODS_N_m_s\n              (SP en (SN_X (SN_f_s la (NUC_f_s casa (MODS_N_f_s )))))\n              (MODS_N_m_s ))))\n        (MODS_V )))))"
+    },
+    {
+      "id": "19",
+      "oracion": "La estudiante alta lee un libro",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "DET",
+        "N"
+      ],
+      "conflictos_resueltos": [
+        "M[MODS_N_f_s, ADJ_f_s]"
+      ],
+      "arbol": "(O\n  (SN_f_s la (NUC_f_s estudiante (MODS_N_f_s alta (MODS_N_f_s ))))\n  (SV_f_s\n    (ADVS )\n    (NUCLEO_V_f_s\n      lee\n      (COMP (SN_m_s un (NUC_m_s libro (MODS_N_m_s ))) (MODS_V )))))"
+    },
+    {
+      "id": "20",
+      "oracion": "Los perros grandes ladraron ayer",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "ADV"
+      ],
+      "conflictos_resueltos": [
+        "M[MODS_N_m_p, ADJ_c_p]",
+        "M[MODS_V, ADV]"
+      ],
+      "arbol": "(O\n  (SN_m_p los (NUC_m_p perros (MODS_N_m_p grandes (MODS_N_m_p ))))\n  (SV_m_p\n    (ADVS )\n    (NUCLEO_V_m_p ladraron (COMP (MODS_V ayer (MODS_V ))))))"
+    },
+    {
+      "id": "21",
+      "oracion": "El gato de la profesora duerme en la mesa",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N",
+        "V",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "conflictos_resueltos": [
+        "M[MODS_N_m_s, PREP]",
+        "M[MODS_V, PREP]"
+      ],
+      "arbol": "(O\n  (SN_m_s\n    el\n    (NUC_m_s\n      gato\n      (MODS_N_m_s\n        (SP de (SN_X (SN_f_s la (NUC_f_s profesora (MODS_N_f_s )))))\n        (MODS_N_m_s ))))\n  (SV_m_s\n    (ADVS )\n    (NUCLEO_V_m_s\n      duerme\n      (COMP\n        (MODS_V\n          (SP en (SN_X (SN_f_s la (NUC_f_s mesa (MODS_N_f_s )))))\n          (MODS_V ))))))"
+    },
+    {
+      "id": "22",
+      "oracion": "Ana vio el perro negro en el parque",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N",
+        "ADJ",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "conflictos_resueltos": [
+        "M[MODS_N_m_s, ADJ_m_s]",
+        "M[MODS_N_m_s, PREP]"
+      ],
+      "arbol": "(O\n  (SN_f_s ana)\n  (SV_f_s\n    (ADVS )\n    (NUCLEO_V_f_s\n      vio\n      (COMP\n        (SN_m_s\n          el\n          (NUC_m_s\n            perro\n            (MODS_N_m_s\n              negro\n              (MODS_N_m_s\n                (SP\n                  en\n                  (SN_X (SN_m_s el (NUC_m_s parque (MODS_N_m_s )))))\n                (MODS_N_m_s )))))\n        (MODS_V )))))"
+    },
+    {
+      "id": "23",
+      "oracion": "La niña feliz come mucho",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "V",
+        "ADV"
+      ],
+      "conflictos_resueltos": [
+        "M[MODS_N_f_s, ADJ_c_s]",
+        "M[MODS_V, ADV]"
+      ],
+      "arbol": "(O\n  (SN_f_s la (NUC_f_s niña (MODS_N_f_s feliz (MODS_N_f_s ))))\n  (SV_f_s\n    (ADVS )\n    (NUCLEO_V_f_s come (COMP (MODS_V mucho (MODS_V ))))))"
+    },
+    {
+      "id": "24",
+      "oracion": "Los estudiantes leyeron un libro sobre la mesa",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "conflictos_resueltos": [
+        "M[MODS_N_m_s, PREP]"
+      ],
+      "arbol": "(O\n  (SN_m_p los (NUC_m_p estudiantes (MODS_N_m_p )))\n  (SV_m_p\n    (ADVS )\n    (NUCLEO_V_m_p\n      leyeron\n      (COMP\n        (SN_m_s\n          un\n          (NUC_m_s\n            libro\n            (MODS_N_m_s\n              (SP\n                sobre\n                (SN_X (SN_f_s la (NUC_f_s mesa (MODS_N_f_s )))))\n              (MODS_N_m_s ))))\n        (MODS_V )))))"
+    },
+    {
+      "id": "25",
+      "oracion": "El perro que ladra come",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "V",
+        "V"
+      ],
+      "conflictos_resueltos": [
+        "M[MODS_N_m_s, QUE]"
+      ],
+      "arbol": "(O\n  (SN_m_s\n    el\n    (NUC_m_s\n      perro\n      (MODS_N_m_s\n        (REL_m_s\n          que\n          (REL_RESTO_m_s\n            (SV_m_s (ADVS ) (NUCLEO_V_m_s ladra (COMP (MODS_V ))))))\n        (MODS_N_m_s ))))\n  (SV_m_s (ADVS ) (NUCLEO_V_m_s come (COMP (MODS_V )))))"
+    },
+    {
+      "id": "26",
+      "oracion": "Luis dice que la niña duerme",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "QUE",
+        "DET",
+        "N",
+        "V"
+      ],
+      "conflictos_resueltos": [
+        "M[MODS_V, QUE]"
+      ],
+      "arbol": "(O\n  (SN_m_s luis)\n  (SV_m_s\n    (ADVS )\n    (NUCLEO_V_m_s\n      dice\n      (COMP\n        (MODS_V\n          (SUB\n            que\n            (O\n              (SN_f_s la (NUC_f_s niña (MODS_N_f_s )))\n              (SV_f_s (ADVS ) (NUCLEO_V_f_s duerme (COMP (MODS_V )))))))))))"
+    },
+    {
+      "id": "27",
+      "oracion": "Las gatas negras están cansadas",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "ADJ",
+        "COP",
+        "ADJ"
+      ],
+      "conflictos_resueltos": [
+        "M[MODS_N_f_p, ADJ_f_p]"
+      ],
+      "arbol": "(O\n  (SN_f_p las (NUC_f_p gatas (MODS_N_f_p negras (MODS_N_f_p ))))\n  (SV_f_p\n    (ADVS )\n    (NUCLEO_V_f_p están (ATRIB_f_p cansadas) (MODS_V ))))"
+    },
+    {
+      "id": "28",
+      "oracion": "Los gato negra come",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para NUC_m_p con 'gato' (N_m_s) en la posición 2. Se esperaba uno de: N_c_p, N_m_p"
+    },
+    {
+      "id": "29",
+      "oracion": "La estudiante pequeño lee",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para SV_f_s con 'pequeño' (ADJ_m_s) en la posición 3. Se esperaba uno de: ADV, COP_s, V_s"
+    },
+    {
+      "id": "30",
+      "oracion": "El perro que ladran come",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para REL_RESTO_m_s con 'ladran' (V_p) en la posición 4. Se esperaba uno de: ADV, COP_s, DET_f_p, DET_f_s, DET_m_p, DET_m_s, NP_f_s, NP_m_s, V_s"
+    },
+    {
+      "id": "31",
+      "oracion": "Las niñas pequeños leen un libro",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para SV_f_p con 'pequeños' (ADJ_m_p) en la posición 3. Se esperaba uno de: ADV, COP_p, V_p"
+    },
+    {
+      "id": "32",
+      "oracion": "El gato de la profesora duermen",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para SV_m_s con 'duermen' (V_p) en la posición 6. Se esperaba uno de: ADV, COP_s, V_s"
+    },
+    {
+      "id": "33",
+      "oracion": "Las niñas que el profesor regañó están cansadas",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "COP",
+        "ADJ"
+      ],
+      "conflictos_resueltos": [
+        "M[MODS_N_f_p, QUE]"
+      ],
+      "arbol": "(O\n  (SN_f_p\n    las\n    (NUC_f_p\n      niñas\n      (MODS_N_f_p\n        (REL_f_p\n          que\n          (REL_RESTO_f_p\n            (O_HUECO\n              (SN_m_s el (NUC_m_s profesor (MODS_N_m_s )))\n              (SV_HUECO_m_s (ADVS ) regañó (MODS_V )))))\n        (MODS_N_f_p ))))\n  (SV_f_p\n    (ADVS )\n    (NUCLEO_V_f_p están (ATRIB_f_p cansadas) (MODS_V ))))"
+    },
+    {
+      "id": "34",
+      "oracion": "Ana vio el perro con el telescopio",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "conflictos_resueltos": [
+        "M[MODS_N_m_s, PREP]"
+      ],
+      "arbol": "(O\n  (SN_f_s ana)\n  (SV_f_s\n    (ADVS )\n    (NUCLEO_V_f_s\n      vio\n      (COMP\n        (SN_m_s\n          el\n          (NUC_m_s\n            perro\n            (MODS_N_m_s\n              (SP\n                con\n                (SN_X (SN_m_s el (NUC_m_s telescopio (MODS_N_m_s )))))\n              (MODS_N_m_s ))))\n        (MODS_V )))))"
+    },
+    {
+      "id": "35",
+      "oracion": "Ana vio el perro en el parque con el telescopio",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N",
+        "PREP",
+        "DET",
+        "N"
+      ],
+      "conflictos_resueltos": [
+        "M[MODS_N_m_s, PREP]",
+        "M[MODS_N_m_s, PREP]"
+      ],
+      "arbol": "(O\n  (SN_f_s ana)\n  (SV_f_s\n    (ADVS )\n    (NUCLEO_V_f_s\n      vio\n      (COMP\n        (SN_m_s\n          el\n          (NUC_m_s\n            perro\n            (MODS_N_m_s\n              (SP\n                en\n                (SN_X\n                  (SN_m_s\n                    el\n                    (NUC_m_s\n                      parque\n                      (MODS_N_m_s\n                        (SP\n                          con\n                          (SN_X\n                            (SN_m_s\n                              el\n                              (NUC_m_s telescopio (MODS_N_m_s )))))\n                        (MODS_N_m_s ))))))\n              (MODS_N_m_s ))))\n        (MODS_V )))))"
+    },
+    {
+      "id": "36",
+      "oracion": "Luis dice que Ana dice que los niños comen",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "NP",
+        "V",
+        "QUE",
+        "NP",
+        "V",
+        "QUE",
+        "DET",
+        "N",
+        "V"
+      ],
+      "conflictos_resueltos": [
+        "M[MODS_V, QUE]",
+        "M[MODS_V, QUE]"
+      ],
+      "arbol": "(O\n  (SN_m_s luis)\n  (SV_m_s\n    (ADVS )\n    (NUCLEO_V_m_s\n      dice\n      (COMP\n        (MODS_V\n          (SUB\n            que\n            (O\n              (SN_f_s ana)\n              (SV_f_s\n                (ADVS )\n                (NUCLEO_V_f_s\n                  dice\n                  (COMP\n                    (MODS_V\n                      (SUB\n                        que\n                        (O\n                          (SN_m_p los (NUC_m_p niños (MODS_N_m_p )))\n                          (SV_m_p\n                            (ADVS )\n                            (NUCLEO_V_m_p comen (COMP (MODS_V )))))))))))))))))"
+    },
+    {
+      "id": "37",
+      "oracion": "Llegaron los niños",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para O con 'llegaron' (V_p) en la posición 1. Se esperaba uno de: DET_f_p, DET_f_s, DET_m_p, DET_m_s, NP_f_s, NP_m_s"
+    },
+    {
+      "id": "38",
+      "oracion": "Lee un libro",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para O con 'lee' (V_s) en la posición 1. Se esperaba uno de: DET_f_p, DET_f_s, DET_m_p, DET_m_s, NP_f_s, NP_m_s"
+    },
+    {
+      "id": "39",
+      "oracion": "Ayer los niños comieron mucho",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para O con 'ayer' (ADV) en la posición 1. Se esperaba uno de: DET_f_p, DET_f_s, DET_m_p, DET_m_s, NP_f_s, NP_m_s"
+    },
+    {
+      "id": "40",
+      "oracion": "Ana , Luis y Pedro son alta , alto y alto respectivamente",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para SV_f_s con ',' (SEP) en la posición 2. Se esperaba uno de: ADV, COP_s, V_s"
+    },
+    {
+      "id": "41",
+      "oracion": "El perro que el niño vio ladra",
+      "veredicto": "ACEPTA",
+      "categorias": [
+        "DET",
+        "N",
+        "QUE",
+        "DET",
+        "N",
+        "V",
+        "V"
+      ],
+      "conflictos_resueltos": [
+        "M[MODS_N_m_s, QUE]"
+      ],
+      "arbol": "(O\n  (SN_m_s\n    el\n    (NUC_m_s\n      perro\n      (MODS_N_m_s\n        (REL_m_s\n          que\n          (REL_RESTO_m_s\n            (O_HUECO\n              (SN_m_s el (NUC_m_s niño (MODS_N_m_s )))\n              (SV_HUECO_m_s (ADVS ) vio (MODS_V )))))\n        (MODS_N_m_s ))))\n  (SV_m_s (ADVS ) (NUCLEO_V_m_s ladra (COMP (MODS_V )))))"
+    },
+    {
+      "id": "42",
+      "oracion": "Los niños que leen libros están felices",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para COMP con 'libros' (N_m_p) en la posición 5. Se esperaba uno de: $, ADJ_c_p, ADJ_c_s, ADJ_f_p, ADJ_f_s, ADJ_m_p, ADJ_m_s, ADV, COP_p, COP_s, DET_f_p, DET_f_s, DET_m_p, DET_m_s, NP_f_s, NP_m_s, PREP, QUE, V_p, V_s"
+    },
+    {
+      "id": "43",
+      "oracion": "Las niñas que el profesor regañó están cansados",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para ATRIB_f_p con 'cansados' (ADJ_m_p) en la posición 8. Se esperaba uno de: ADJ_c_p, ADJ_f_p"
+    },
+    {
+      "id": "44",
+      "oracion": "Las niñas que el profesor regañó el libro están cansadas",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para MODS_V con 'el' (DET_m_s) en la posición 7. Se esperaba uno de: $, ADJ_c_p, ADJ_c_s, ADJ_f_p, ADJ_f_s, ADJ_m_p, ADJ_m_s, ADV, COP_p, COP_s, PREP, QUE, V_p, V_s"
+    },
+    {
+      "id": "45",
+      "oracion": "Ana , Luis y Pedro son alto , alto y alta respectivamente",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para SV_f_s con ',' (SEP) en la posición 2. Se esperaba uno de: ADV, COP_s, V_s"
+    },
+    {
+      "id": "46",
+      "oracion": "Ana y Luis son alto y alta respectivamente",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para SV_f_s con 'y' (SEP) en la posición 2. Se esperaba uno de: ADV, COP_s, V_s"
+    },
+    {
+      "id": "47",
+      "oracion": "Los niños que el profesor regañó está cansados",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para SV_m_p con 'está' (COP_s) en la posición 7. Se esperaba uno de: ADV, COP_p, V_p"
+    },
+    {
+      "id": "48",
+      "oracion": "El perro que el niño vio el gato ladra",
+      "veredicto": "RECHAZA",
+      "categorias": [],
+      "motivo": "No hay regla para MODS_V con 'el' (DET_m_s) en la posición 7. Se esperaba uno de: $, ADJ_c_p, ADJ_c_s, ADJ_f_p, ADJ_f_s, ADJ_m_p, ADJ_m_s, ADV, COP_p, COP_s, PREP, QUE, V_p, V_s"
+    }
+  ]
+}

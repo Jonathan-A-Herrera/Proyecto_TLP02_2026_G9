@@ -1,0 +1,50 @@
+# nivel | esperado | oración | fenómeno
+# esperado: ACEPTA = oración correcta del español, RECHAZA = oración incorrecta
+1 | ACEPTA | El perro come | SVO mínimo, presente
+1 | ACEPTA | La niña duerme | sujeto femenino singular
+1 | ACEPTA | Los niños leen un libro | sujeto plural con objeto directo
+1 | ACEPTA | Las gatas comen | sujeto femenino plural
+1 | ACEPTA | Ana lee un libro | nombre propio como sujeto
+1 | ACEPTA | Luis vio el parque | pretérito con objeto
+1 | ACEPTA | El profesor lee un libro | sujeto masculino con objeto
+1 | ACEPTA | La profesora llegó | pretérito intransitivo
+1 | ACEPTA | Los perros ladran | plural intransitivo
+1 | ACEPTA | Pedro come | nombre propio intransitivo
+1 | ACEPTA | El niño está cansado | cópula con atributo
+1 | ACEPTA | Las niñas son altas | cópula con atributo plural
+1 | RECHAZA | La perro come | concordancia determinante-sustantivo
+1 | RECHAZA | Los niños come | concordancia sujeto-verbo
+1 | RECHAZA | Las niñas es altas | concordancia sujeto-cópula
+1 | RECHAZA | El niño están cansado | concordancia sujeto-cópula
+2 | ACEPTA | El perro negro come rápidamente | adjetivo y adverbio
+2 | ACEPTA | Las niñas pequeñas leen un libro en la casa | adjetivo y frase preposicional
+2 | ACEPTA | La estudiante alta lee un libro | sustantivo de género común
+2 | ACEPTA | Los perros grandes ladraron ayer | adjetivo común, pretérito y adverbio
+2 | ACEPTA | El gato de la profesora duerme en la mesa | frase preposicional dentro del SN
+2 | ACEPTA | Ana vio el perro negro en el parque | objeto con adjetivo y frase preposicional
+2 | ACEPTA | La niña feliz come mucho | adjetivo común y adverbio
+2 | ACEPTA | Los estudiantes leyeron un libro sobre la mesa | pretérito y frase preposicional
+2 | ACEPTA | El perro que ladra come | relativa de sujeto
+2 | ACEPTA | Luis dice que la niña duerme | subordinada sustantiva
+2 | ACEPTA | Las gatas negras están cansadas | adjetivo y atributo femenino plural
+2 | RECHAZA | Los gato negra come | concordancia dentro del SN
+2 | RECHAZA | La estudiante pequeño lee | género común mal concordado
+2 | RECHAZA | El perro que ladran come | concordancia dentro de la relativa
+2 | RECHAZA | Las niñas pequeños leen un libro | concordancia sustantivo-adjetivo
+2 | RECHAZA | El gato de la profesora duermen | concordancia sujeto-verbo con frase preposicional
+3 | ACEPTA | Las niñas que el profesor regañó están cansadas | concordancia a distancia con relativa de objeto
+3 | ACEPTA | Ana vio el perro con el telescopio | ambigüedad de adjunción
+3 | ACEPTA | Ana vio el perro en el parque con el telescopio | ambigüedad con dos frases preposicionales
+3 | ACEPTA | Luis dice que Ana dice que los niños comen | subordinadas anidadas
+3 | ACEPTA | Llegaron los niños | orden verbo-sujeto
+3 | ACEPTA | Lee un libro | sujeto tácito
+3 | ACEPTA | Ayer los niños comieron mucho | adverbio antepuesto
+3 | ACEPTA | Ana , Luis y Pedro son alta , alto y alto respectivamente | dependencias cruzadas
+3 | ACEPTA | El perro que el niño vio ladra | relativa de objeto
+3 | ACEPTA | Los niños que leen libros están felices | plural sin determinante dentro de la relativa
+3 | RECHAZA | Las niñas que el profesor regañó están cansados | concordancia a distancia
+3 | RECHAZA | Las niñas que el profesor regañó el libro están cansadas | hueco de la relativa ocupado
+3 | RECHAZA | Ana , Luis y Pedro son alto , alto y alta respectivamente | dependencias cruzadas en orden espejo
+3 | RECHAZA | Ana y Luis son alto y alta respectivamente | dependencias cruzadas mal emparejadas
+3 | RECHAZA | Los niños que el profesor regañó está cansados | concordancia a distancia sujeto-cópula
+3 | RECHAZA | El perro que el niño vio el gato ladra | hueco de la relativa ocupado
